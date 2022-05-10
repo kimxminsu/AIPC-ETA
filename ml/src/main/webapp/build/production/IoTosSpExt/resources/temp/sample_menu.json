@@ -1,0 +1,45 @@
+{
+	"data": [
+        // {
+        //     "menuId": "TEMPLATE",
+        //     "upperMenuId": "ROOT",
+        //     "menuOrder": "17",
+        //     "screenPathAddress": "null",
+        //     "screenIconDefineCode": "x-fa fa-star",
+        //     "menuTypeCode": "FOLDER",
+        //     "menuScreenName": "TEMPLATE",
+        //     "depth": "1"
+        // },
+        // {
+        //     "menuId": "VesselList",
+        //     "upperMenuId": "TEMPLATE",
+        //     "menuOrder": "18",
+        //     "screenPathAddress": "app-vessellist2",
+        //     "screenIconDefineCode": "x-fa fa-star",
+        //     "menuTypeCode": "SCREEN",
+        //     "menuScreenName": "VesselList",
+        //     "depth": "2"
+        // },
+        // {
+        //     "menuId": "TEMPLATE",
+        //     "upperMenuId": "ROOT",
+        //     "menuOrder": "17",
+        //     "screenPathAddress": null,
+        //     "screenIconDefineCode": "x-fa fa-star",
+        //     "menuTypeCode": "FOLDER",
+        //     "menuScreenName": "TEMPLATE",
+        //     "depth": "1"
+        // },
+        // {
+    
+        //     "menuId": "ErrorCode",
+        //     "upperMenuId": "TEMPLATE",
+        //     "menuOrder": "19",
+        //     "screenPathAddress": "app-errorcode",
+        //     "screenIconDefineCode": "x-fa fa-star",
+        //     "menuTypeCode": "SCREEN",
+        //     "menuScreenName": "ErrorCode",
+        //     "depth": "2"
+        // }
+	]
+}

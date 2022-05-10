@@ -1,0 +1,194 @@
+@font-face {
+  font-family: 'ticon';
+  src:  url('./fonts/ticon.eot?cg7wcz');
+  src:  url('./fonts/ticon.eot?cg7wcz#iefix') format('embedded-opentype'),
+    url('./fonts/ticon.ttf?cg7wcz') format('truetype'),
+    url('./fonts/ticon.woff?cg7wcz') format('woff'),
+    url('./fonts/ticon.svg?cg7wcz#ticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ticon-"], [class*=" ticon-"]{
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ticon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ticon-monitoring-vessel-car:before {
+  content: "\e934";
+}
+.ticon-monitoring-vessel:before {
+  content: "\e935";
+}
+.ticon-monitoring-earth:before {
+  content: "\e936";
+}
+.ticon-bond:before {
+  content: "\e937";
+}
+.ticon-yardplan:before {
+  content: "\e900";
+}
+.ticon-yard:before {
+  content: "\e901";
+}
+.ticon-worker:before {
+  content: "\e902";
+}
+.ticon-vessel-sail-empty-right:before {
+  content: "\e903";
+}
+.ticon-vessel-sail-empty-left:before {
+  content: "\e904";
+}
+.ticon-vessel-sail-empty:before {
+  content: "\e905";
+}
+.ticon-vessel-sail:before {
+  content: "\e906";
+}
+.ticon-tugmaster:before {
+  content: "\e907";
+}
+.ticon-truck-right-o:before {
+  content: "\e908";
+}
+.ticon-truck-right:before {
+  content: "\e909";
+}
+.ticon-truck-left-o:before {
+  content: "\e90a";
+}
+.ticon-truck-left:before {
+  content: "\e90b";
+}
+.ticon-truck-front:before {
+  content: "\e90c";
+}
+.ticon-truck-empty-right:before {
+  content: "\e90d";
+}
+.ticon-truck-empty-left:before {
+  content: "\e90e";
+}
+.ticon-transporter:before {
+  content: "\e90f";
+}
+.ticon-tc-cntr:before {
+  content: "\e910";
+}
+.ticon-sts-vessel-right:before {
+  content: "\e911";
+}
+.ticon-sts-vessel-left:before {
+  content: "\e912";
+}
+.ticon-sts-cntr-right:before {
+  content: "\e913";
+}
+.ticon-sts-cntr-left:before {
+  content: "\e914";
+}
+.ticon-printer:before {
+  content: "\e915";
+}
+.ticon-port-marker:before {
+  content: "\e916";
+}
+.ticon-port-fuel-marker:before {
+  content: "\e917";
+}
+.ticon-mafi:before {
+  content: "\e918";
+}
+.ticon-hh-right:before {
+  content: "\e919";
+}
+.ticon-hh-left:before {
+  content: "\e91a";
+}
+.ticon-heavycargo:before {
+  content: "\e91b";
+}
+.ticon-handshake-o:before {
+  content: "\e91c";
+}
+.ticon-handhelder:before {
+  content: "\e91d";
+}
+.ticon-global-port-connection:before {
+  content: "\e91e";
+}
+.ticon-gate-truck:before {
+  content: "\e91f";
+}
+.ticon-gate:before {
+  content: "\e920";
+}
+.ticon-driver:before {
+  content: "\e921";
+}
+.ticon-dollar:before {
+  content: "\e922";
+}
+.ticon-document-o:before {
+  content: "\e923";
+}
+.ticon-cntr-tk:before {
+  content: "\e924";
+}
+.ticon-cntr-stacked-3d:before {
+  content: "\e925";
+}
+.ticon-cntr-stacked:before {
+  content: "\e926";
+}
+.ticon-cntr-rf:before {
+  content: "\e927";
+}
+.ticon-cntr-ot:before {
+  content: "\e928";
+}
+.ticon-cntr-os:before {
+  content: "\e929";
+}
+.ticon-cntr-gp:before {
+  content: "\e92a";
+}
+.ticon-cntr-fr:before {
+  content: "\e92b";
+}
+.ticon-cloud-shipping-o:before {
+  content: "\e92c";
+}
+.ticon-cloud-shipping:before {
+  content: "\e92d";
+}
+.ticon-chat-o:before {
+  content: "\e92e";
+}
+.ticon-car-right:before {
+  content: "\e92f";
+}
+.ticon-car-loading:before {
+  content: "\e930";
+}
+.ticon-car-left:before {
+  content: "\e931";
+}
+.ticon-car-Inspection:before {
+  content: "\e932";
+}
+.ticon-barcode:before {
+  content: "\e933";
+}

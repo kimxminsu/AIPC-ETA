@@ -1,0 +1,96 @@
+/*
+ * This is is imported by virtue of "sass.var" in "app.json".
+ */
+$enable-font-awesome: dynamic(true);
+
+/*
+ * This file defines variables used throughout the application for modern and
+ * classic builds.
+ */
+$font-weight: 400;
+$font-weight-bold: 500;
+$font-family: Roboto, Arial;
+$font-size: dynamic(11px);
+
+/*
+$font-size: dynamic(13px);
+
+//Base color of all tehmes like header color
+$base-color:#647cac;
+*/
+
+ //This makes panel gray
+/*$panel-body-background-color: #f6f6f6;*/
+$panel-body-background-color: #EDEDED;
+
+//Window Header Size make smaller than default
+$panel-header-padding : 5px;;
+
+//Narrowing the vertical sapce of toolbars
+$toolbar-vertical-spacing: 2px;
+
+//Accordion Header Size make smaller than default
+$accordion-header-padding: 5px;
+
+//Fieldset Header Size make smaller than default
+$fieldset-header-padding: 1px;
+
+.x-column-header-inner .x-column-header-text {
+    white-space: normal;
+}
+
+$button-small-font-size: dynamic(11px);
+$button-small-padding: 4px;
+
+//Height for form field like combo, textfield, etc
+$form-field-height: 26px;
+
+//Tab Title padding
+$tab-padding: 2px 12px;
+
+//enable grid cell height
+.x-grid-cell-inner {
+	padding : 3px 10px 3px 10px  !important;
+}
+
+// cell merge
+$grid-merge-backcolor:dynamic(#EAEAEA);
+$grid-merge-color: dynamic(#D2D2D2);
+$grid-merge-total-color: dynamic(#EAEAEA);
+
+.grid-merge-cell {
+    background-color:#{$grid-merge-backcolor};
+    border-top:0.2px solid #{$grid-merge-color} !important;
+    border-right:0.2px solid #{$grid-merge-color} !important;
+    border-collaspe:collaspe;
+}
+.grid-merge-cell-color {
+    color:#{$grid-merge-backcolor};
+    background-color:#{$grid-merge-backcolor};
+    border-right:0.2px solid #{$grid-merge-color} !important;
+    border-collaspe:collaspe;
+}
+.grid-merge-cell-total-first {
+    background-color:#{$grid-merge-total-color};
+    border-left:0.2px solid #{$grid-merge-backcolor} !important;
+    border-top:0.2px solid  #{$grid-merge-color} !important;
+    border-right:0.2px solid #{$grid-merge-backcolor} !important;
+    border-bottom:0.2px solid  #{$grid-merge-color} !important;
+    border-collaspe:collaspe;
+}
+.grid-merge-cell-total-last {
+    background-color:#{$grid-merge-total-color};
+    border-left:0.2px solid #{$grid-merge-backcolor} !important;
+    border-top:0.2px solid  #{$grid-merge-color} !important;
+    border-right:0.2px solid #{$grid-merge-color} !important;
+    border-bottom:0.2px solid  #{$grid-merge-color} !important;
+    border-collaspe:collaspe;
+}
+.grid-merge-cell-total-middle {
+    background-color:#{$grid-merge-total-color};
+    border-left:0.2px solid #{$grid-merge-backcolor} !important;
+    border-top:0.2px solid  #{$grid-merge-color} !important;
+    border-right:0.2px solid #{$grid-merge-backcolor} !important;
+    border-bottom:0.2px solid  #{$grid-merge-color} !important;
+    border-collaspe:collaspe;
+}

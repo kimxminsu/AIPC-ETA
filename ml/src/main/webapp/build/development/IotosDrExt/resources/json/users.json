@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "User Foo",
+    "userInfo": {
+      "age": "이름",
+      "email": "qodbtn41@naver.com",
+      "phone": "010-4907-2470"
+    },
+    "orders": [
+      {
+        "id": 101,
+        "userId": 1
+      },
+      {
+        "id": 102,
+        "userId": 1
+      },
+      {
+        "id": 103,
+        "userId": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "User Bar",
+    "userInfo": {},
+    "orders": [
+      {
+        "id": 201,
+        "userId": 2
+      },
+      {
+        "id": 202,
+        "userId": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "User Default Test",
+    "userInfo": {},
+    "orders": [
+      {
+        "id": 201
+      },
+      {
+        "id": 202,
+        "userId": 2
+      }
+    ]
+  }
+]

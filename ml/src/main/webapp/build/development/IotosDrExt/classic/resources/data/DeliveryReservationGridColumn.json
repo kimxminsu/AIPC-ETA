@@ -1,0 +1,519 @@
+{
+	"data": [
+		{
+			"key": "coparnListView",
+			"items": [ 	
+                { "text": ViewUtil.getLabel('WRD_CTDR_TransportOrderNo') , "dataIndex": "transOdrNo",	"caption": "transOdrNo",	"reference": "refTransOdrNo",	"filter": "string",	"width": 120,"locked" : true,
+                    "editor": { "xtype": "textfield", "allowBlank": false, "maxLength": 35, "editable":false }
+                },
+				{ "text": ViewUtil.getLabel('WRD_CTDR_SICNo') , "dataIndex": "sicNo",	"caption": "sicNo",	"reference": "refSicNo",	"filter": "string",	"width": 120,"locked" : true,
+                    "editor": { "xtype": "textfield", "allowBlank": false, "maxLength": 35, "editable":false }
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_IOMode') , "dataIndex": "inOutMode", "caption": "inOutMode", "reference": "refInOutMode", "filter": "string", "width": 80,
+                    "renderer":function(value,metaData,record,rowIndex,colIndex,store,view){
+                        if(value == 'I'){
+                            return 'In';
+                        }else if(value =='O'){
+                            return 'Out';
+                        }
+                        return null;
+                    }
+                },
+		        { "text": ViewUtil.getLabel('WRD_CTDR_VesselAssign') , "reference": "refVslAsign", "width": 80,
+                    "xtype": "widgetcolumn",  "align": "center",
+                    "widget": { 
+                        "xtype": "checkbox",
+                        "display":"flex",
+                        "align": "center",
+                        "listeners": {
+                            "change": "onVslCheckClick"
+                            },
+                        "cls": "x-grid-checkheader-editor" },
+                    "editor": { 
+                        "xtype": "checkbox",
+                        "listeners": {
+                            "change": "onVslCheckClick"
+                        }
+                    }
+
+                 },
+				{ "text": ViewUtil.getLabel('WRD_CTDR_UserVoy') , "dataIndex": "userVoy", "caption": "userVoy", "reference": "refUserVoy", "filter": "string", "width": 80 },
+				{ "text": ViewUtil.getLabel('WRD_CTDR_VesselCode') , "dataIndex": "vslCd", "caption": "vslCd", "reference": "refVslCd", "filter": "string", "width": 80 },				
+				{ "text": ViewUtil.getLabel('WRD_CTDR_CallYear') , "dataIndex": "callYear", "caption": "callYear", "reference": "refCallYear", "filter": "string", "width": 80 },
+				{ "text": ViewUtil.getLabel('WRD_CTDR_CallSeq') , "dataIndex": "callSeq", "caption": "callSeq", "reference": "refCallSeq", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_InVoy') , "dataIndex": "inVoy", "caption": "inVoy", "reference": "refInVoy", "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OutVoy') , "dataIndex": "outVoy", "caption": "outVoy", "reference": "refOutVoy", "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ContainerNo') , "dataIndex": "cntrNo", "caption": "cntrNo", "reference": "refCntrNo", "filter": "string", "width": 100,
+                    "editor": { "xtype": "textfield", "allowBlank": false, "maxLength": 12 }
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_FE') , "dataIndex": "fe", "caption": "fe", "reference": "refFe", "filter": "string", "width": 80,
+                    "editor": { 
+                        "xtype": "combobox", 
+                        "allowBlank": false, 
+                        "bind" :{
+                            "store" : "{feStore}"
+                        },
+                        "displayField": "display",
+						"valueField": "value",
+                        "editable": false,
+                        "maxLength": 1
+                    }
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_StorageCode') , "dataIndex": "storageCode", "caption": "storageCode", "reference": "refStorageCode", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield","maxLength": 35 }
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_HandlingInstS') , "dataIndex": "handleInstr", "caption": "handleInstr", "reference": "refHandleInstr", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield","maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_HandlingInstY') , "dataIndex": "yhandleInstr", "caption": "yhandleInstr", "reference": "refYhandleInstr", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield","maxLength": 35 }
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_AbsoluteConstS') , "dataIndex": "absConst", "caption": "absConst", "reference": "refAbsConst", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield","maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_LCLFCL') , "dataIndex": "lclFcl", "caption": "lclFcl", "reference": "refLclFcl", "filter": "string", "width": 80,
+                    "editor": { 
+                        "xtype": "combobox", 
+                        "bind" :{
+                            "store" : "{lfclStore}"
+                        },
+                        "displayField": "display",
+						"valueField": "value",
+                        "editable": false
+                    },
+                    "renderer":function(value,metaData,record,rowIndex,colIndex,store,view){
+                        if(value == 'F'){
+                            return 'FCL';
+                        }else if(value =='L'){
+                            return 'LCL';
+                        }
+                        return null;
+                    } 
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_SzTp') , "dataIndex": "sztp", "caption": "sztp", "reference": "refSztp", "filter": "string", "width": 80,
+                    "editor": { 
+                        "xtype": "textfield", 
+                        "allowBlank": false, 
+                        "maxLength": 35,
+                        "listeners":{
+                            "change":"onSztpChange"
+                        }}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_SzTp2') , "dataIndex": "sztp2", "caption": "sztp2", "reference": "refSztp2", "filter": "string", "width": 80,
+                    "editor": { 
+                        "xtype": "textfield",
+                        "editable": false,
+                        "maxLength": 35
+                    }
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_PrivateSzTp') , "dataIndex": "privateSztp", "caption": "privateSztp", "reference": "refPrivateSztp", "filter": "string", "width": 80,
+                    "editor": { 
+                        "xtype": "textfield",
+                        "editable": false,  
+                        "maxLength": 35
+                    }
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CntrLen') , "dataIndex": "cntrLength", "caption": "cntrLength", "reference": "refCntrLength", "filter": "string", "width": 80,
+                    "renderer":function(value,metaData,record,rowIndex,colIndex,store,view){
+                        if(value == '2'){
+                            return '20';
+                        }else if(value =='4'){
+                            return '40';
+                        }
+                        return null;
+                    }  
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OPR') , "dataIndex": "ptnrCode", "caption": "ptnrCode", "reference": "refPtnrCode", "filter": "string", "width": 80,
+                    "editor": { 
+                        "xtype": "commoncodefield",
+                        "reference": "ctlCoparnOpr",
+                        "allowBlank": false, 
+                        "params": {
+                            "popupType": ViewUtil.POPUPTYPE_SINGLE, // default : MULTI, ViewUtil.POPUPTYPE_SINGLE
+                            "title": ViewUtil.getLabel("OPRType_Code_Value"),
+                            "itemKey": PopupServiceConstants.ItemKey.OPR_CODE
+                        },
+                        "bind" :{
+                            "value":"{theSearch.ptnrCode}"
+                        }
+                        ,
+                        "editable": false,
+                        "maxLength": 1
+                    },
+                    "renderer": "setCode"
+                },
+    { "text": ViewUtil.getLabel('WRD_CTDR_SA') , "dataIndex": "sa", "caption": "sa", "reference": "refSa", "filter": "string", "width": 80,
+        "editor": { "xtype": "textfield", "maxLength": 35}
+    },
+    { "text": ViewUtil.getLabel('WRD_CTDR_SARegNo') , "dataIndex": "saRegNo", "caption": "saRegNo", "reference": "refSaRegNo", "filter": "string", "width": 80,
+        "editor": { "xtype": "textfield", "maxLength": 35}
+    },
+                { "text": ViewUtil.getLabel('WRD_CTDR_POR') , "dataIndex": "por", "caption": "por", "reference": "refPor", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_POL') , "dataIndex": "pol", "caption": "pol", "reference": "refPol", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_FPOD') , "dataIndex": "fpod", "caption": "fpod", "reference": "refFpod", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_FDEST') , "dataIndex": "fdest", "caption": "fdest", "reference": "refFdest", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_SVCLane') , "dataIndex": "laneCd", "caption": "laneCd", "reference": "refLaneCd", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Wgt') , "dataIndex": "wgt", "caption": "wgt", "reference": "refWgt", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35},
+                    "renderer":function(value,metaData,record,rowIndex,colIndex,store,view){
+                        if(value){
+                            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        }
+                        return null;
+                    }  
+                
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_MaxWgt') , "dataIndex": "maxWgt", "caption": "maxWgt", "reference": "refMaxWgt", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+    { "text": ViewUtil.getLabel('WRD_CTDR_VGM') , "dataIndex": "vgm", "caption": "vgm", "reference": "refVgm", "filter": "string", "width": 80,
+        "editor": { "xtype": "textfield", "maxLength": 35}
+    },   
+                { "text": ViewUtil.getLabel('WRD_CTDR_NoPlugInstr') , "reference": "refNoPlugInstr","width": 80,
+                "xtype" : "checkcolumn"
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TempC') , "dataIndex": "setTempC", "caption": "setTempC", "reference": "refSetTempC", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+    { "text": ViewUtil.getLabel('WRD_CTDR_TempF') , "dataIndex": "setTempF", "caption": "setTempF", "reference": "resetTempF", "filter": "string", "width": 80,
+        "editor": { "xtype": "textfield", "maxLength": 35}
+    },
+                { "text": ViewUtil.getLabel('WRD_CTDR_MinTempC') , "dataIndex": "minTempC", "caption": "minTempC", "reference": "refMinTempC", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_MaxTempC') , "dataIndex": "maxTempC", "caption": "maxTempC", "reference": "refMaxTempC", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_IMDG') , "dataIndex": "imdg", "caption": "imdg", "reference": "refImdg", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_UNNo') , "dataIndex": "unno", "caption": "unno", "reference": "refUnno", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OvH') , "dataIndex": "ovHeight", "caption": "ovHeight", "reference": "refOvHeight", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OvA') , "dataIndex": "ovAft", "caption": "ovAft", "reference": "refOvAft", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OvS') , "dataIndex": "ovStbd", "caption": "ovStbd", "reference": "refOvStbd", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OvF') , "dataIndex": "ovFore", "caption": "ovFore", "reference": "refOvFore", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OvP') , "dataIndex": "ovPort", "caption": "ovPort", "reference": "refOvPort", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OsH') , "dataIndex": "osHeight", "caption": "osHeight", "reference": "refOsHeight", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OsS') , "dataIndex": "osStbd", "caption": "osStbd", "reference": "refOsStbd", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OsP') , "dataIndex": "osPort", "caption": "osPort", "reference": "refOsPort", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Trucker') , "dataIndex": "trucker", "caption": "trucker", "reference": "refTrucker", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TruckerRegNo') , "dataIndex": "truckerRegNo", "caption": "truckerRegNo", "reference": "refTruckerRegNo", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TruckNo') , "dataIndex": "truckNo", "caption": "truckNo", "reference": "refTruckNo", "filter": "string", "width": 100,
+                    "editor": { "xtype": "textfield","maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TruckID') , "dataIndex": "truckId", "caption": "truckId", "reference": "refTruckId", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Forwarder') , "dataIndex": "forwarder", "caption": "forwarder", "reference": "refForwarder", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ForwarderRegNo') , "dataIndex": "forwarderRegNo", "caption": "forwarderRegNo", "reference": "refForwarderRegNo", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ConsigneeRegNo') , "dataIndex": "consigneeRegNo", "caption": "consigneeRegNo", "reference": "refConsigneeRegNo", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+    { "text": ViewUtil.getLabel('WRD_CTDR_Shipper') , "dataIndex": "shipper", "caption": "shipper", "reference": "refShipper", "filter": "string", "width": 80,
+        "editor": { "xtype": "textfield", "maxLength": 35}
+    },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ShipperRegNo') , "dataIndex": "shipperRegNo", "caption": "shipperRegNo", "reference": "refShipperRegNo", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CarrierSeal') , "dataIndex": "sealNo1", "caption": "sealNo1", "reference": "refSealNo1", "filter": "string", "width": 120,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CustomSeal') , "dataIndex": "sealNo2", "caption": "sealNo2", "reference": "refSealNo2", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ExportSeal') , "dataIndex": "sealNo3", "caption": "sealNo3", "reference": "refSealNo3", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_JobOrderNo') , "dataIndex": "jobOdrNo", "caption": "jobOdrNo", "reference": "refJobOdrNo", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+    { "text": ViewUtil.getLabel('WRD_CTDR_ADNo') , "dataIndex": "adNo", "caption": "adNo", "reference": "refAdNo", "filter": "string", "width": 80,
+        "editor": { "xtype": "textfield", "maxLength": 35}
+    },
+
+
+    { "text": ViewUtil.getLabel('WRD_CTDR_EstimatedDate') , "dataIndex": "estimatedDate", "xtype" : "datecolumn","format" : "Y-m-d H:i:s", "width": 150},
+                { "text": ViewUtil.getLabel('WRD_CTDR_ReceivedDate') , "dataIndex": "ediIoDate", "xtype" : "datecolumn","format" : "Y-m-d H:i:s", "width": 150},
+    
+                { "text": ViewUtil.getLabel('WRD_CTDR_ExpireDate') , "dataIndex": "expireDate", "xtype" : "datecolumn","format" : "Y-m-d H:i:s", "width": 150 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ValidDate') , "dataIndex": "validDate", "xtype" : "datecolumn","format" : "Y-m-d H:i:s", "width": 150 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_UsedDate') , "dataIndex": "usedDate","xtype" : "datecolumn","format" : "Y-m-d H:i:s", "width": 150 },
+
+
+                { "text": ViewUtil.getLabel('WRD_CTDR_ConfirmNo') , "dataIndex": "confirmNo", "caption": "confirmNo", "reference": "refConfirmNo", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CollectionOPR') , "dataIndex": "colPtnr", "caption": "colPtnr", "reference": "refColPtnr", "filter": "string", "width": 80 ,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+    { "text": ViewUtil.getLabel('WRD_CTDR_AcceptanceOPR') , "dataIndex": "acceptPtnrNm", "caption": "acceptPtnrNm", "reference": "refacceptPtnrNm", "filter": "string", "width": 80,
+        "editor": { "xtype": "textfield", "maxLength": 35}
+    },
+                { "text": ViewUtil.getLabel('WRD_CTDR_PackageQty') , "dataIndex": "pkgQty", "caption": "pkgQty", "reference": "refPkgQty", "filter": "string", "width": 80 ,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_PackageCode') , "dataIndex": "pkgCd", "caption": "pkgCd", "reference": "refPkgCd", "filter": "string", "width": 80 ,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_PackageWgt') , "dataIndex": "pkgWgt", "caption": "pkgWgt", "reference": "refPkgWgt", "filter": "string", "width": 80 ,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_GeneralRemark') , "dataIndex": "gnrlRmk", "caption": "gnrlRmk", "reference": "refGnrlRmk", "filter": "string", "width": 80 ,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ConfirmRemark') , "dataIndex": "confirmRmk", "caption": "confirmRmk", "reference": "refConfirmRmk", "filter": "string", "width": 80 ,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ControlNo') , "dataIndex": "controlNo", "caption": "controlNo", "reference": "refControlNo", "filter": "string", "width": 110,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_BLNo') , "dataIndex": "blNo", "caption": "blNo", "reference": "refBlNo", "filter": "string", "width": 110,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_DONo') , "dataIndex": "doNo", "caption": "doNo", "reference": "refDoNo", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_FromDepot') , "dataIndex": "fromDepot", "caption": "fromDepot", "reference": "refFromDepot", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ToDepot') , "dataIndex": "toDepot", "caption": "toDepot", "reference": "refToDepot", "filter": "string", "width": 80,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                
+                { "text": ViewUtil.getLabel('WRD_CTDR_UpdateDate') , "dataIndex":"updateTime","xtype" : "datecolumn","format" : "Y-m-d H:i:s", "width": 150},
+                
+                { "text": ViewUtil.getLabel('WRD_CTDR_UpdateStaff') , "dataIndex": "staffCd", "caption": "staffCd", "reference": "refStaffCd", "filter": "string", "width": 80,
+                    "editor": { 
+                        "xtype": "textfield",
+                        "editable": false, 
+                        "maxLength": 35
+                    }
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CargoType') ,"dataIndex": "cargoType", "caption": "cargoType", "reference": "refCargoType", "filter": "string", "width": 100,
+                    "editor": { 
+                        "xtype": "commoncodefield", 
+                        "allowBlank": false, 
+                        "maxLength": 1,
+                        "params": {
+                            "popupType": ViewUtil.POPUPTYPE_SINGLE, // default : MULTI, ViewUtil.POPUPTYPE_SINGLE
+                            "title": ViewUtil.getLabel("CargoType_Code_Value"),
+                            "itemKey": PopupServiceConstants.MasterCode.CARGO_TYPE
+                        },
+                        "bind": {
+                            "value" : "{theSearch.cargoType}"
+                        }
+                    
+                    }
+                    ,"renderer": "setCode"
+                     
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_BookingNo') , "dataIndex": "bookingNo", "caption": "bookingNo", "reference": "refBookingNo", "filter": "string", "width": 110,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_DamageCondition') , "dataIndex": "dmgCond", "caption": "dmgCond", "reference": "refDmgCond", "filter": "string", "width": 80,
+                    "editor": { "xtype": "commoncodefield", "maxLength": 1,
+                        "params": {
+                            "codeValue": "{record.dmgCond}",
+                            "popupType": ViewUtil.POPUPTYPE_SINGLE, // default : MULTI, ViewUtil.POPUPTYPE_SINGLE
+                            "title": ViewUtil.getLabel("Damage_Condition_Code_Value"),
+                            "itemKey": PopupServiceConstants.MasterCode.DAMANAGE_CONDITION,
+                        },
+                        "bind": {
+                            "value": "{record.dmgCond}"
+                        }
+                    },
+                    "renderer":function(value,metaData,record,rowIndex,colIndex,store,view){
+                        if(value == 'S'){
+                            return 'Sound';
+                        }else if(value =='M'){
+                            return 'Minor';
+                        }else if(value =='H'){
+                            return 'Heavy';
+                        }else if(value =='T'){
+                            return 'TOTAL LOSS';
+                        }else if(value =='R'){
+                            return 'NEED TO RE CHECK';
+                        }
+                        return null;
+                    } 
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_DomesticCheck'), "caption": "domesticChk", "reference": "refDomesticChk","width": 80,
+                    "xtype" : "checkcolumn"
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_MediumType') , "dataIndex": "mediumType", "caption": "mediumType", "reference": "refMediumType", "filter": "string", "width": 80,
+                    "renderer":function(value,metaData,record,rowIndex,colIndex,store,view){
+                        if(value == 'E'){
+                            return 'EDI';
+                        }else if(value =='M'){
+                            return 'Manual';
+                        }else if(value =='I'){
+                            return 'Interface';
+                        }else if(value =='A'){
+                            return 'API';
+                        }else if(value =='G'){
+                            return 'Gate';
+                        }else if(value =='W'){
+                            return 'WEB';
+                        }
+                        return null;
+                    } 
+                },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Remark') , "dataIndex": "remark", "caption": "remark", "reference": "refRemark", "filter": "string", "width": 250,
+                    "editor": { "xtype": "textfield", "maxLength": 35}
+                }
+			]
+		},
+        {
+			"key": "generalPickupOrderListView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTDR_SzTp2') , "dataIndex": "sztp2", "caption": "sztp2",  "filter": "string", "width": 80 },
+				{ "text": ViewUtil.getLabel('WRD_CTDR_PrivateSzTp') , "dataIndex": "psztp", "caption": "privateSztp",  "filter": "string", "width": 80 },				
+				{ "text": ViewUtil.getLabel('WRD_CTDR_PickupQty') , "dataIndex": "pickupQty", "caption": "pickupQty",  "filter": "string", "width": 80 },
+				{ "text": ViewUtil.getLabel('WRD_CTDR_AssignQty') , "dataIndex": "assignQty", "caption": "assignQty",  "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_InOutQty') , "dataIndex": "ioQty", "caption": "ioQty",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_RemainQty') , "dataIndex": "remainQty", "caption": "remainQty",  "filter": "string", "width": 100 }
+			]
+		},
+        {
+			"key": "positioningCntrListView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTDR_BlockArea') , "dataIndex": "blockArea", "caption": "BlockArea", "reference" : "refBlockArea", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Bay') , "dataIndex": "bay", "caption": "Bay", "reference" : "refbay", "filter": "string", "width": 50 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_StackDays') , "dataIndex": "averageStackDays", "caption": "blockArea", "reference" : "refaverageStackDays", "filter": "number", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_StackQty') , "dataIndex": "bayStackingQty", "caption": "StackingQty", "filter": "number", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_SelectQty') , "dataIndex": "selectQty", "caption": "SelectQty", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ApplyCheck'), "dataIndex" : "checkPosition" ,"caption": "ApplyChk", "reference": "refApplyChk","width": 80,
+                    "xtype" : "checkcolumn" ,"align" : "center" ,"sortable":false,
+                    "listeners" : {
+                        "checkchange" : "onYardPositionClick"
+                    }
+                    
+                }
+			]
+		},
+        {
+            "key": "wholeContainerView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTDR_ContainerNo') , "dataIndex": "cntrNo", "caption": "CntrNo", "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_SzTp') , "dataIndex": "sztp", "caption": "sztp", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_SzTp2') , "dataIndex": "sztp2", "caption": "sztp2",  "filter": "number", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_PrivateSzTp') , "dataIndex": "bayStackingQty", "caption": "bayStackingQty", "filter": "number", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Status') , "dataIndex": "displayCntrState", "caption": "displayCntrState", "filter": "number", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_VslCd') , "dataIndex": "vslCd", "caption": "VslCd", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CallYear') , "dataIndex": "callYear", "caption": "callYear", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CallSeq') , "dataIndex": "callSeq", "caption": "callSeq", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_UserVoyage') , "dataIndex": "userVoy", "caption": "userVoy", "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TruckNoOut') , "dataIndex": "truckNo2", "caption": "truckNo2", "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_FE') , "dataIndex": "fe", "caption": "fe", "filter": "string", "width": 50 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OPR') , "dataIndex": "ptnrCode", "caption": "ptnrCode", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CargoType') , "dataIndex": "displayCargoType", "caption": "displayCargoType", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TempC') , "dataIndex": "setTempC", "caption": "SetTempC", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TempF') , "dataIndex": "selectQty", "caption": "selectQty", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_IMDG') , "dataIndex": "imdg", "caption": "Imdg", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_UNNo') , "dataIndex": "unno", "caption": "Unno", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_POL') , "dataIndex": "pol", "caption": "Pol", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_POR') , "dataIndex": "por", "caption": "Por", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Delivery') , "dataIndex": "displayDelv", "caption": "displayDelv", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Block') , "dataIndex": "block", "caption": "block", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Bay') , "dataIndex": "bay", "caption": "bay", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Row') , "dataIndex": "row", "caption": "row", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Tier') , "dataIndex": "tier", "caption": "tier", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Area') , "dataIndex": "yardPosition", "caption": "yardPosition",  "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_DamageCondition') , "dataIndex": "dmgCond", "caption": "dmgCond",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CustomsHold') , "dataIndex": "displayCHoldCheck", "caption": "displayCHoldCheck",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TerminalHold') , "dataIndex": "tholdChk", "caption": "tholdChk",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TerminalInDate') , "dataIndex": "inTmnlDate", "caption": "inTmnlDate",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_StackDays') , "dataIndex": "stackDays", "caption": "stackDays",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_StorageCode') , "dataIndex": "storageCode", "caption": "storageCode",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ContainerCondition') , "dataIndex": "cntrCond", "caption": "cntrCond",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CustomsReleaseNo') , "dataIndex": "selectQty", "caption": "selectQty", "filter": "string", "width": 100 }
+			]
+        },{
+            "key": "selectedContainerView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTDR_ContainerNo') , "dataIndex": "cntrNo", "caption": "CntrNo", "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_SzTp') , "dataIndex": "sztp", "caption": "sztp", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_SzTp2') , "dataIndex": "sztp2", "caption": "sztp2",  "filter": "number", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_PrivateSzTp') , "dataIndex": "bayStackingQty", "caption": "bayStackingQty", "filter": "number", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Status') , "dataIndex": "displayCntrState", "caption": "displayCntrState", "filter": "number", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_UserAssigned') , "dataIndex": "userAssigned", "caption": "userAssigned", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_VslCd') , "dataIndex": "vslCd", "caption": "VslCd", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CallYear') , "dataIndex": "callYear", "caption": "callYear", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CallSeq') , "dataIndex": "callSeq", "caption": "callSeq", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_UserVoyage') , "dataIndex": "userVoy", "caption": "userVoy", "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TruckNoOut') , "dataIndex": "truckNo2", "caption": "truckNo2", "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_FE') , "dataIndex": "fe", "caption": "fe", "filter": "string", "width": 50 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_OPR') , "dataIndex": "ptnrCode", "caption": "ptnrCode", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CargoType') , "dataIndex": "displayCargoType", "caption": "displayCargoType", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TempC') , "dataIndex": "setTempC", "caption": "SetTempC", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TempF') , "dataIndex": "selectQty", "caption": "selectQty", "filter": "string", "width": 60 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_IMDG') , "dataIndex": "imdg", "caption": "Imdg", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_UNNo') , "dataIndex": "unno", "caption": "Unno", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_POL') , "dataIndex": "pol", "caption": "Pol", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_POR') , "dataIndex": "por", "caption": "Por", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Delivery') , "dataIndex": "displayDelv", "caption": "displayDelv", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Block') , "dataIndex": "block", "caption": "block", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Bay') , "dataIndex": "bay", "caption": "bay", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Row') , "dataIndex": "row", "caption": "row", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Tier') , "dataIndex": "tier", "caption": "tier", "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_Area') , "dataIndex": "yardPosition", "caption": "yardPosition",  "filter": "string", "width": 80 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_DamageCondition') , "dataIndex": "dmgCond", "caption": "dmgCond",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CustomsHold') , "dataIndex": "displayCHoldCheck", "caption": "displayCHoldCheck",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TerminalHold') , "dataIndex": "tholdChk", "caption": "tholdChk",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_TerminalInDate') , "dataIndex": "inTmnlDate", "caption": "inTmnlDate",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_StackDays') , "dataIndex": "stackDays", "caption": "stackDays",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_StorageCode') , "dataIndex": "storageCode", "caption": "storageCode",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_ContainerCondition') , "dataIndex": "cntrCond", "caption": "cntrCond",  "filter": "string", "width": 100 },
+                { "text": ViewUtil.getLabel('WRD_CTDR_CustomsReleaseNo') , "dataIndex": "selectQty", "caption": "selectQty", "filter": "string", "width": 100 }
+			]
+        },{
+            "key" : "selectOPRCode",
+            "items" : [
+                { "text" : ViewUtil.getLabel('WRD_CTDR_Code') , "dataIndex": "code", "caption": "code", "filter": "string" , "flex" : 1 },
+                { "text" : ViewUtil.getLabel('WRD_CTDR_Code_Name') , "dataIndex": "name", "caption": "codeName", "filter": "string", "flex": 1 }
+            ]
+        },{
+            "key" : "selectDmgCondCode",
+            "items" : [
+                { "text" : ViewUtil.getLabel('WRD_CTDR_Code') , "dataIndex": "code", "caption": "code", "filter": "string" , "flex" : 1 },
+                { "text" : ViewUtil.getLabel('WRD_CTDR_Code_Name') , "dataIndex": "codeName", "caption": "codeName", "filter": "string", "flex": 1 }
+            ]
+        }
+    ]
+}

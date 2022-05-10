@@ -1,0 +1,44 @@
+{
+  "name": "tsb-overrides",
+  "namespace": "Tsb.overrides",
+  "format": "1",
+  "version": "1.0.12",
+  "compatVersion": "1.0.0",
+  "creator": "TSB Ltd.",
+  "summary": "Short summary",
+  "detailedDescription": "Long description of package",
+  "type": "code",
+  "signatures": [
+    {
+      "name": "TSB Ltd.",
+      "uuid": "b710dfab-5f43-42f1-97ae-a72bd539de55",
+      "created": "2016-06-24T05:46:59Z",
+      "algorithm": "SHA1withRSA",
+      "nonce": "fSYCWCg6eVI\u003d",
+      "signature": "G8lWMrmWccngtmN6IhJYQih2gRkPahTLVqrcxS/DWBCpLruYqm4RbbsXAYk4425MpTGgLcLEfBLix7qAum0WFRVQA2cBFvmtZ5POBdwXQAiFZD9Z9omI1/8F8kt69To2QTBDHwIBuI8hekix9KkuPGKlE9kmTAyjASenIP29Cso3f9a2rzP9rDsqaai5ghaVkpqoBRF+/cXjPblYzmKFnds256UTgogyxgXD3K5Vo4g3BfQ7ajdXufaauFzPbRjhVzH5ktkf1r9RQu3Q6CaetuaR9gsvA4ubzvCzW3DZJZolBt0nwjVAm/IksFKjMUESZTz7dt5RaBFk/hJkx6WrGw\u003d\u003d"
+    }
+  ],
+  "slicer": {
+    "js": [
+      {
+        "path": "${package.dir}/sass/example/custom.js",
+        "isWidgetManifest": true
+      }
+    ]
+  },
+  "toolkit": "classic",
+  "output": "${package.dir}/build",
+  "sass": {
+    "namespace": "Tsb.overrides",
+    "etc": "${package.dir}/sass/etc/all.scss,${package.dir}/${toolkit.name}/sass/etc/all.scss",
+    "var": "${package.dir}/sass/var,${package.dir}/${toolkit.name}/sass/var",
+    "src": "${package.dir}/sass/src,${package.dir}/${toolkit.name}/sass/src"
+  },
+  "classpath": "${package.dir}/src,${package.dir}/${toolkit.name}/src",
+  "overrides": "${package.dir}/overrides,${package.dir}/${toolkit.name}/overrides",
+  "example": {
+    "path": [
+      "${package.dir}/examples"
+    ]
+  }
+}

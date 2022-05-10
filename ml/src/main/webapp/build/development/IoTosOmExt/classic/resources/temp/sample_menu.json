@@ -1,0 +1,25 @@
+{
+	"data": [
+        // {
+        //     "menuId": "TEMPLATE",
+        //     "upperMenuId": "ROOT",
+        //     "menuOrder": "17",
+        //     "screenPathAddress": null,
+        //     "screenIconDefineCode": "x-fa fa-star",
+        //     "menuTypeCode": "FOLDER",
+        //     "menuScreenName": "TEMPLATE",
+        //     "depth": "1"
+        // },
+        // {
+    
+        //     "menuId": "ErrorCode",
+        //     "upperMenuId": "TEMPLATE",
+        //     "menuOrder": "18",
+        //     "screenPathAddress": "app-errorcode",
+        //     "screenIconDefineCode": "x-fa fa-star",
+        //     "menuTypeCode": "SCREEN",
+        //     "menuScreenName": "ErrorCode",
+        //     "depth": "2"
+        // }
+	]
+}

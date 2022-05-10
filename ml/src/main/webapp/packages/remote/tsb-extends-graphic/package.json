@@ -1,0 +1,63 @@
+{
+  "name": "tsb-extends-graphic",
+  "namespace": "TsbExtendsGraphic",
+  "format": "1",
+  "version": "1.0.16",
+  "compatVersion": "1.0.0",
+  "creator": "TSB Ltd.",
+  "summary": "Short summary",
+  "detailedDescription": "Long description of package",
+  "type": "code",
+  "requires": [
+    "charts"
+  ],
+  "signatures": [
+    {
+      "name": "TSB Ltd.",
+      "uuid": "b710dfab-5f43-42f1-97ae-a72bd539de55",
+      "created": "2016-09-05T08:25:26Z",
+      "algorithm": "SHA1withRSA",
+      "nonce": "zLN2e+WPaSc\u003d",
+      "signature": "AupwjOvWETuQdSaClXP1KRS7+jPfZjmmm+MnX98MuCtwJzaAYbZ6t4qzioasqM7dnuBPuxynMZ5bpYqRPlGmWCkX0XVbbWh25+nRQAI47X8cCPz2l9fAgadIGX/iF34+p853hoeW2jjaVkP1D5Fk8yeIWeJ1vJ7PoLFHrqGfeCFsZoey+hjgy4GkuGU4RfqwxgD79ssQZuGfFkZfahe47qiHNe80ZaRdGPUsyM6sjTwQJRutZDEuwl18gQT3OgizmAPratuKJ0N2sa/Yyqf8+6hbfGIARd+Y38XBYrrLryjL2ojXHdLX/XKJXi3HIJY1LuyaL37zom0FdMbvI179Xw\u003d\u003d"
+    }
+  ],
+  "slicer": {
+    "js": [
+      {
+        "path": "${package.dir}/sass/example/custom.js",
+        "isWidgetManifest": true
+      }
+    ]
+  },
+  "toolkit": "classic",
+  "output": "${package.dir}/build",
+  "sass": {
+    "namespace": "TsbExtendsGraphic",
+    "etc": [
+      "${package.dir}/sass/etc/all.scss",
+      "${package.dir}/${toolkit.name}/sass/etc/all.scss"
+    ],
+    "var": [
+      "${package.dir}/sass/var",
+      "${package.dir}/${toolkit.name}/sass/var"
+    ],
+    "src": [
+      "${package.dir}/sass/src",
+      "${package.dir}/${toolkit.name}/sass/src"
+    ]
+  },
+  "classpath": [
+    "${package.dir}/src",
+    "${package.dir}/${toolkit.name}/src"
+  ],
+  "overrides": [
+    "${package.dir}/overrides",
+    "${package.dir}/${toolkit.name}/overrides"
+  ],
+  "example": {
+    "path": [
+      "${package.dir}/examples"
+    ]
+  },
+  "framework": "ext"
+}

@@ -1,0 +1,584 @@
+/*
+ * javascript.json
+ * @Author: SL.Choi 
+ * @Date: 2020-04-14 09:27:02
+ * @Last Modified by: SL.Choi 
+ * @Last Modified time: 2020-04-22 16:52:40
+ * >>>>>> Index <<<<<
+ * 
+ * Basic - panelview, gridpanelview, viewmodel, controller
+ * Component - form, combobox, renderer, vtype, textfield, window, addsavebuttonwindow
+ * Event - click, change, onLoad, edit, canceledit, add, remove 
+ * etc - comment, componentquery, references, getLabel(locale)
+ * Message - info, warning, question, infoToast, warningToast, savesuccess, duplication fail, nodata, mandattory field, showprogressbar, hideprogressbar 
+ * 
+ * 
+ */
+
+ {
+    /********************** Basic  **********************/
+
+    "Ext JS Panel View": {
+        "prefix": "extjs_panelview",
+        "body": [
+            "xtype: '${TM_FILENAME_BASE/(.*)/${1:/downcase}/}',",
+            "requires : [",
+            "     /*** Controller and ViewModel Class name here ***/",
+            "],",
+            "listeners : {",
+            "   //beforerender: ''",
+            "},",
+            "/*** Add panel layout option like width ***/",
+            "initComponent: function(){",
+            "    var me = this;",
+            "    Ext.apply(me, {",
+            "        items : [{",
+            "            /*** Input Panel Item here ***/",
+            "        }],",
+            "        dockedItems : [{",
+            "            /*** Input Toolbar Item",
+            "            xtype: 'toolbar',",
+            "            dock: 'top',",
+            "            items: [{",
+            "                xtype: 'button',",
+            "                text: 'Add',",
+            "                handler: 'onAdd'",
+            "            }]",
+            "            ***/",
+            "        }]",
+            "    });",
+            "    me.callParent();",
+            "}",
+        ],
+        "description": "New Ext JS view"
+    },
+
+    "Ext JS Grid Panel View": {
+        "prefix": "extjs_gridpanelview",
+        "body": [
+            "xtype: '${TM_FILENAME_BASE/(.*)/${1:/downcase}/}',",
+            "requires : [",
+            "     /*** Controller and ViewModel Class name here ***/",
+            "     'Ext.grid.plugin.RowEditing'",
+            "],",
+            "/*** Add panel layout option like width ***/",
+            "initComponent: function(){",
+            "    var me = this;",
+            "    var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {",
+            "        clicksToEdit: 2,",
+            "        pluginId :'rowEditor',",
+            "        listeners:{",
+            "            cancelEdit: 'onCancelEdit',",
+            "            edit: 'onAfterEdit',",
+            "            beforeedit: 'onBeforeEdit'",
+            "        }",
+            "    });",
+            "    Ext.apply(me, {",
+            "        items : [{",
+            "            /*** Input Panel Item here ***/",
+            "            xtype: 'grid',",
+            "            reference: '', /*** Input Grid Reference Name ***/",
+            "            header: false,",
+            "            bind: {",
+            "                    store: '{}' /*** Input Store ***/",
+            "            },",
+            "            plugins:[rowEditing],",
+            "            listeners: {",
+            "                //beforerender: 'onLoad'",
+            "            },",
+            "            columns: [",
+            "                { header: 'Num', xtype: 'rownumberer', align : 'center', flex: 0.5},",
+            "                { header: 'Port Code', reference: 'refPortCd', dataIndex: 'portCd', flex: 1,",
+            "                    editor: {",
+            "                        xtype: 'textfield',",
+            "                    }",
+            "                }",
+            "            ]",
+            "        }],",
+            "        dockedItems : [{",
+            "            /*** Input Toolbar Item",
+            "            xtype: 'toolbar',",
+            "            dock: 'top',",
+            "            items: [{",
+            "                xtype: 'button',",
+            "                text: 'Add',",
+            "                handler: 'onAddPort'",
+            "            }]",
+            "            ***/",
+            "        }]",
+            "    });",
+            "me.callParent();",
+            "}",
+        ],
+        "description": "New Ext JS Grid view"
+    },
+
+    "Ext JS ViewModel": {
+        "prefix": "extjs_viewmodel",
+        "body": [
+            ",",
+            "formulas: {",
+            "    isEditable : {",
+            "        bind: {",
+            "            selection: '{${1:refgridName}.selection}'",
+            "        },",
+            "        get: function (data) {",
+            "            if(data.selection) {",
+            "                if(data.selection.phantom){",
+            "                    return true;",
+            "                }",
+            "                return false;",
+            "            }",
+            "            return false;",
+            "        }",
+            "    }",
+            "},",
+            "stores: {",
+            "    testStore: {",
+            "        model: 'IotosSpExt.model.User',",
+            "        storeId: 'userInfoStore',",
+            "        autoLoad: false,",
+            "        queryMode:'local', //Input this when bind in combobox", 
+            "        proxy: {",
+            "            type : 'rest',",
+            "            url : '', /*** Input Url ***/",
+            "            extraParams : {",
+            "                userId : 'TSB'",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "description": "New Ext JS viewmodel"
+    },
+
+    "Ext JS ViewController": {
+        "prefix": "extjs_controller",
+        "body": [
+            "//extend: 'ESVC.view.foundation.BaseViewController',",
+            ",",
+            "listen: { ",
+            "    controller: {",
+            "        '*': {",
+            "        //fire Event mapping",
+            "        }",
+            "    }",
+            "},",
+            "init : function () {",
+            "    /*** Input Store, grid setting ***/",
+            "    //store = this.getStore('');",
+            "    //grid = this.getReferences().refGridName; ***/",
+            "},",
+            "/*** Input method ***/"
+        ],
+        "description": "New Ext JS controller"
+    },
+
+    
+
+    /********************** Component  **********************/
+
+    "Formula iseditable": {
+        "prefix": "extjs_editable",
+        "body": [
+            "isEditable : {",
+            "    bind: {",
+            "        selection: '{${1:refgridName}.selection}'",
+            "    },",
+            "    get: function (data) {",
+            "        if(data.selection) {",
+            "            if(data.selection.phantom){",
+            "                return true;",
+            "            }",
+            "            return false;",
+            "        }",
+            "        return false;",
+            "    }",
+            "}"
+        ],
+        "description": "iseditable formula"
+    },
+
+    "Checkbox": {
+        "prefix": "extjs_checkbox",
+        "body": [
+			"xtype : 'checkboxfield',",
+			"reference: '', //Insert refName like refXXX",
+            "bind : {",	
+            "    store : '',",
+            "    value : '', //default value",
+            "    readOnly: '{crudIns}', // define in ViewModel-formula change by crudtype",
+            "    fieldStyle: '{fsIns}' //change by crudtype",
+            "},",
+            "displayField : '',",
+            "valueField : '',",	
+            "editable : false"
+        ],
+        "description": "Creates a new Ext JS Combobox"
+    },
+
+    "Combobox": {
+        "prefix": "extjs_combobox",
+        "body": [
+			"xtype : 'combobox',",
+			"reference: '${1:refname}', //Insert refName like refXXX",
+            "bind: '{${2:bindStore}}', /*** Input bind store ***/", 	
+            "displayFieldLabel: getLabel('${3:label name}')"
+        ],
+        "description": "Creates a new Ext JS Combobox"
+    },
+
+    "Add Vtype": {
+        "prefix": "extjs_vtype_id",
+        "body": [
+            "Ext.apply(Ext.form.VTypes, {",
+            "    'idText': 'ID has Only Number and English character',",
+            "    'idMask': /([A-Z0-9a-z])/, //입력가능",
+            "    'idRe': /([A-Za-z]{1,})([0-9]{1,})/,//validation",
+            "    'id': function (v) {",
+            "        return this.idRe.test(v);",
+            "    }",
+            "});"
+        ],
+        "description": "Add User comment with today date"
+    },
+
+    "textfield": {
+        "prefix": "extjs_textfield",
+        "body": [
+            "xtype: 'textfield',",
+            "allowBlank: false, //필수입력값인지",
+            "maxLength: 20, //최대입력문자",
+            "enforceMaxLength : true,",
+            "allowOnlyWhitespace: false, //공백 허용",
+            "fieldStyle: 'text-transform:uppercase', //대문자만 입력할 때 fieldStyle과 listeners 둘다 적용",
+            "listeners:{",
+            "    change: function(){",
+            "        this.setValue(this.getValue().toUpperCase());",
+            "    }",
+            "}",
+        ],
+        "description": "Textfield config"
+    },
+
+    "Add Renderer": {
+        "prefix": "extjs_renderer",
+        "body": [
+            "renderer: function(value, metaData, record, rowIndex, colIndex, store) {",
+            "    metaData.style =  'background: #' + value + ';' //셀의 background 바꿀 수 있음",
+            "}",
+        ],
+        "description": "Renderer config"
+    },
+
+    "Open Window": {
+        "prefix": "extjs_window",
+        "body": [
+            "refs = this.getReferences();",
+            "var win = refs.${1:window ref name};",
+            "if(!win){",
+            "    win = Ext.create('Ext.window.Window', {",
+            "        reference: '${1}', /*** Input Reference Name ***/",
+            "        title: '${2:window title}', /*** Input Window Title ***/",
+            "        layout: 'fit',",
+            "        width: 1400,",
+            "        height:800,",
+            "        modal: true,",
+            "        maximizable: true,",
+            "        resizable: true,",
+            "        resizeHandles: 'all',",
+            "        constrain: false,",
+            "        scrollable:true,",
+            "        closeAction: 'destroy',",
+            "        iconCls: 'x-fa fa-ship', /*** Input Icon ***/",
+            "        items: [{",
+            "            xtype: '${3:Inner view xtype}', /*** Input Window Inner View ***/",
+            "            layout: 'fit'",
+            "        }],",
+            "        //tools: [add, modify], //Input Window Header Button ",
+            "        listeners : {",
+            "            'close' : function(win) {",
+            "                win.destroy();",
+            "            }",
+            "        }",
+            "    });",
+            "    this.getView().add(win);",
+            "}",
+            "win.show();",
+            "win.toFront();",
+        ],
+        "description": "Open Window"
+    },
+
+    "Open Window with Add Save button": {
+        "prefix": "extjs_window_addsave",
+        "body": [
+            "refs = this.getReferences();",
+            "var add = {",
+            "    xtype: 'button'",
+            "    text: 'Add'",
+            "    iconCls: 'x-fa fa-plus'",
+            "    listeners: {",
+            "        click: function(){",
+            "            Ext.ComponentQuery.query('#${1:Form ItemId}')[0].getForm().reset();" /*** form itemId***/,
+            "        }",
+            "    }",
+            "};",
+            "var save = {",
+            "    xtype: 'button'",
+            "    text: 'Save'",
+            "    iconCls: 'x-fa fa-save'",
+            "    listeners: {",
+            "        click: function(){",
+            "            Ext.ComponentQuery.query('${2:Save method view xtype}')[0].getController().${3:save method}();" /*** form itemId***/,
+            "        }",
+            "    }",
+            "};",
+            "var win = refs.${4:window ref name};",
+            "if(!win){",
+            "    win = Ext.create('Ext.window.Window', {",
+            "        reference: '${4}', /*** Input Reference Name ***/",
+            "        title: '${5:window title}', /*** Input Window Title ***/",
+            "        layout: 'fit',",
+            "        width: 1400,",
+            "        height:800,",
+            "        modal: true,",
+            "        maximizable: true,",
+            "        resizable: true,",
+            "        resizeHandles: 'all',",
+            "        constrain: false,",
+            "        scrollable:true,",
+            "        closeAction: 'destroy',",
+            "        iconCls: 'x-fa fa-ship', /*** Input Icon ***/",
+            "        items: [{",
+            "            //xtype: '${6:Inner view xtype}', /*** Input Window Inner View ***/",
+            "            //layout: 'fit'",
+            "        }],",
+            "        //tools: [add, save], //Input Window Header Button ",
+            "        listeners : {",
+            "            'close' : function(win) {",
+            "                win.destroy();",
+            "            }",
+            "        }",
+            "    });",
+            "    this.getView().add(win);",
+            "}",
+            "win.show();",
+            "win.toFront();",
+        ],
+        "description": "Open Window"
+    },
+
+    /********************** event **********************/
+    "Ext JS Click event": {
+        "prefix": "extjs_event_buttonclick",
+        "body": [
+            "onClick : function (btn, e, eOpts){",
+            "    //btn.value = buttton ",
+            "}"
+        ],
+        "description": "Add Click event"
+    },
+
+    "Ext JS Change event": {
+        "prefix": "extjs_event_onChange",
+        "body": [
+            "onChange : function (obj, newVal, oldVal, eOpts){",
+            "    if(newVal==='' || newVal === null){",
+            "        return;",
+            "    }",
+            "    if(oldVal != null && newVal != oldVal){",
+            "        /*** Input Code ***/",
+            "    }",
+            "}"
+        ],
+        "description": "onChange Event"
+    },
+
+    "Ext JS Load event": {
+        "prefix": "extjs_event_onLoad",
+        "body": [
+            "onLoad : function (){",
+            "    fn_getStoreLoad_(store);",
+            "}"
+        ],
+        "description": "onLoad Event"
+    },
+
+    "Ext JS Cancel Edit event": {
+        "prefix": "extjs_event_canceledit",
+        "body": [
+            "onCancelEdit : function (rowEditing, context){",
+            "    if (context.record.phantom) {",
+            "        context.store.remove(context.record);",
+            "    }",
+            "}"
+        ],
+        "description": "onCancelEdit Event"
+    },
+
+    "Ext JS Edit event": {
+        "prefix": "extjs_event_edit",
+        "body": [
+            "onAfterEdit : function (editor, context){",
+            "    fn_createUpdateRecord_(context.record, context.store);",
+            "},"
+        ],
+        "description": "OnAfterEdit Event"
+    },
+
+    "Ext JS Add event": {
+        "prefix": "extjs_event_add",
+        "body": [
+            "onAdd: function(){",
+            "    fn_addRow_(grid);",
+            "},"
+        ],
+        "description": "Add Event"
+    },
+
+    "Ext JS Remove event": {
+        "prefix": "extjs_event_remove",
+        "body": [
+            "onRemove : function (){",
+            "    var selection = fn_getSelectedRecord_(grid);",
+            "    fn_removeRecord_(store, selection);",
+            "},"
+        ],
+        "description": "Remove Event"
+    },
+    /********************** etc **********************/
+    "Add Componentquery": {
+        "prefix": "extjs_component_query",
+        "body": [
+            "Ext.ComponentQuery.query('')[0]" //itemId로 찾을 경우 #itemId, xtype으로 찾을 경우 xtype
+        ],
+        "description": "Add ComponentQuery"
+    },
+
+    "Line comment": {
+		"prefix": "/*",
+		"body": [
+			"/********************** ${1:} **********************/"
+		],
+		"description": "line comment"
+    },
+
+    "References": {
+        "prefix": "extjs_reference",
+        "body": [
+            "this.getReferences().${1:reference name};"
+        ],
+        "description": "Add reference"
+    },
+
+    "getLabel": {
+        "prefix": "getlabel",
+        "body": [
+            "getLabel('${1}')"
+        ],
+        "description": "Get Locale label by key"
+    },
+
+    //rownumber
+    "rowNumber": {
+        "prefix": "extjs_rownumber",
+        "body": [
+            "{ header: 'Num', xtype: 'rownumberer', align : 'center', flex: 0.5},"
+        ],
+        "description": "Input row number"
+    },
+
+    //timeout
+    "setTimeout": {
+        "prefix": "extjs_timeout",
+        "body": [
+            "setTimeout(function(){",
+            "    ",
+            "}, 100);"
+        ],
+        "description": "Time out"
+    },
+    //progress bar
+    "progressBar": {
+        "prefix": "extjs_progressbar",
+        "body": [
+            "Ext.MessageBox.show({",
+            "    title: 'Please wait',",
+            "    msg: 'Uploading data...',",
+            "    progressText: 'Loading...',",
+            "    width:300,",
+            "    wait:true,",
+            "    waitConfig: {interval:300}",
+            "});"
+        ],
+        "description": "Progress Bar"
+    },
+    //combobox store local
+    
+    /********************** message **********************/
+    "msg.duplicate": {
+        "prefix": "msg_duplicate",
+        "body": [
+            "MessageUtil.duplicationFail();"
+        ],
+        "description": "Duplication Message"
+    },
+
+    "msg.mandatory": {
+        "prefix": "msg_mandatory",
+        "body": [
+            "MessageUtil.mandatoryFieldInValid();"
+        ],
+        "description": "Mandatory Message"
+    },
+
+    "msg.showprogress": {
+        "prefix": "msg_progressbarshow",
+        "body": [
+            "MessageUtil.showBlockingProgressbar();"
+        ],
+        "description": "Show Progressbar"
+    },
+
+    "msg.hideprogress": {
+        "prefix": "msg_progressbarhide",
+        "body": [
+            "MessageUtil.hideBlockingProgressbar();"
+        ],
+        "description": "Hide Progressbar"
+    },
+
+    "msg.noData": {
+        "prefix": "msg_nodata",
+        "body": [
+            "MessageUtil.noMatchData();"
+        ],
+        "description": "No Data"
+    },
+
+    "msg.saveSuccess": {
+        "prefix": "msg_savesuccess",
+        "body": [
+            "MessageUtil.saveSuccess();"
+        ],
+        "description": "saveSuccess"
+    },
+
+    "msg.warningToast": {
+        "prefix": "msg_warningtoast",
+        "body": [
+            "MessageUtil.warningToast('Warning', ${2:msg});" //params, callBack
+        ],
+        "description": "warningToast"
+    },
+
+    "msg.infoMsg": {
+        "prefix": "msg_infotoast",
+        "body": [
+            "MessageUtil.infoToast('Information', ${2:msg});" //params, callBack
+        ],
+        "description": "infoToast"
+    }
+
+}

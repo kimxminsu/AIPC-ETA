@@ -1,0 +1,58 @@
+{
+	"data": [{
+		"hd": "D",
+		"ruleCode": "COM01",
+		"rule": "Prohibited on Outboard Rows",
+		"level": "error"
+	},{
+		"hd": "D",
+		"ruleCode": "COM02",
+		"rule": "Prohibited on bay 01/02 positions not protected by break water",
+		"level": "error"
+	},{
+		"hd": "D",
+		"ruleCode": "COM03",
+		"rule": "Prohibited on bay 03 positions not protected by units in bay 01",
+		"level": "error"
+	},{
+		"hd": "D",
+		"ruleCode": "COM04",
+		"rule": "Temperature controlled cargo (UNNO 3113-20 and 3233-40) stowed on bottom tier, 4 x 20' bays from living quarters, close to ship's side with door accessible",
+		"level": "error"
+	},{
+		"hd": "D",
+		"ruleCode": "COM05",
+		"rule": "Class 1.1 and 1.2 prohibited on bay 01/02/03",
+		"level": "error"
+	},{
+		"hd": "D",
+		"ruleCode": "COM06",
+		"rule": "Winter Time: Prohibited on bay 01/02/03 on Atlantic & Pacific crossings",
+		"level": "warn"
+	},{
+		"hd": "H",
+		"ruleCode": "COM07",
+		"rule": "Marine Pollutant preferably stowed under deck where IMDG code permits",
+		"level": "warn"
+	},{
+		"hd": "H",
+		"ruleCode": "COM08",
+		"rule": "Prohibited Under Deck (ML specific UNNO)",
+		"level": "error"
+	},{
+		"hd": "H",
+		"ruleCode": "COM11",
+		"rule": "Prohibited Under Deck (Class 1, 2.1, 3, 5.1, 6.1, 8)",
+		"level": "error"
+	},{
+		"hd": "H",
+		"ruleCode": "COM09",
+		"rule": "Prohibited in Cargo Hold fore/aft of Accommodation & Funnel",
+		"level": "error"
+	},{
+		"hd": "D",
+		"ruleCode": "COM10",
+		"rule": "Prohibited on 40' bay (60' if 20' dedicated) fore/aft of Accommodation & Funnel ",
+		"level": "error"
+	}]
+}

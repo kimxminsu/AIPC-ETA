@@ -1,0 +1,45 @@
+{
+  "name": "tsb-extends",
+  "namespace": "TsbExtends",
+  "format": "1",
+  "version": "1.0.22",
+  "compatVersion": "1.0.0",
+  "creator": "TSB Ltd.",
+  "summary": "Short summary",
+  "detailedDescription": "Long description of package",
+  "type": "code",
+  "signatures": [
+    {
+      "name": "TSB Ltd.",
+      "uuid": "b710dfab-5f43-42f1-97ae-a72bd539de55",
+      "created": "2016-07-15T08:25:57Z",
+      "algorithm": "SHA1withRSA",
+      "nonce": "sm1+8jSvXjI\u003d",
+      "signature": "PZox3vMt9d/0/RDvvJU3oa5aDbFQa9QQnQGueeTL5Cz/zRMt3wKymN9kP8pFf9kfIb/0kkaP4I2rO2vgvpMhlvVMyUKzIvoNoc4TEToNB4uu4/5VadFfToNnIb3AivnegaF8RUgGN0Xg/U4lY394KopHcfiieuo8u1/qoEdAJQO9iAcPgnZIPI4cesfZYJ0bMWBR0hJKMyJphjwzV9pRs/z7uC6BoySeWiYifEeAh3Q1X+sP5QtGX2+SLa9XlKwQkYFEIsfE9xX6R1J04SgesR9/vn8hnDXt1/tCnhc01d4/B+9PxWIPUvEJCGs+pSlav0XP9plKjnfbDzdSzkFWqQ\u003d\u003d"
+    }
+  ],
+  "slicer": {
+    "js": [
+      {
+        "path": "${package.dir}/sass/example/custom.js",
+        "isWidgetManifest": true
+      }
+    ]
+  },
+  "toolkit": "classic",
+  "output": "${package.dir}/build",
+  "sass": {
+    "namespace": "TsbExtends",
+    "etc": "${package.dir}/sass/etc/all.scss,${package.dir}/${toolkit.name}/sass/etc/all.scss",
+    "var": "${package.dir}/sass/var,${package.dir}/${toolkit.name}/sass/var",
+    "src": "${package.dir}/sass/src,${package.dir}/${toolkit.name}/sass/src"
+  },
+  "classpath": "${package.dir}/src,${package.dir}/${toolkit.name}/src",
+  "overrides": "${package.dir}/overrides,${package.dir}/${toolkit.name}/overrides",
+  "example": {
+    "path": [
+      "${package.dir}/examples"
+    ]
+  },
+  "framework": "ext"
+}

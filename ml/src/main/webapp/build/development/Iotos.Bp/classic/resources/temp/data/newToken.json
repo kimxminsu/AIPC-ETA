@@ -1,0 +1,43 @@
+{
+  "response" : {
+    "newVersion" : null,
+    "offset" : 0,
+    "limit" : 0,
+    "size" : 1,
+    "errorNumber" : 0,
+    "errorDescription" : "",
+    "totalCount" : 0,
+    "sharable" : false,
+    "messageId" : "",
+    "mode" : "",
+    "data" : [ {
+      "newVersion" : "7d16779e-3154-4d3e-a8a2-f7e20ad722a2",
+      "userId" : "MPTSADMIN",
+      "registeredTime" : 1617254766222,
+      "roleId" : null,
+      "userType" : null,
+      "refreshToken" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDbG91ZC1DQVNQLUF1dGhlbnRpY2F0aW9uIiwiZXhwIjoxNjE3MjU1OTY2LCJpYXQiOjE2MTcyNTQ3NjZ9.vPRxsIwdSzwxBHKutMC7MISSGvVHpZ5_kyDcFTM5q9BqmUSN0Zynys8LgUcAvIg6BJ-c8-F0h7yw8aTd14nGOQ",
+      "revokeYn" : null,
+      "apiDisabledYn" : null,
+      "revokeDttm" : null,
+      "accessToken" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDbG91ZC1DQVNQLUF1dGhlbnRpY2F0aW9uIiwiZXhwIjoxNjE3MjU1OTY2LCJpYXQiOjE2MTcyNTQ3NjZ9.vPRxsIwdSzwxBHKutMC7MISSGvVHpZ5_kyDcFTM5q9BqmUSN0Zynys8LgUcAvIg6BJ-c8-F0h7yw8aTd14nGOQ",
+      "expiresInSec" : 1200,
+      "idToken" : null,
+      "tokenType" : null,
+      "userLevel" : null,
+      "ptnrCode" : null,
+      "userInfo" : null,
+      "userGroupList" : null,
+      "groupId" : null,
+      "requestServerName" : null,
+      "mptsAp" : null,
+      "useYn" : null,
+      "accessDevice" : null,
+      "pgmID" : null,
+      "cinquiry" : null,
+      "ccreate" : null,
+      "csave" : null,
+      "cdelete" : null
+    } ]
+  }
+}

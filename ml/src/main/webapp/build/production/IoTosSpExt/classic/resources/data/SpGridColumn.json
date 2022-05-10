@@ -1,0 +1,1377 @@
+{
+	"data": [
+		{
+			"key": "TerminalView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('terminalId'),	"dataIndex": "tmlId", "caption": "terminalId",	"reference": "refTmlId",	"filter": "string",	"width": 160,
+					"editor": {
+						"xtype": "textfield",
+						"maxLength": 20,
+						"fieldStyle": "text-transform:uppercase",
+						"enforceMaxLength" : true,
+						"allowBlank": false
+			       }
+				},
+				{ "text": ViewUtil.getLabel('dtpId'),	"dataIndex": "dtpId", "caption": "dtpId",	"reference": "refDtpId",	"filter": "string",	"width": 160,
+					"editor": {
+						"xtype": "textfield",
+						"maxLength": 35,
+						"fieldStyle": "text-transform:uppercase",
+						"enforceMaxLength" : true,
+						"allowBlank": false
+			       	}
+				},
+				{ "text": ViewUtil.getLabel('terminalName'),	"dataIndex": "tmlName", "caption": "terminalName",	"reference": "refTmlName",	"filter": "string",	"width": 320,
+					"editor": {
+						"xtype": "textfield",
+						"maxLength": 35,
+						"enforceMaxLength" : true,
+						"allowBlank": false
+			       	}
+				}
+			]
+		},
+		{
+			"key": "TradePartnerView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('terminalId'),	"dataIndex": "tmlId", "caption": "terminalId",	"reference": "refTmlId",	"filter": "string",	"width": 160},
+				{ "text": ViewUtil.getLabel('partner'),	"dataIndex": "tpId", "caption": "partner",	"reference": "refTpId",	"filter": "string",	"width": 160},
+				{ "text": ViewUtil.getLabel('type'),	"dataIndex": "tpType", "caption": "type",	"reference": "refTpType",	"filter": "string",	"width": 160},
+				{ "text": ViewUtil.getLabel('operator'),	"dataIndex": "tpOperator", "caption": "operator",	"reference": "refTpOperator",	"filter": "string",	"width": 200},
+				{ "text": ViewUtil.getLabel('otpId'),	"dataIndex": "tpOtpid", "caption": "otpId",	"reference": "refTpOtpid",	"filter": "string",	"width": 300}			
+			]
+		},
+		{
+			"key": "MessageSearchView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('messageId'),	"dataIndex": "msgId", "caption": "messageId",	"reference": "refMsgId",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('version'),	"dataIndex": "msgVer", "caption": "version",	"reference": "refMsgVer",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('messageName'),	"dataIndex": "msgName", "caption": "messageName",	"reference": "refMsgName",	"filter": "string",	"width": 400, "align" :'left'},
+				{ "text": ViewUtil.getLabel('format'),	"dataIndex": "displayMsgFormat", "caption": "format",	"reference": "refDisplayMsgFormat",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('sr'),	"dataIndex": "displayMsgSnr", "caption": "sr",	"reference": "refDisplayMsgSnr",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('maxprocess'),	"dataIndex": "msgMaxProcess", "caption": "maxprocess",	"reference": "refMsgMaxProcess",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('msgPeriod'),	"dataIndex": "msgPeriod", "caption": "msgPeriod",	"reference": "refMsgPeriod",	"filter": "string",	"width": 200, "align" :'right'}			
+			]
+		},
+		{
+			"key": "SyntaxView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('messageEdi'),	"dataIndex": "msgIdVer", "caption": "messageEdi",	"reference": "refMsgIdVer",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('description'),	"dataIndex": "stxDesc", "caption": "description",	"reference": "refStxDesc",	"filter": "string",	"width": 300, "align" :'left'},
+				{ "text": ViewUtil.getLabel('groupType'),	"dataIndex": "stxGrpType", "caption": "groupType",	"reference": "refStxGrpType",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('mc'),	"dataIndex": "stxMnc", "caption": "m/c",	"reference": "refStxMnc",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('type'),	"dataIndex": "stxDataType", "caption": "type",	"reference": "refStxDataType",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('startPosition'),	"dataIndex": "stxStrPos", "caption": "startPosition",	"reference": "refStxStrPos",	"filter": "string",	"width": 110},
+				{ "text": ViewUtil.getLabel('length'),	"dataIndex": "stxLength", "caption": "length",	"reference": "refStxLength",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('delimit'),	"dataIndex": "stxDelimit", "caption": "delimit",	"reference": "refStxDelimit",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('align'),	"dataIndex": "stxAlign", "caption": "align",	"reference": "refStxAlign",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('defaultValue'),	"dataIndex": "stxDefaultValue", "caption": "defaultValue",	"reference": "refStxDefaultValue",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('codeConvert'),	"dataIndex": "cvtType", "caption": "codeConvert",	"reference": "refCvtType",	"filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "ConvertCodeView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('tp'),	"dataIndex": "tpId", "caption": "tp",	"reference": "refTpId",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('codeType'),	"dataIndex": "displayCvtType", "caption": "codeType",	"reference": "refDisplayCvtType",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('internalcode'),	"dataIndex": "cvtIntCode", "caption": "internalcode",	"reference": "refCvtIntCode",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('tpCode'),	"dataIndex": "cvtTpCode", "caption": "tpCode",	"reference": "refCvtTpCode",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('sr'),	"dataIndex": "displayCvtSnr", "caption": "sr",	"reference": "refDisplayCvtSnr",	"filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "ErrorCodeView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('errorCode'),	"dataIndex": "errCode", "caption": "errorCode",	"reference": "refErrCode",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('errorName'),	"dataIndex": "errName", "caption": "errorName",	"reference": "refErrName",	"filter": "string",	"width": 350, "align" :'left'},
+				{ "text": ViewUtil.getLabel('messageEdi'),	"dataIndex": "msgId", "caption": "messageEdi",	"reference": "refMsgId",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('errorType'),	"dataIndex": "displayErrType", "caption": "errorType",	"reference": "refDisplayErrType",	"filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "QCPlanView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Crane'),	"dataIndex": "name", "caption": "Name",	"reference": "refQcName",	"filter": "string",	"width": 130, "summaryType": "sum",
+					"summaryRenderer": function(value, summaryData, dataIndex) {
+						return ViewUtil.getLabel('WRD_CTSP_Label_Total');
+					}, 
+					"renderer": function(value, metaData, record){
+					metaData.style =  'background: #' + record.data.backColor + ';' + 'color: #' + record.data.foreColor + ';font-weight: bold';	
+					return value;
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Discharge'), "dataIndex": "disQcQty", "caption": "discharge Qty by QC",	"summaryType": "sum", "filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Load'),	"dataIndex": "loadQcQty", "caption": "load Qty by QC","summaryType": "sum", 	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Total'), "dataIndex": "qcQty", "caption": "total Qty by QC",	"summaryType": "sum", "filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "QCStatusView",
+			"items": [ 	
+				{ "text": "",	"dataIndex": "type", "caption": "Type",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Assigned'),	"dataIndex": "assignQty", "caption": "assign Qty",	"summaryType": "sum",
+					"summaryRenderer": function(value, summaryData, dataIndex) {
+						return ViewUtil.getLabel('WRD_CTSP_Label_Total');
+					}, "filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Pending'),	"dataIndex": "pendingQty", "caption": "pending Qty","summaryType": "sum","filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Total'),	"dataIndex": "totalQty", "caption": "total Qty","summaryType": "sum","filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "VesselListView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('define'),	"dataIndex": "checkDefInfo", "caption": "checkDefInfo",	"reference": "refCheckDefInfo",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('vslcd'),	"dataIndex": "vslCd", "caption": "vesselCode",	"reference": "refVslCd",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('callyear'),	"dataIndex": "callYear", "caption": "callYear",	"reference": "refCallYear",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('callseq'),	"dataIndex": "callSeq", "caption": "callSeq",	"reference": "refCallSeq",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('userVoyage'),	"dataIndex": "userVoyage", "caption": "userVoyage",	"reference": "refUserVoyage", "filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('vslnm'),	"dataIndex": "vslNm", "caption": "vesselName",	"reference": "refVslNm",	"filter": "string",	"width": 150},
+				{ "text": ViewUtil.getLabel('invoy'),	"dataIndex": "iVoyNo", "caption": "inVoy",	"reference": "refInvoy",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('outvoy'),	"dataIndex": "oVoyNo", "caption": "outVoy",	"reference": "refOutVoy",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('inlane'),	"dataIndex": "inLane", "caption": "inLane",	"reference": "refInLane",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('outlane'),	"dataIndex": "outLane", "caption": "outLane",	"reference": "refOutLane",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('etb'),	"dataIndex": "etb", "caption": "etb",	"reference": "refEtb",	"filter": "string",	"xtype" : "datecolumn", "format": "Y-m-d", "width": 100},
+				{ "text": ViewUtil.getLabel('etw'),	"dataIndex": "etw", "caption": "etw",	"reference": "refEtw",	"filter": "string",	"xtype" : "datecolumn", "format": "Y-m-d", "width": 100},
+				{ "text": ViewUtil.getLabel('etd'),	"dataIndex": "etd", "caption": "etd",	"reference": "refEtd",	"filter": "string",	"xtype" : "datecolumn", "format": "Y-m-d", "width": 100},
+				{ "text": ViewUtil.getLabel('berthno'),	"dataIndex": "berthCode", "caption": "berthCode",	"reference": "refBerthNo",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('alongside'),	"dataIndex": "planAlongSide", "caption": "alongside",	"reference": "refAlongSide",	"filter": "string",	"width": 90},
+				// { "text": ViewUtil.getLabel('totalqty'),	"dataIndex": "totalQty", "caption": "totalQty",	"reference": "refTotalQty",	"filter": "string",	"width": 90},
+				// { "text": ViewUtil.getLabel('plannedqty'),	"dataIndex": "plannedQty", "caption": "plannedQty",	"reference": "refPlannedQty",	"filter": "string",	"width": 90}
+				
+				// { "text": ViewUtil.getLabel('vslnm'),	"dataIndex": "vslNm", "caption": "vesselName",	"reference": "refVslNm",	"filter": "string",	"width": 350 /*"align" :'left'*/}
+				// { "text": ViewUtil.getLabel('messageEdi'),	"dataIndex": "msgId", "caption": "messageEdi",	"reference": "refMsgId",	"filter": "string",	"width": 130},
+				// { "text": ViewUtil.getLabel('errorType'),	"dataIndex": "displayErrType", "caption": "errorType",	"reference": "refDisplayErrType",	"filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "DirectoryView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('ediFlat'),	"dataIndex": "displayDirEnfFlag", "caption": "edi/flat",	"reference": "refDisplayDirEnfFlag",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('sendReceive'),	"dataIndex": "displayDirSnr", "caption": "send/receive",	"reference": "refDisplayDirSnr",	"filter": "string",	"width": 110},
+				{ "text": ViewUtil.getLabel('dirAlias'),	"dataIndex": "dirAlias", "caption": "dirAlias",	"reference": "refDirAlias",	"filter": "string",	"width": 160},
+				{ "text": ViewUtil.getLabel('directory'),	"dataIndex": "dir", "caption": "directory",	"reference": "refDir",	"filter": "string",	"width": 350, "align" :'left'},
+				{ "text": ViewUtil.getLabel('lock'),	"dataIndex": "displayDirLockChk", "caption": "lock",	"reference": "refDisplayDirLockChk",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('updateTime'),	"dataIndex": "version", "caption": "updateTime",	"reference": "refVersion",	"filter": "string",	"width": 160}
+			]
+		},
+		{
+			"key": "LoadListView",
+			"items": [ 	
+				{ "text": "ViewUtil.getLabel('WRD_CTSP_Label_LoadingBaySequence')",	"dataIndex": "obSeqNo", "caption": "seqNo", "reference": "refSeqNo", "filter": "string",	"width": 80,
+					"renderer": function(value,meta,record,row,col) {
+						if(record.data.obSeqNo == 0 || record.data.obSeqNo == ''){
+							value = "";
+						} 
+						return value;
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingShipLocation'),	"dataIndex": "obLocation", "caption": "shipLocation",	"reference": "refShipLocation",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_ContainerNo'),	"dataIndex": "cntrNo", "caption": "containerNo",	"reference": "refCntrNo",	"filter": "string",	"width": 120},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Status'),	"dataIndex": "state", "caption": "status",	"reference": "refStatus",	"filter": "string",	"width": 120, 
+					"renderer": function(value) {
+						if(value === CodeConstants.CntrState.RESERVED) return 'Reserved';
+						else if(value === CodeConstants.CntrState.BOOKING) return 'Booking';
+						else if(value === CodeConstants.CntrState.STACKING) return 'Stacking';
+						else if(value === CodeConstants.CntrState.IN_PROGRESS_INCOMING) return 'Incoming';
+						else if(value === CodeConstants.CntrState.IN_PROGRESS_OUTGOING) return 'Outcoming';
+						else if(value === CodeConstants.CntrState.UNDER_SHIFTING) return 'Shifting';
+						else if(value === CodeConstants.CntrState.DELIVERED) return 'Delivered';
+					}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_YardPosition'),	"dataIndex": "yardPosition", "caption": "yardPosition",	"reference": "refyardPosition",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_SZTP'),	"dataIndex": "sztp", "caption": "sztp",	"reference": "refSztp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_SZTP2'),	"dataIndex": "sztp2", "caption": "sztp2",	"reference": "refSztp2",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_POD'),	"dataIndex": "pod", "caption": "POD",	"reference": "refPod",	"filter": "string",	"width": 80,
+					"renderer": function(value, metaData, record){
+						var obPodStore = IoTosSpExt.getApplication().obPodList;
+						if(obPodStore.getCount() > 0){
+							var index = obPodStore.findExact('name', value);
+							if(index > -1){
+								metaData.style =  'background: #' + obPodStore.getAt(index).get('backColor') + ';' + 'color: #' + obPodStore.getAt(index).get('foreColor') + ';';
+							}
+						}			
+						return value;
+					}
+				},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_WGT'),	"dataIndex": "weight", "caption": "WGT",	"reference": "refWgt",	"filter": "string",	"width": 80},
+
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_FE'),	"dataIndex": "fe", "caption": "FE",	"reference": "refFe",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_CargoType'),	"dataIndex": "cargoType", "caption": "Cargo Type",	"reference": "refCargoType",	"filter": "string",	"width": 80,
+					"renderer": function(value) {
+						if(value === CodeConstants.CargoType.GENERAL) return 'General';
+						else if(value === CodeConstants.CargoType.EMPTY) return 'Empty';
+						else if(value === CodeConstants.CargoType.REEFER) return 'Reefer';
+						else if(value === CodeConstants.CargoType.DANGEROUS) return 'Dangerous';
+						else if(value === CodeConstants.CargoType.EMPTY_DANGEROUS) return 'EmptyDangerous';
+						else if(value === CodeConstants.CargoType.DANGEROUS_REEFER) return 'DangerousReefer';
+						else if(value === CodeConstants.CargoType.BUNDLE) return 'Bundle';
+						else if(value === CodeConstants.CargoType.BREAK_BULK) return 'BreakBulk';
+						else if(value === CodeConstants.CargoType.OVER_DIMENSION) return 'OverDimension';
+						else if(value === CodeConstants.CargoType.FRAGILE) return 'Fragile';
+					}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_IMDG'),	"dataIndex": "imdg", "caption": "Imdg",	"reference": "refImdg",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_UNNO'),	"dataIndex": "unno", "caption": "Unno",	"reference": "refUnno",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PackingGroup'),	"dataIndex": "packingGrp", "caption": "Packing Grp",	"reference": "refPkgGrp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Temp'),	"dataIndex": "temp", "caption": "temp",	"reference": "refTemp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Hold'),	"dataIndex": "holdStr", "caption": "hold",	"reference": "refHold",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Opr'),	"dataIndex": "opr", "caption": "opr",	"reference": "refOpr",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingQCNo'),	"dataIndex": "obEquStr", "caption": "qc No",	"reference": "refQcNo",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingQCSequence'),	"dataIndex": "obEquNo", "caption": "qc Seq",	"reference": "refQcseq",	"filter": "string",	"width": 80, 
+					"renderer": function(value,meta,record,row,col) {
+						if(record.data.obEquNo === 0 ) return '';
+						else return value;
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_TransTypeIn'),	"dataIndex": "transTypeIn", "caption": "TransType(In)",	"reference": "refTransIn",	"filter": "string",	"width": 80,
+					"renderer": function(value) {
+						if(value === CodeConstants.TransportType.VESSEL) return 'Vessel';
+						else if(value === CodeConstants.TransportType.RAIL) return 'Rail';
+						else if(value === CodeConstants.TransportType.TRUCK) return 'Truck';
+						else if(value === CodeConstants.TransportType.CFS) return 'Cfs';
+						else if(value === CodeConstants.TransportType.MODE_CHANGE) return 'Mode Change';
+						else if(value === CodeConstants.TransportType.BARGE) return 'Barge';
+						else if(value === CodeConstants.TransportType.SHUTTLE) return 'Shuttle';
+						else if(value === CodeConstants.TransportType.RE_EXPORT) return 'Re Export';
+						else if(value === CodeConstants.TransportType.INTER_TERMINAL) return 'Inter Terminal';
+						else if(value === CodeConstants.TransportType.BUNDLE) return 'Bundle';
+						else if(value === CodeConstants.TransportType.CONSOLIDATE) return 'Consolidate';
+					}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Delivery'),	"dataIndex": "delv", "caption": "Delivery",	"reference": "refDelv",	"filter": "string",	"width": 80, 
+					"renderer": function(value) {
+						if(value === CodeConstants.Delivery.DIRECT_DELIVERY) return 'Direct Delivery';
+						else if(value === CodeConstants.Delivery.TRANSSHIPMENT) return 'Trans Shipment';
+						else if(value === CodeConstants.Delivery.HOTCONNECTION) return 'Hot Connection';
+						else if(value === CodeConstants.Delivery.TS_TO_OTHER_TERMINAL) return 'Ts To Other Terminal';
+						else if(value === CodeConstants.Delivery.TS_FROM_OTHER_TERMINAL) return 'Ts From Other Terminal';
+						else if(value === CodeConstants.Delivery.SHIFTING) return 'Shifting';
+						else if(value === CodeConstants.Delivery.DIRECT_LOADING_TS_FROM_OTHER_TERMINAL) return 'Direct Loading to other Terminal';
+						else if(value === CodeConstants.Delivery.RE_EXPORT) return 'Re Export';
+						else if(value === CodeConstants.Delivery.NORMAL) return 'Normal';
+						else if(value === CodeConstants.Delivery.TO_BE_TS_TO_SAME_VESSEL) return 'To be TS to Same Vessel';
+					}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_ShiftingTime'),	"dataIndex": "rstTime", "caption": "Shifting Time",	"reference": "refSftTime",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PreVessel'),	"dataIndex": "preVessel", "caption": "Prev Vessel",	"reference": "refPrevVessel",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PreCallYear'),	"dataIndex": "preCallYear", "caption": "Prev Year",	"reference": "refPrevYear",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PreCallSEQ'),	"dataIndex": "preCallSeq", "caption": "Prev Seq",	"reference": "refPrevSeq",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargingShipLocation'),	"dataIndex": "ibLocation", "caption": "Ship Location",	"reference": "refIbLocation",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargingBaySequence'),	"dataIndex": "ibSeq", "caption": "Bay Seq",	"reference": "refIbSeq",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_HandlingInstr'),	"dataIndex": "hi", "caption": "Handling Instr",	"reference": "refHi",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_AbsoluteConst'),	"dataIndex": "ac", "caption": "ac",	"reference": "refAc",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Osh'),	"dataIndex": "osh", "caption": "osh",	"reference": "refOsh",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Osp'),	"dataIndex": "osp", "caption": "osp",	"reference": "refOsp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Oss'),	"dataIndex": "oss", "caption": "oss",	"reference": "refOss",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Ova'),	"dataIndex": "ova", "caption": "ova",	"reference": "refOva",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Ovf'),	"dataIndex": "ovf", "caption": "ovf",	"reference": "refOvf",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Ovh'),	"dataIndex": "ovh", "caption": "ovh",	"reference": "refOvh",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Ovp'),	"dataIndex": "ovp", "caption": "ovp",	"reference": "refOvp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Ovs'),	"dataIndex": "ovs", "caption": "ovs",	"reference": "refOvs",	"filter": "string",	"width": 80}
+			]
+		},{
+			"key": "ContainerProperty",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_ContainerNo'),	"dataIndex": "cntrNo", "caption": "seqNo", "reference": "refCntrNo", "filter": "string",	"width": 80}
+			]
+		},{
+			"key": "AllocationList",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_JobBay'),	"dataIndex": "jobBay", "caption": "jobbay", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DH'),	"dataIndex": "deckHoldStr", "caption": "deckhold", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Allocation'),	"dataIndex": "update", "caption": "allocation",  "reference": "refUpdate", 
+					"xtype": "checkcolumn",  "width": 80 },
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_UpdateActivation'),	"caption": "update activation", "reference": "refActivate", 
+					"xtype": "widgetcolumn",  "widget": { "xtype": "checkbox", "bind": {"value": "{record.updateActivation}","disabled": "{!record.update}"}, "dataIndex": "updateActivation", "listeners": {"change": "onUpdateActivationChk"},"cls": "x-grid-checkheader-editor" }, "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_UpdateOperationalSEQ'),	"dataIndex": "updateOperationSEQ", "caption": "update seq", "reference": "refOpSeq", 
+					"xtype": "widgetcolumn",  "widget": { "xtype": "checkbox", "bind": {"value": "{record.updateOperationSEQ}", "disabled": "{!record.update}"}, "inputValue": true, "cls": "x-grid-checkheader-editor" }, "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_RemoveDeallocatedPlan'),	"dataIndex": "removeDeallocatedPlan", "caption": "remove dealloc plan", "reference": "refRemoveDealloc", 
+					"xtype": "widgetcolumn",  "widget": { "xtype": "checkbox", "bind": {"value": "{record.removeDeallocatedPlan}", "disabled": "{!record.update}"}, "inputValue": true, "cls": "x-grid-checkheader-editor" }, "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_KeepActivated'),	"dataIndex": "keepActive", "caption": "keep activate", "reference": "refKeepActivate", 
+						"xtype": "widgetcolumn",  "widget": { "xtype": "checkbox", "bind": {"value": "{record.keepActive}","disabled": "{!record.update}"}, "cls": "x-grid-checkheader-editor" }, "hidden" : true, "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PlanWithoutQC'),	"dataIndex": "qtyWithoutQC", "caption": "qty QC", "hidden": false, "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_ProfileWithoutCntrs'),	"dataIndex": "qtyProfileWithoutCntr", "reference": "refPrfCntr", "caption": "qty Prf", "hidden": true, "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LinkedWith'),	"dataIndex": "linkedWith", "caption": "qty linked", "hidden": false, "width": 80}
+			]
+		},{
+			"key": "DeletePlanList",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_JobBay'),	"dataIndex": "jobBay", "caption": "jobbay", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DH'),	"dataIndex": "deckHoldStr", "caption": "deckhold", "width": 60},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DeletePlan'),	
+					//"caption": "DeletePlan",  "reference": "refUpdate", 
+					// "xtype": "widgetcolumn",  "widget": { "xtype": "checkbox", "bind": {"value": "update","disabled": "{!record.planChecked}","style" : "align : center" }, "dataIndex": "update", "cls": "x-grid-checkheader-editor" }, "width": 60},
+				"xtype"	 : "checkcolumn", "dataIndex" : "update" ,"width" : 60, "reference" : "refCheckUpdate",
+				"renderer" : function(value,meta,record,row,col){
+					
+					if(!record.data.planChecked){
+						meta['tdCls'] = 'x-item-disabled';
+					}
+					if(record.data.columnCheck === 'Y'){
+						record.data.update = true;
+					}else{
+						record.data.update = false;
+					}
+					value = record.data.update;
+					return new Ext.ux.CheckColumn().renderer(value);
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_TotalQty'),	"dataIndex": "totalQty", "caption": "totalQty", "width": 60, 
+					"renderer" : function(value,meta,record,row,col){
+
+						if(record.data.totalQty == 0 || record.data.totalQty == ''){
+							value = "";
+						}else{
+						value = record.data.totalQty;
+					}
+						return value;
+				}}, 
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PlannedQty'),	"dataIndex": "plannedQty", "caption": "plannedQty", "width": 80,
+					"renderer" : function(value,meta,record,row,col){
+
+						if(record.data.plannedQty == 0 || record.data.plannedQty == ''){
+							value = "";
+						}else{
+						value = record.data.plannedQty;
+					}
+						return value;
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_CompletedQty'),	"dataIndex": "completedQty", "caption": "completedQty", "width": 80,
+					"renderer" : function(value,meta,record,row,col){
+
+						if(record.data.completedQty == 0 || record.data.completedQty == ''){
+							value = "";
+						}else{
+						value = record.data.completedQty;
+					}
+						return value;
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LinkedWith'),	"dataIndex": "linkedWith", "caption": "qty linked", "width": 60}
+			]
+		},{
+			"key": "IrrCntrList",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Description'),	"dataIndex": "irrTypeStr", "caption": "irrType", "reference": "refIrrtype", "width": 200, "style": "text-align: center",  "align": "left"},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Inbound'),	"dataIndex": "inboundQty", "caption": "inboundQty", "reference": "refInQty", "width": 70},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Outbound'),	"dataIndex": "outboundQty", "caption": "outboundQty", "reference": "refOutQty", "width": 70},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Profile'),	"dataIndex": "profileQty", "caption": "profileQty", "reference": "refPrfQty", "width": 70, "hidden" : false}
+			]
+		},{
+			"key": "YardStackSummaryByPodList",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_POD'),	"dataIndex": "pod", "caption": "POD", "reference": "refPod", "width": 200, "style": "text-align: center",  "align": "left"},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Total'),	"dataIndex": "total", "caption": "total", "reference": "refTotal", "width": 100},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_20'), "align" : "center",
+					"columns" : [
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_F'), "dataIndex": "teuFullCntr", "caption": "", "reference": "refTeuFullCntr", "width": 150},
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_E'), "dataIndex": "teuEmptyCntr", "caption": "", "reference": "refTeuEmptyCntr", "width": 150}
+					]
+				},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_40'), "align" : "center",
+					"columns" : [
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_F'), "dataIndex": "feuFullCntr", "caption": "", "reference": "refFeuFullCntr", "width": 150},
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_E'), "dataIndex": "feuEmptyCntr", "caption": "", "reference": "refFeuEmptyCntr", "width": 150}
+					]
+				}
+			]
+		},
+		{
+			"key": "YardStackSummaryByBlockList",
+			"items": [ 	
+			]
+		},
+		{
+			"key" : "DischargeSummaryByCargoList",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Cargo') ,"dataIndex": "cargo", "width": 100, "align": "center", "editor": { "xtype": "textfield" },
+				"xtype" : "numbercolumn", "format" : "",
+				"summaryType" : "sum",
+				"summaryRenderer" : function(value, summaryData, dataIndex) {
+					return "TOTAL";
+				}},
+				
+				{ "text": "TOTAL", "align": "center",
+					"columns": [
+						{ "text": "TOTAL", "dataIndex": "totalQty", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}
+					}, 
+						{ "text": "20'", "dataIndex": "teuTotalQty", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}, 
+						{ "text": "40'", "dataIndex": "fourtyTotalQty", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+						{ "text": "40HC'", "dataIndex": "fourHCTotalQty", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "45'", "dataIndex": "fourtyfiveTotalQty", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}
+					]
+				},
+				{ "text": "FULL", "align": "center",
+					"columns": [
+						{ "text": "20'", "dataIndex": "fulTeu", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}, 
+						{ "text": "40'", "dataIndex": "fulFour", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "40HC'", "dataIndex": "fulfourHC", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "45'", "dataIndex": "fulfourtyFive", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}
+					]
+				}, 
+				{ "text": "EMPTY", "align": "center",
+					"columns": [
+						{ "text": "20'", "dataIndex": "emptyTeu", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}, 
+						{ "text": "40'", "dataIndex": "emptyFour", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "40HC'", "dataIndex": "emptyfourHC", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "45'", "dataIndex": "emptyfourtyFive", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}
+					]
+				}, 
+				{ "text": "TS LOCAL", "align": "center",
+					"columns": [
+						{ "text": "20'", "dataIndex": "tSLTeu", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}, 
+						{ "text": "40'", "dataIndex": "tSLFour", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "40HC'", "dataIndex": "tSLfourHC", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "45'", "dataIndex": "tSLfourtyFive", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}
+					]
+				},
+				{ "text": "TS To Other Terminal", "align": "center",
+					"columns": [
+						{ "text": "20'", "dataIndex": "tSTTeu", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}, 
+						{ "text": "40'", "dataIndex": "tSTFour", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "40HC'", "dataIndex": "tSTfourHC", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "45'", "dataIndex": "tSTfourtyFive", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}
+					]
+				},
+				{ "text": "RESTOW 1", "align": "center",
+					"columns": [
+						{ "text": "20'", "dataIndex": "restowTeu", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}, 
+						{ "text": "40'", "dataIndex": "restowFour", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "40HC'", "dataIndex": "restowfourHC", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "45'", "dataIndex": "restowfourtyFive", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}
+					]
+				},
+				{ "text": "RESTOW 2", "align": "center",
+					"columns": [
+						{ "text": "20'", "dataIndex": "restowtTeu", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}, 
+						{ "text": "40'", "dataIndex": "restowtFour", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "40HC'", "dataIndex": "restowtfourHC", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}},
+						{ "text": "45'", "dataIndex": "restowtfourtyFive", "width": 80, "align": "right", "editor": { "xtype": "textfield" },
+						renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+							return value;
+						},
+						"xtype" : "numbercolumn", "format" : "",
+						"summaryType" : "sum",
+						"summaryRenderer" : function(value, summaryData, dataIndex) {
+							if(value == 0) value = "";
+							return value;
+						}}
+					]
+				}
+			]
+		},{
+			"key": "DischargeSummaryByBayList",
+			"items": [ 	
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Bay'), "dataIndex": "jobBay", "width": 70, "align": "center", "editor": { "xtype": "textfield" },"locked": true, "sortable"  : true,
+					"renderer" : function(value, meta, record, rowIndex, colIdx, store, view){
+						// irregular cntr grid 끝에 배치;
+						if(value == "" && rowIndex == 0 ){
+							store.data.items.push(record);
+							store.data.items.shift();
+							return;
+						}
+						return value;
+				},
+				"summaryType" : "sum",
+				"summaryRenderer" : function(value, summaryData, dataIndex) {
+					return "TOTAL";
+			}},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_DH'), "dataIndex": "deckHoldStr", "width": 50, "align": "center", "editor": { "xtype": "textfield" },"locked": true, "sortable"  : true,},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Total'), "dataIndex": "totalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" },"locked": true, "sortable"  : true,
+				renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+				return value;
+			},
+				"xtype" : "numbercolumn", "format" : "",
+				"summaryType" : "sum",
+				"summaryRenderer" : function(value, summaryData, dataIndex) {
+					if(value == 0) value = "";
+					return value;
+			}},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_20'), "dataIndex": "teuTotalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" },"locked": true, "sortable"  : true,
+				renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+				return value;
+			},
+			"xtype" : "numbercolumn", "format" : "",
+			"summaryType" : "sum",
+			"summaryRenderer" : function(value, summaryData, dataIndex) {
+				if(value == 0) value = "";
+				return value;
+			}},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_40'), "dataIndex": "fourtyTotalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" },"locked": true, "sortable"  : true,
+				renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+				return value;
+			},
+			"xtype" : "numbercolumn", "format" : "",
+			"summaryType" : "sum",
+			"summaryRenderer" : function(value, summaryData, dataIndex) {
+				if(value == 0) value = "";
+				return value;
+			}},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_4HC'), "dataIndex": "fourHCTotalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" },"locked": true, "sortable"  : true,
+				renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+				return value;
+			},
+			"xtype" : "numbercolumn", "format" : "",
+			"summaryType" : "sum",
+			"summaryRenderer" : function(value, summaryData, dataIndex) {
+				if(value == 0) value = "";
+				return value;
+			}},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_45'), "dataIndex": "fourtyfiveTotalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" },"locked": true, "sortable"  : true,
+				renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+				return value;
+			},
+			"xtype" : "numbercolumn", "format" : "",
+			"summaryType" : "sum",
+			"summaryRenderer" : function(value, summaryData, dataIndex) {
+				if(value == 0) value = "";
+				return value;
+			}},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_20'), "align": "center",
+					"columns": [
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_General'), "align": "center",
+							"columns" : [
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_NM'), "dataIndex": "genTeuNM", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_FR'), "dataIndex": "genTeuFR", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_OT'), "dataIndex": "genTeuOT", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_TK'), "dataIndex": "genTeuTK", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_PF'), "dataIndex": "genTeuPF", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Total'), "dataIndex": "teuTotalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}}
+							]
+						},
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Special'), "align": "center",
+							"columns" : [
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_DG'), "dataIndex": "spTeuDG", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_RF'), "dataIndex": "spTeuRF", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_MTY'), "dataIndex": "spTeuMTY", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}}
+							]
+						}
+					]
+				},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_40'), "align": "center",
+					"columns": [
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_General'), "align": "center",
+							"columns" : [
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_NM'), "dataIndex": "genFourNM", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_FR'), "dataIndex": "genFourFR", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_OT'), "dataIndex": "genFourOT", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_TK'), "dataIndex": "genFourTK", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_PF'), "dataIndex": "genFourPF", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Total'), "dataIndex": "fourtyTotalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}}
+							]
+						},
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Special'), "align": "center",
+							"columns" : [
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_DG'), "dataIndex": "spFourDG", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_RF'), "dataIndex": "spFourRF", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_MTY'), "dataIndex": "spFourMTY", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}}
+							]
+						}
+					]
+				},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_4HC'), "align": "center",
+					"columns": [
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_General'), "align": "center",
+							"columns" : [
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_NM'), "dataIndex": "genFHCNM", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_FR'), "dataIndex": "genFHCFR", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_OT'), "dataIndex": "genFHCOT", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_TK'), "dataIndex": "genFHCTK", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_PF'), "dataIndex": "genFHCPF", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Total'), "dataIndex": "fourHCTotalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}}
+							]
+						},
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Special'), "align": "center",
+							"columns" : [
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_DG'), "dataIndex": "spFHCDG", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_RF'), "dataIndex": "spFHCRF", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_MTY'), "dataIndex": "spFHCMTY", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}}
+							]
+						}
+					]
+				},
+				{"text" : ViewUtil.getLabel('WRD_CTSP_Label_45'), "align": "center",
+					"columns": [
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_General'), "align": "center",
+							"columns" : [
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_NM'), "dataIndex": "genFourtyfiveNM", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_FR'), "dataIndex": "genFourtyfiveFR", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_OT'), "dataIndex": "genFourtyfiveOT", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_TK'), "dataIndex": "genFourtyfiveTK", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_PF'), "dataIndex": "genFourtyfivePF", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Total'), "dataIndex": "fourtyfiveTotalQty", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}}
+							]
+						},
+						{"text" : ViewUtil.getLabel('WRD_CTSP_Label_Special'), "align": "center",
+							"columns" : [
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_DG'), "dataIndex": "spFourtyfiveDG", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_RF'), "dataIndex": "spFourtyfiveRF", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}},
+								{"text" : ViewUtil.getLabel('WRD_CTSP_Label_MTY'), "dataIndex": "spFourtyfiveMTY", "width": 50, "align": "center", "editor": { "xtype": "textfield" }, "sortable"  : true,
+								renderer: function(value, metaData, record, rowIdx, colIdx, store, view){if(value == 0){value = "";	}
+								return value;
+							},
+							"xtype" : "numbercolumn", "format" : "",
+							"summaryType" : "sum",
+							"summaryRenderer" : function(value, summaryData, dataIndex) {
+								if(value == 0) value = "";
+								return value;
+							}}
+							]
+						}
+					]
+				}
+			]
+		},{
+			"key": "IrrCntrs",
+			"items": [ 	
+				{"xtype" : "rownumberer","width" : 40},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Mode'),	"dataIndex": "classTypeStr", "caption": "mode", "width": 65},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Description'),	"dataIndex": "irrTypeStr", "caption": "description", "width": 150, "style": "text-align: center",  "align": "left"},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_ContainerNo'),	"dataIndex": "cntrNo", "caption": "cntrNo", "width": 100},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_SZTP2'),	"dataIndex": "sztp2", "caption": "sztp", "width": 70},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Operator'),	"dataIndex": "opr", "caption": "opr", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_POL'),	"dataIndex": "pol", "caption": "pol", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_POD'),	"dataIndex": "pod", "caption": "pod", "width": 80,},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_CargoType'),	"dataIndex": "cgTypeStr", "caption": "cargoType", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_WGT'),	"dataIndex": "weight", "caption": "wgt", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargingShipLocation'),	"dataIndex": "ibLocation", "caption": "ibLocation", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingShipLocation'),	"dataIndex": "obLocation", "caption": "obLocation", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Temp'),	"dataIndex": "temp", "caption": "temp", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_IMDG'),	"dataIndex": "imdg", "caption": "imdg", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_UNNO'),	"dataIndex": "unno", "caption": "unno", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Osh'),	"dataIndex": "osh", "caption": "osh", "width": 80, "renderer": function(value) {if(value == 0) return '';}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Osp'),	"dataIndex": "osp", "caption": "osp", "width": 80, "renderer": function(value) {if(value == 0) return '';}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Oss'),	"dataIndex": "oss", "caption": "oss", "width": 80, "renderer": function(value) {if(value == 0) return '';}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_YardPosition'),	"dataIndex": "yardPosition", "caption": "yardPosition", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Remark'),	"dataIndex": "remarkTypeStr", "caption": "remarkTypeStr", "width": 80}
+			]
+		},{
+			"key": "IrrCntrsPop",
+			"items": [ 	
+				{"xtype" : "rownumberer","width" : 40},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Mode'),	"dataIndex": "classTypeStr", "caption": "mode", "width": 65},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Description'),	"dataIndex": "irrTypeStr", "caption": "description", "width": 150, "style": "text-align: center",  "align": "left"},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_ContainerNo'),	"dataIndex": "cntrNo", "caption": "cntrNo", "width": 100},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Status'),	"dataIndex": "state", "caption": "state", "width": 100,
+					"renderer": function(value) {
+						if(value === CodeConstants.CntrState.RESERVED) return 'Reserved';
+						else if(value === CodeConstants.CntrState.BOOKING) return 'Booking';
+						else if(value === CodeConstants.CntrState.STACKING) return 'Stacking';
+						else if(value === CodeConstants.CntrState.IN_PROGRESS_INCOMING) return 'Incoming';
+						else if(value === CodeConstants.CntrState.IN_PROGRESS_OUTGOING) return 'Outcoming';
+						else if(value === CodeConstants.CntrState.UNDER_SHIFTING) return 'Shifting';
+						else if(value === CodeConstants.CntrState.DELIVERED) return 'Delivered';
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_SZTP2'),	"dataIndex": "sztp2", "caption": "sztp", "width": 70},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Operator'),	"dataIndex": "opr", "caption": "opr", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_POL'),	"dataIndex": "pol", "caption": "pol", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_POD'),	"dataIndex": "pod", "caption": "pod", "width": 80,
+					"renderer": function(value, metaData, record){
+						var obPodStore = IoTosSpExt.getApplication().obPodList;
+						if(obPodStore.getCount() > 0){
+							var index = obPodStore.findExact('name', value);
+							if(index > -1){
+								metaData.style =  'background: #' + obPodStore.getAt(index).get('backColor') + ';' + 'color: #' + obPodStore.getAt(index).get('foreColor') + ';';
+							}
+						}			
+						return value;
+					}
+				},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_CargoType'),	"dataIndex": "cgTypeStr", "caption": "cargoType", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_WGT'),	"dataIndex": "weight", "caption": "wgt", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargingShipLocation'),	"dataIndex": "ibLocation", "caption": "ibLocation", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingShipLocation'),	"dataIndex": "obLocation", "caption": "obLocation", "width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Remark'),	"dataIndex": "remarkTypeStr", "caption": "remarkTypeStr", "width": 80}
+			]
+		},{
+			"key": "OneTimeCntrListView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_ContainerNo'),	"dataIndex": "cntrNo", "caption": "containerNo",	"reference": "refCntrNo",	"filter": "string",	"width": 120},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PreLocation'),	"dataIndex": "ibLocation", "caption": "Pre Location",	"reference": "refIbLocation",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingShipLocation'),	"dataIndex": "obLocation", "caption": "Loading Location",	"reference": "refObLocation",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Status'),	"dataIndex": "state", "caption": "status",	"reference": "refStatus",	"filter": "string",	"width": 120, 
+					"renderer": function(value) {
+						if(value === CodeConstants.CntrState.RESERVED) return 'Reserved';
+						else if(value === CodeConstants.CntrState.BOOKING) return 'Booking';
+						else if(value === CodeConstants.CntrState.STACKING) return 'Stacking';
+						else if(value === CodeConstants.CntrState.IN_PROGRESS_INCOMING) return 'Incoming';
+						else if(value === CodeConstants.CntrState.IN_PROGRESS_OUTGOING) return 'Outcoming';
+						else if(value === CodeConstants.CntrState.UNDER_SHIFTING) return 'Shifting';
+						else if(value === CodeConstants.CntrState.DELIVERED) return 'Delivered';
+					}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_YardPosition'),	"dataIndex": "yardPosition", "caption": "yardPosition",	"reference": "refyardPosition",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_SZTP'),	"dataIndex": "sztp", "caption": "sztp",	"reference": "refSztp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_SZTP2'),	"dataIndex": "sztp2", "caption": "sztp2",	"reference": "refSztp2",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_POD'),	"dataIndex": "pod", "caption": "POD",	"reference": "refPod",	"filter": "string",	"width": 80,
+					"renderer": function(value, metaData, record){
+						var obPodStore = IoTosSpExt.getApplication().obPodList;
+						if(obPodStore.getCount() > 0){
+							var index = obPodStore.findExact('name', value);
+							if(index > -1){
+								metaData.style =  'background: #' + obPodStore.getAt(index).get('backColor') + ';' + 'color: #' + obPodStore.getAt(index).get('foreColor') + ';';
+							}
+						}			
+						return value;
+					}
+				},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_WGT'),	"dataIndex": "weight", "caption": "WGT",	"reference": "refWgt",	"filter": "string",	"width": 70},
+
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_FE'),	"dataIndex": "fe", "caption": "FE",	"reference": "refFe",	"filter": "string",	"width": 40},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_CargoType'),	"dataIndex": "cargoType", "caption": "Cargo Type",	"reference": "refCargoType",	"filter": "string",	"width": 80,
+					"renderer": function(value) {
+						if(value === CodeConstants.CargoType.GENERAL) return 'General';
+						else if(value === CodeConstants.CargoType.EMPTY) return 'Empty';
+						else if(value === CodeConstants.CargoType.REEFER) return 'Reefer';
+						else if(value === CodeConstants.CargoType.DANGEROUS) return 'Dangerous';
+						else if(value === CodeConstants.CargoType.EMPTY_DANGEROUS) return 'EmptyDangerous';
+						else if(value === CodeConstants.CargoType.DANGEROUS_REEFER) return 'DangerousReefer';
+						else if(value === CodeConstants.CargoType.BUNDLE) return 'Bundle';
+						else if(value === CodeConstants.CargoType.BREAK_BULK) return 'BreakBulk';
+						else if(value === CodeConstants.CargoType.OVER_DIMENSION) return 'OverDimension';
+						else if(value === CodeConstants.CargoType.FRAGILE) return 'Fragile';
+					}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_IMDG'),	"dataIndex": "imdg", "caption": "Imdg",	"reference": "refImdg",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_UNNO'),	"dataIndex": "unno", "caption": "Unno",	"reference": "refUnno",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PackingGroup'),	"dataIndex": "packingGrp", "caption": "Packing Grp",	"reference": "refPkgGrp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Temp'),	"dataIndex": "temp", "caption": "temp",	"reference": "refTemp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Opr'),	"dataIndex": "opr", "caption": "opr",	"reference": "refOpr",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargeQCNo'),	"dataIndex": "ibEquStr", "caption": "qc No",	"reference": "refQcNo",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargeQCSequence'),	"dataIndex": "ibEquNo", "caption": "qc Seq",	"reference": "refQcseq",	"filter": "string",	"width": 80, 
+					"renderer": function(value) {
+						if(value === 0) return '';
+						else return value;
+				}},
+				
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargingBaySequence'),	"dataIndex": "ibSeqNo", "caption": "Discharging Bay Sequence",	"reference": "refIbSeqNo",	"filter": "string",	"width": 80},
+				
+			]
+		},{
+			"key": "TwoTimeCntrListView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingBaySequence'),	"dataIndex": "obSeqNo", "caption": "Loading Bay Sequence",	"reference": "refObSeqNo",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingShipLocation'),	"dataIndex": "obLocation", "caption": "Loading Location",	"reference": "refObLocation",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_ContainerNo'),	"dataIndex": "cntrNo", "caption": "containerNo",	"reference": "refCntrNo",	"filter": "string",	"width": 120},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Status'),	"dataIndex": "state", "caption": "status",	"reference": "refStatus",	"filter": "string",	"width": 120, 
+					"renderer": function(value) {
+						if(value === CodeConstants.CntrState.RESERVED) return 'Reserved';
+						else if(value === CodeConstants.CntrState.BOOKING) return 'Booking';
+						else if(value === CodeConstants.CntrState.STACKING) return 'Stacking';
+						else if(value === CodeConstants.CntrState.IN_PROGRESS_INCOMING) return 'Incoming';
+						else if(value === CodeConstants.CntrState.IN_PROGRESS_OUTGOING) return 'Outcoming';
+						else if(value === CodeConstants.CntrState.UNDER_SHIFTING) return 'Shifting';
+						else if(value === CodeConstants.CntrState.DELIVERED) return 'Delivered';
+					}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_YardPosition'),	"dataIndex": "yardPosition", "caption": "yardPosition",	"reference": "refyardPosition",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_SZTP'),	"dataIndex": "sztp", "caption": "sztp",	"reference": "refSztp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_SZTP2'),	"dataIndex": "sztp2", "caption": "sztp2",	"reference": "refSztp2",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_POD'),	"dataIndex": "pod", "caption": "POD",	"reference": "refPod",	"filter": "string",	"width": 80,
+					"renderer": function(value, metaData, record){
+						var obPodStore = IoTosSpExt.getApplication().obPodList;
+						if(obPodStore.getCount() > 0){
+							var index = obPodStore.findExact('name', value);
+							if(index > -1){
+								metaData.style =  'background: #' + obPodStore.getAt(index).get('backColor') + ';' + 'color: #' + obPodStore.getAt(index).get('foreColor') + ';';
+							}
+						}			
+						return value;
+					}
+				},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_WGT'),	"dataIndex": "weight", "caption": "WGT",	"reference": "refWgt",	"filter": "string",	"width": 70},
+
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_FE'),	"dataIndex": "fe", "caption": "FE",	"reference": "refFe",	"filter": "string",	"width": 40},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_CargoType'),	"dataIndex": "cargoType", "caption": "Cargo Type",	"reference": "refCargoType",	"filter": "string",	"width": 80,
+					"renderer": function(value) {
+						if(value === CodeConstants.CargoType.GENERAL) return 'General';
+						else if(value === CodeConstants.CargoType.EMPTY) return 'Empty';
+						else if(value === CodeConstants.CargoType.REEFER) return 'Reefer';
+						else if(value === CodeConstants.CargoType.DANGEROUS) return 'Dangerous';
+						else if(value === CodeConstants.CargoType.EMPTY_DANGEROUS) return 'EmptyDangerous';
+						else if(value === CodeConstants.CargoType.DANGEROUS_REEFER) return 'DangerousReefer';
+						else if(value === CodeConstants.CargoType.BUNDLE) return 'Bundle';
+						else if(value === CodeConstants.CargoType.BREAK_BULK) return 'BreakBulk';
+						else if(value === CodeConstants.CargoType.OVER_DIMENSION) return 'OverDimension';
+						else if(value === CodeConstants.CargoType.FRAGILE) return 'Fragile';
+					}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_IMDG'),	"dataIndex": "imdg", "caption": "Imdg",	"reference": "refImdg",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_UNNO'),	"dataIndex": "unno", "caption": "Unno",	"reference": "refUnno",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PackingGroup'),	"dataIndex": "packingGrp", "caption": "Packing Grp",	"reference": "refPkgGrp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Temp'),	"dataIndex": "temp", "caption": "temp",	"reference": "refTemp",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_Opr'),	"dataIndex": "opr", "caption": "opr",	"reference": "refOpr",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_PreLocation'),	"dataIndex": "ibLocation", "caption": "Ib Location",	"reference": "refIbLocation",	"filter": "string",	"width": 80},
+
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingQCNo'),	"dataIndex": "obEquStr", "caption": "qc No",	"reference": "refQcNo",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_LoadingQCSequence'),	"dataIndex": "obEquNo", "caption": "qc Seq",	"reference": "refQcseq",	"filter": "string",	"width": 80, 
+					"renderer": function(value) {
+						if(value === 0) return '';
+						else return value;
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargeQCNo'),	"dataIndex": "ibEquStr", "caption": "qc No",	"reference": "refQcNo",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargeQCSequence'),	"dataIndex": "ibEquNo", "caption": "qc Seq",	"reference": "refQcseq",	"filter": "string",	"width": 80, 
+					"renderer": function(value) {
+						if(value === 0) return '';
+						else return value;
+				}},
+				{ "text": ViewUtil.getLabel('WRD_CTSP_Label_DischargingBaySequence'),	"dataIndex": "ibSeqNo", "caption": "Discharging Bay Sequence",	"reference": "refIbSeqNo",	"filter": "string",	"width": 80},
+				
+			]
+		}
+	]
+}

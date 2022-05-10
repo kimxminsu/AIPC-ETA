@@ -1,0 +1,164 @@
+{
+	"name": "iotos-common",
+	"sencha": {
+		"namespace": "Iotos",
+		"type": "code",
+		"toolkit": "",
+		"creator": "TSB",
+		"summary": "Short summary",
+		"detailedDescription": "Iotos Common Packages",
+		"version": "1.0.0",
+		"compatVersion": "1.0.0",
+		"requires": [
+			"esvc-common"
+		],
+		"format": "1",
+		"slicer": {
+			"js": [
+				{
+					"path": "${package.dir}/sass/example/custom.js",
+					"isWidgetManifest": true
+				}
+			]
+		},
+		"output": "${package.dir}/build",
+		"local": true,
+		"sass": {
+			"namespace": "Iotos",
+			"etc": [
+				"${package.dir}/sass/etc/all.scss"
+			],
+			"var": [
+				"${package.dir}/sass/var"
+			],
+			"src": [
+				"${package.dir}/sass/src"
+			]
+		},
+		"classpath": [
+			"${package.dir}/src"
+		],
+		"overrides": [
+			"${package.dir}/overrides"
+		],
+		"example": {
+			"path": [
+				"${package.dir}/examples"
+			]
+		},
+		"js": [
+			{
+				"path": "${framework.dir}/build/ext-all-rtl-debug.js"
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/esvc-common/resources/util/DateUtil.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/esvc-common/resources/util/GridUtil.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/esvc-common/resources/util/StringUtil.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/esvc-common/resources/util/ViewUtil.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/esvc-common/resources/util/WorkingStatus.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/esvc-common/resources/util/MessageUtil.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/esvc-common/resources/util/TempConvert.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/esvc-common/resources/util/ControlUtil.js",
+				"remote": false
+			},
+			{
+				"path": "${package.dir}/resources/constants/CommonConstants.js",
+				"remote": false
+			},
+			{
+				"path": "${package.dir}/resources/constants/WebMessageConstants.js",
+				"remote": false
+			},
+			{
+				"path": "${package.dir}/resources/constants/WebCacheServiceConstants.js",
+				"remote": false
+			},
+			{
+				"path": "${package.dir}/resources/constants/UserSessionServiceConstants.js",
+				"remote": false
+			},
+			{
+				"path": "${package.dir}/resources/constants/PopupServiceConstants.js",
+				"remote": false
+			},
+			{
+				"path": "${package.dir}/resources/constants/MessageConstants.js",
+				"remote": false
+			},
+			{
+				"path": "${package.dir}/resources/constants/CodeConstants.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/packages/remote/iotos-common/resources/util/StringUtil.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/rsa/jsbn.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/rsa/rsa.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/rsa/prng4.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/rsa/rng.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/CodeConstants_Container.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/CodeConstants_Container.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/CodeConstants_SP.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/common.js",
+				"remote": false
+			},
+
+			{
+				"path": "${workspace.dir}/common/tgl20_22.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/dataBlockTopView.js",
+				"remote": false
+			},
+			{
+				"path": "${workspace.dir}/common/bayViewData.js",
+				"remote": false
+			}
+		]
+	}
+}

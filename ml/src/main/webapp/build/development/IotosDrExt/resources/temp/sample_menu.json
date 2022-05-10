@@ -1,0 +1,54 @@
+{
+  "data": [
+    // {
+    //   "menuId": "TEMPLATE",
+    //   "upperMenuId": "ROOT",
+    //   "menuOrder": "1",
+    //   "screenPathAddress": null,
+    //   "screenIconDefineCode": "x-fa fa-star",
+    //   "menuTypeCode": "FOLDER",
+    //   "menuScreenName": "TEMPLATE",
+    //   "depth": "1"
+    // },
+    // {
+    //   "menuId": "ErrorCode",
+    //   "upperMenuId": "TEMPLATE",
+    //   "menuOrder": "2",
+    //   "screenPathAddress": "app-errorcode",
+    //   "screenIconDefineCode": "x-fa fa-star",
+    //   "menuTypeCode": "SCREEN",
+    //   "menuScreenName": "ErrorCode",
+    //   "depth": "2"
+    // },
+    // {
+    //   "menuId": "Sample",
+    //   "upperMenuId": "ROOT",
+    //   "menuOrder": "1",
+    //   "screenPathAddress": null,
+    //   "screenIconDefineCode": "x-fa fa-star",
+    //   "menuTypeCode": "FOLDER",
+    //   "menuScreenName": "Sample",
+    //   "depth": "1"
+    // },
+    // {
+    //   "menuId": "CommonCode",
+    //   "upperMenuId": "Sample",
+    //   "menuOrder": "2",
+    //   "screenPathAddress": "app-sample",
+    //   "screenIconDefineCode": "x-fa fa-star",
+    //   "menuTypeCode": "SCREEN",
+    //   "menuScreenName": "Common Code",
+    //   "depth": "2"
+    // },
+    // {
+    //   "menuId": "Association",
+    //   "upperMenuId": "Sample",
+    //   "menuOrder": "2",
+    //   "screenPathAddress": "app-association",
+    //   "screenIconDefineCode": "x-fa fa-star",
+    //   "menuTypeCode": "SCREEN",
+    //   "menuScreenName": "Association",
+    //   "depth": "2"
+    // }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+	"data": [
+        {
+            "menuId": "TEMPLATE",
+            "upperMenuId": "ROOT",
+            "menuOrder": "1",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "TEMPLATE",
+            "depth": "1"
+        },
+        {
+    
+            "menuId": "ErrorCode",
+            "upperMenuId": "TEMPLATE",
+            "menuOrder": "2",
+            "screenPathAddress": "app-errorcode",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "ErrorCode",
+            "depth": "2"
+        },
+        {
+            "menuId": "Sample",
+            "upperMenuId": "ROOT",
+            "menuOrder": "1",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "Sample",
+            "depth": "1"
+        },
+        {
+    
+            "menuId": "Sample",
+            "upperMenuId": "Sample",
+            "menuOrder": "2",
+            "screenPathAddress": "app-sample",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "Sample",
+            "depth": "2"
+        },
+		{
+            "menuId": "CODE",
+            "upperMenuId": "ROOT",
+            "menuOrder": "3",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "Code	",
+            "depth": "1"
+        },
+        {
+    
+            "menuId": "PodForVvd",
+            "upperMenuId": "CODE",
+            "menuOrder": "4",
+            "screenPathAddress": "app-podforvvd",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "선박 항차에 대한 POD",
+            "depth": "2"
+        },
+        {
+    
+            "menuId": "OprForVvd",
+            "upperMenuId": "CODE",
+            "menuOrder": "4",
+            "screenPathAddress": "app-oprforvvd",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "선박 항차에 대한 OPR",
+            "depth": "2"
+        },
+		{
+            "menuId": "PLAN",
+            "upperMenuId": "ROOT",
+            "menuOrder": "5",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "Plan",
+            "depth": "1"
+        },
+        {
+    
+            "menuId": "LongTermSchedule",
+            "upperMenuId": "PLAN",
+            "menuOrder": "6",
+            "screenPathAddress": "app-longtermschedule",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "롱텀 일정",
+            "depth": "2"
+        },
+        {
+    
+            "menuId": "CallingSchedule",
+            "upperMenuId": "PLAN",
+            "menuOrder": "7",
+            "screenPathAddress": "app-callingschedule",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "입항 일정",
+            "depth": "2"
+        },
+        {
+    
+            "menuId": "QcAssignment",
+            "upperMenuId": "PLAN",
+            "menuOrder": "8",
+            "screenPathAddress": "app-berthexplorer",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "월별차트",
+            "depth": "2"
+        },
+
+        {
+    
+            "menuId": "QcAssignment",
+            "upperMenuId": "PLAN",
+            "menuOrder": "9",
+            "screenPathAddress": "app-qcassignment",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "크래인 배치",
+            "depth": "2"
+        },
+        /*
+         * 작성일자 : 2020.10.07
+         * 작성자 : 김용진
+         * YQ 단말기의 BayView Sample 화면
+         * 추가 Model, Controller, View는 controlyardjob 폴더에서 관리   
+         */
+        {
+            "menuId": "YQ Mobile",
+            "upperMenuId": "ROOT",
+            "menuOrder": "5",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "YQ",
+            "depth": "1"
+        },
+        {
+            "menuId": "BayView",
+            "upperMenuId": "YQ Mobile",
+            "menuOrder": "8",
+            "screenPathAddress": "app-bayView",
+            "screenIconDefineCode": "x-fa fa-star",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "Bay View",
+            "depth": "2"
+        }
+	]
+}

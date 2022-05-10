@@ -1,0 +1,124 @@
+{
+    "data": [
+        {
+            "menuId": "Schedule",
+            "upperMenuId": "ROOT",
+            "menuOrder": "0",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "fa fa-ship",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "스케줄",
+            "depth": "1"
+        },
+        {
+            "menuId": "VesselScheduleList",
+            "upperMenuId": "Schedule",
+            "menuOrder": "5",
+            "screenPathAddress": "app-vesselschedulelist",
+            "screenIconDefineCode": "fa fa-ship",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "선석배정현황목록",
+            "depth": "2"
+        },
+        {
+            "menuId": "Edi",
+            "upperMenuId": "ROOT",
+            "menuOrder": "0",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "fa fa-life-ring",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "EDI",
+            "depth": "1"
+        },
+        {
+            "menuId": "ExportBookingTBAList",
+            "upperMenuId": "Edi",
+            "menuOrder": "5",
+            "screenPathAddress": "app-exportbookingtbalist",
+            "screenIconDefineCode": "fa fa-life-ring",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "선사 Booking 조회",
+            "depth": "2"
+        },
+        {
+            "menuId": "CopinoMonitoring",
+            "upperMenuId": "Edi",
+            "menuOrder": "5",
+            "screenPathAddress": "app-copinomonitoring",
+            "screenIconDefineCode": "fa fa-life-ring",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "COPINO Monitoring",
+            "depth": "2"
+        },
+        {
+            "menuId": "LoadingDischarging",
+            "upperMenuId": "ROOT",
+            "menuOrder": "0",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "fa fa-sign-in",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "양적하 목록",
+            "depth": "1"
+        },
+        {
+            "menuId": "NotArrivedCoprarList",
+            "upperMenuId": "LoadingDischarging",
+            "menuOrder": "5",
+            "screenPathAddress": "",
+            "screenIconDefineCode": "fa fa-sign-in",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "미반입목록",
+            "depth": "2"
+        },
+        {
+            "menuId": "Gate",
+            "upperMenuId": "ROOT",
+            "menuOrder": "0",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "fa fa-cogs",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "반출입 목록",
+            "depth": "1"
+        },
+        {
+            "menuId": "GateInOutContainerList",
+            "upperMenuId": "Gate",
+            "menuOrder": "5",
+            "screenPathAddress": "",
+            "screenIconDefineCode": "fa fa-cogs",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "반출입 목록조회",
+            "depth": "2"
+        },
+        {
+            "menuId": "Tools",
+            "upperMenuId": "ROOT",
+            "menuOrder": "0",
+            "screenPathAddress": null,
+            "screenIconDefineCode": "fa fa-university",
+            "menuTypeCode": "FOLDER",
+            "menuScreenName": "컨테이너 정보",
+            "depth": "1"
+        },
+        {
+            "menuId": "FindContainer",
+            "upperMenuId": "Tools",
+            "menuOrder": "5",
+            "screenPathAddress": "app-findcontainer",
+            "screenIconDefineCode": "fa fa-university",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "컨테이너 찾기",
+            "depth": "2"
+        },
+        {
+            "menuId": "ContainerDetail",
+            "upperMenuId": "Tools",
+            "menuOrder": "5",
+            "screenPathAddress": "app-containerdetail",
+            "screenIconDefineCode": "fa fa-university",
+            "menuTypeCode": "SCREEN",
+            "menuScreenName": "컨테이너 이력조회",
+            "depth": "2"
+        }
+    ]
+}

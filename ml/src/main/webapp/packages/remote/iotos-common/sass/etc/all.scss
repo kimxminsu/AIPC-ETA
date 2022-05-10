@@ -1,0 +1,172 @@
+/*----------------------------------------------------
+ ioTOS style class
+*/
+
+.logo-ico {
+    background-image: url(get-resource-path('/images/tsb/logo_ico.png')) !important;
+}
+
+.logo-kr {
+    background-image: url(get-resource-path('/images/tsb/logo_kr.png')) !important;
+}
+
+.logo-en {
+    background-image: url(get-resource-path('/images/tsb/logo_en.png')) !important;
+}
+
+.login {
+    background-image: url(get-resource-path('/images/login.png')) !important;
+}
+
+.logout {
+    background-image: url(get-resource-path('/images/logout.png')) !important;
+}
+
+.member {
+    background-image: url(get-resource-path('/images/member.png')) !important;
+}
+
+.padlock {
+    background-image: url(get-resource-path('/images/padlock.png')) !important;
+}
+
+
+/*----------------------------------------------------
+ OM Start
+*/
+.bookingList:before {
+    content : url(get-resource-path('/images/icons/menu/om/bookingList.svg')) !important;
+}
+.coprarList:before {
+    content : url(get-resource-path('/images/icons/menu/om/coprarList.svg')) !important;
+}
+.loadingList:before {
+    content : url(get-resource-path('/images/icons/menu/om/loadingList.svg')) !important;
+}
+.movinsList:before {
+    content : url(get-resource-path('/images/icons/menu/om/movinsList.svg')) !important;
+}
+.manifestList:before {
+    content : url(get-resource-path('/images/icons/menu/om/movinsList.svg')) !important;
+}
+.operationManagement:before {
+    content : url(get-resource-path('/images/icons/menu/om/operationManagement.svg')) !important;
+}
+.specialServiceRequest:before {
+    content : url(get-resource-path('/images/icons/menu/om/specialServiceRequest.svg')) !important;
+}
+.stowageBayPlan:before {
+    content : url(get-resource-path('/images/icons/menu/om/stowageBayPlan.svg')) !important;
+}
+.vesselChange:before {
+    content : url(get-resource-path('/images/icons/menu/om/vesselChange.svg')) !important;
+}
+.code:before {
+    content : url(get-resource-path('/images/icons/menu/om/code.svg')) !important;
+}
+.containerSize:before {
+    content : url(get-resource-path('/images/icons/menu/om/containerSize.svg')) !important;
+}
+.containerType:before {
+    content : url(get-resource-path('/images/icons/menu/om/containerType.svg')) !important;
+}
+.serviceLane:before {
+    content : url(get-resource-path('/images/icons/menu/om/serviceLane.svg')) !important;
+}
+.port:before {
+    content : url(get-resource-path('/images/icons/menu/om/port.svg')) !important;
+}
+.user:before {
+    content : url(get-resource-path('/images/icons/menu/om/user.svg')) !important;
+}
+.vessel:before {
+    content : url(get-resource-path('/images/icons/menu/om/vessel.svg')) !important;
+}
+.list:before {
+    content : url(get-resource-path('/images/icons/menu/om/list.svg')) !important;
+}
+.reconcile:before {
+    content : url(get-resource-path('/images/icons/menu/om/reconcile.svg')) !important;
+}
+.truck:before {
+    content : url(get-resource-path('/images/icons/menu/om/truck.svg')) !important;
+}
+.yard:before {
+    content : url(get-resource-path('/images/icons/menu/om/yard.svg')) !important;
+}
+.generalContainer:before {
+    content : url(get-resource-path('/images/icons/menu/om/generalContainer.svg')) !important;
+}
+.bundleCargo:before {
+    content : url(get-resource-path('/images/icons/menu/om/bundleCargo.svg')) !important;
+}
+.document:before {
+    content : url(get-resource-path('/images/icons/menu/om/document.svg')) !important;
+}
+
+/*----------------------------------------------------
+ OM End
+*/
+/*----------------------------------------------------
+ YP Start
+*/
+.stacking:before {
+    content : url(get-resource-path('/images/icons/menu/yp/stacking.svg')) !important;
+}
+.zoomIn:before {
+    content : url(get-resource-path('/images/icons/menu/yp/zoomIn.svg')) !important;
+}
+.zoomOut:before {
+    content : url(get-resource-path('/images/icons/menu/yp/zoomOut.svg')) !important;
+}
+.bayStacking:before {
+    content : url(get-resource-path('/images/icons/menu/yp/bayStacking.svg')) !important;
+}
+.blockPriorityForGrounding:before {
+    content : url(get-resource-path('/images/icons/menu/yp/blockPriorityForGrounding.svg')) !important;
+}
+.blockStacking:before {
+    content : url(get-resource-path('/images/icons/menu/yp/blockStacking.svg')) !important;
+}
+.groupingPattern:before {
+    content : url(get-resource-path('/images/icons/menu/yp/groupingPattern.svg')) !important;
+}
+.importAssignment:before {
+    content : url(get-resource-path('/images/icons/menu/yp/importAssignment.svg')) !important;
+}
+.mixtureRule:before {
+    content : url(get-resource-path('/images/icons/menu/yp/mixtureRule.svg')) !important;
+}
+.planningPattern:before {
+    content : url(get-resource-path('/images/icons/menu/yp/planningPattern.svg')) !important;
+}
+.positioningRule:before {
+    content : url(get-resource-path('/images/icons/menu/yp/positioningRule.svg')) !important;
+}
+.stackVolumeRule:before {
+    content : url(get-resource-path('/images/icons/menu/yp/stackVolumeRule.svg')) !important;
+}
+.yardPlanning:before {
+    content : url(get-resource-path('/images/icons/menu/yp/yardPlanning.svg')) !important;
+}
+.boundaryPlan:before {
+    content : url(get-resource-path('/images/icons/menu/yp/boundaryPlan.svg')) !important;
+}
+.configuration:before {
+    content : url(get-resource-path('/images/icons/menu/yp/configuration.svg')) !important;
+}
+.importArrow:before {
+    content : url(get-resource-path('/images/icons/menu/yp/importArrow.svg')) !important;
+}
+.rightArrow:before {
+    content : url(get-resource-path('/images/icons/menu/yp/rightArrow.svg')) !important;
+}
+/*----------------------------------------------------
+ YP End
+*/
+
+/* Main Logo*/
+.tsb_logo::before{
+    content : url(get-resource-path('/images/tsb/logo_en_s.png')) !important
+}
+

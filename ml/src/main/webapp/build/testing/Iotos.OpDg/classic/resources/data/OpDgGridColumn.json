@@ -1,0 +1,1285 @@
+{
+  "data": [
+    {
+      "key": "PremiumClass",
+      "items": [
+        {
+          "text": ViewUtil.getLabel("WRD_CTDG_PackingGrp"),
+          "dataIndex": "packingGrp",
+          "caption": "packingGrp",
+          "reference": "refPackingGrp",
+          "filter": "string",
+          "width": 130,
+          "allowBlank": false,
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 5
+          }
+        },
+        {
+          "text": ViewUtil.getLabel("WRD_CTDG_Description"),
+          "dataIndex": "description",
+          "caption": "description",
+          "reference": "refDescription",
+          "filter": "string",
+          "width": 350,
+          "align": "left",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 10
+          }
+        }
+      ]
+    },
+    {
+      "key": "DgCargoMapping",
+      "items": [
+        { "text": "No", "xtype": "rownumberer", "width": 50, "style": "text-align:center", "align": "center" },
+        {
+          "dataIndex": "dgChk",
+          "header": ViewUtil.getLabel("WRD_CTDG_DGCheck"),
+          "width": 70,
+          "xtype": "checkcolumn",
+          "listeners": {
+            "beforecheckchange": function () {
+              return false; // HERE
+            }
+          }
+        },
+        { "dataIndex": "cntrNo", "header": ViewUtil.getLabel("WRD_CTDG_ContainerNo"), "width": 120 },
+        { "dataIndex": "dgSeq", "header": ViewUtil.getLabel("WRD_CTDG_DgSeq"), "width": 70 },
+        { "dataIndex": "sztp", "header": ViewUtil.getLabel("WRD_CTDG_Sztp"), "width": 60 },
+        { "dataIndex": "sztp2", "header": ViewUtil.getLabel("WRD_CTDG_Sztp2"), "width": 60 },
+        { "dataIndex": "pSztp", "header": ViewUtil.getLabel("WRD_CTDG_PrivateSzTp"), "width": 90 },
+        { "dataIndex": "fe", "header": ViewUtil.getLabel("WRD_CTDG_FE"), "width": 40 },
+        { "dataIndex": "ptnrCode", "header": ViewUtil.getLabel("WRD_CTDG_OPR"), "width": 60 },
+        { "dataIndex": "ixCd", "header": ViewUtil.getLabel("WRD_CTDG_Mode"), "width": 60, "renderer": "onIxCdRender" },
+        { "dataIndex": "por", "header": ViewUtil.getLabel("WRD_CTDG_POR"), "width": 60 },
+        { "dataIndex": "pol", "header": ViewUtil.getLabel("WRD_CTDG_POL"), "width": 60 },
+        { "dataIndex": "pod", "header": ViewUtil.getLabel("WRD_CTDG_POD"), "width": 60 },
+        { "dataIndex": "fpod", "header": ViewUtil.getLabel("WRD_CTDG_FPOD"), "width": 60 },
+        { "dataIndex": "imdg", "header": ViewUtil.getLabel("WRD_CTDG_Imdg"), "width": 80 },
+        { "dataIndex": "unno", "header": ViewUtil.getLabel("WRD_CTDG_UNNo"), "width": 80 },
+        { "dataIndex": "packingGrp", "header": ViewUtil.getLabel("WRD_CTDG_PackingGroup"), "width": 100 },
+        { "dataIndex": "wgt", "header": ViewUtil.getLabel("WRD_CTDG_Weight"), "width": 60 },
+        { "dataIndex": "subsidiaryRisk", "header": ViewUtil.getLabel("WRD_CTDG_SubsidiaryRisk"), "width": 110 },
+        { "dataIndex": "flashPoint", "header": ViewUtil.getLabel("WRD_CTDG_FlashPoint"), "width": 110 },
+        {
+          "dataIndex": "limitedQty",
+          "header": ViewUtil.getLabel("WRD_CTDG_LimitedQty"),
+          "width": 80,
+          "xtype": "checkcolumn",
+          "listeners": {
+            "beforecheckchange": function () {
+              return false; // HERE
+            }
+          }
+        },
+        { "dataIndex": "ems", "header": ViewUtil.getLabel("WRD_CTDG_Ems"), "width": 110 },
+        { "dataIndex": "fireCode", "header": ViewUtil.getLabel("WRD_CTDG_FireCode"), "width": 80 },
+        { "dataIndex": "remark", "header": ViewUtil.getLabel("WRD_CTDG_Remark"), "width": 110 },
+        { "dataIndex": "orderSeq", "header": ViewUtil.getLabel("WRD_CTDG_OrderSeq"), "width": 70 }
+      ]
+    },
+    {
+      "key": "DgContainerMaster",
+      "items": [
+        { "text": "No", "xtype": "rownumberer", "width": 50, "style": "text-align:center", "align": "center" },
+        {
+          "dataIndex": "dgChk",
+          "header": ViewUtil.getLabel("WRD_CTDG_DgChk"),
+          "width": 80,
+          "locked": true,
+          "xtype": "checkcolumn",
+          "headerCheckbox": true
+        },
+        {
+          "dataIndex": "authNo",
+          "header": ViewUtil.getLabel("WRD_CTDG_AuthNo"),
+          "width": 120,
+          "locked": true
+        },
+        {
+          "dataIndex": "authDate",
+          "header": ViewUtil.getLabel("WRD_CTDG_AuthDate"),
+          "width": 130,
+          "locked": true
+        },
+        {
+          "dataIndex": "checkNonDg",
+          "header": ViewUtil.getLabel("WRD_CTDG_CheckNonDG"),
+          "width": 95,
+          "locked": true,
+          "xtype": "checkcolumn",
+          "listeners": {
+            "beforecheckchange": function () {
+              return false; // HERE
+            }
+          }
+        },
+        { "dataIndex": "cntrNo", "header": ViewUtil.getLabel("WRD_CTDG_ContainerNo"), "width": 110 },
+        { "dataIndex": "ixCd", "header": ViewUtil.getLabel("WRD_CTDG_IxCd"), "width": 60, "renderer": "onIxCdRender" },
+        { "dataIndex": "delv", "header": ViewUtil.getLabel("WRD_CTDG_Delv"), "width": 110, "renderer": "onDelvRender" },
+        { "dataIndex": "sztp", "header": ViewUtil.getLabel("WRD_CTDG_Sztp"), "width": 60 },
+        { "dataIndex": "sztp2", "header": ViewUtil.getLabel("WRD_CTDG_Sztp2"), "width": 60 },
+        { "dataIndex": "fe", "header": ViewUtil.getLabel("WRD_CTDG_F/E"), "width": 60, "renderer": "onFeRender" },
+        { "dataIndex": "ptnrCode", "header": ViewUtil.getLabel("WRD_CTDG_Operator"), "width": 70 },
+        { "dataIndex": "wgt", "header": ViewUtil.getLabel("WRD_CTDG_Wgt"), "width": 70 },
+        {
+          "dataIndex": "transType",
+          "header": ViewUtil.getLabel("WRD_CTDG_TransType"),
+          "width": 90,
+          "renderer": "onTransTypeRender"
+        },
+        { "dataIndex": "recPosition", "header": ViewUtil.getLabel("WRD_CTDG_RecPosition"), "width": 120 },
+        { "dataIndex": "block", "header": ViewUtil.getLabel("WRD_CTDG_Block"), "width": 60 },
+        { "dataIndex": "bay", "header": ViewUtil.getLabel("WRD_CTDG_Bay"), "width": 60 },
+        { "dataIndex": "row", "header": ViewUtil.getLabel("WRD_CTDG_Row"), "width": 60 },
+        { "dataIndex": "tier", "header": ViewUtil.getLabel("WRD_CTDG_Tier"), "width": 60 },
+        { "dataIndex": "goodOwner", "header": ViewUtil.getLabel("WRD_CTDG_GoodOwner"), "width": 110 },
+        { "dataIndex": "eStackDay", "header": ViewUtil.getLabel("WRD_CTDG_EStackDay"), "width": 130 },
+        { "dataIndex": "mStackDay", "header": ViewUtil.getLabel("WRD_CTDG_MStackDay"), "width": 90, "filter": true },
+        {
+          "dataIndex": "cmplChk",
+          "header": ViewUtil.getLabel("WRD_CTDG_CmplChk"),
+          "width": 80,
+          "xtype": "checkcolumn",
+          "listeners": {
+            "beforecheckchange": function () {
+              return false; // HERE
+            }
+          },
+          "filter": "boolean"
+        },
+        { "dataIndex": "updateTime", "header": ViewUtil.getLabel("WRD_CTDG_UpdateTime"), "width": 160 },
+        {
+          "dataIndex": "instruction",
+          "header": ViewUtil.getLabel("WRD_CTDG_Instruction"),
+          "width": 110,
+          "align": "left"
+        },
+        {
+          "dataIndex": "editableInst",
+          "header": ViewUtil.getLabel("WRD_CTDG_EditableInst"),
+          "width": 120,
+          "align": "left"
+        },
+        { "dataIndex": "remark", "header": ViewUtil.getLabel("WRD_CTDG_DgRemark"), "width": 170, "align": "left" }
+      ]
+    },
+    {
+      "key": "DgContainerDetail",
+      "items": [
+        {
+          "text": "No",
+          "xtype": "rownumberer",
+          "width": 50,
+          "style": "text-align:center",
+          "align": "center"
+        },
+        {
+          "dataIndex": "cntrNo",
+          "header": ViewUtil.getLabel("WRD_CTDG_ContainerNo"),
+          "width": 110
+        },
+        {
+          "dataIndex": "dgSeq",
+          "header": ViewUtil.getLabel("WRD_CTDG_DgSeq"),
+          "width": 70
+        },
+        {
+          "dataIndex": "product",
+          "header": ViewUtil.getLabel("WRD_CTDG_Product"),
+          "width": 110
+        },
+        {
+          "dataIndex": "weight",
+          "header": ViewUtil.getLabel("WRD_CTDG_Wgt"),
+          "width": 70
+        },
+        {
+          "dataIndex": "imdg",
+          "header": ViewUtil.getLabel("WRD_CTDG_Imdg"),
+          "width": 70
+        },
+        {
+          "dataIndex": "unno",
+          "header": ViewUtil.getLabel("WRD_CTDG_UNNo"),
+          "width": 70
+        },
+        {
+          "dataIndex": "packingGrp",
+          "header": ViewUtil.getLabel("WRD_CTDG_PackingGrp"),
+          "width": 100
+        },
+        {
+          "dataIndex": "limitedQty",
+          "header": ViewUtil.getLabel("WRD_CTDG_LimitedQty"),
+          "width": 90
+        },
+        {
+          "dataIndex": "marinePollut",
+          "header": ViewUtil.getLabel("WRD_CTDG_Pollutant"),
+          "width": 90
+        },
+        {
+          "dataIndex": "properShipNm",
+          "header": ViewUtil.getLabel("WRD_CTDG_ProperShipNm"),
+          "width": 140,
+          "align": "left"
+        },
+        {
+          "dataIndex": "subsidiaryRisk",
+          "header": ViewUtil.getLabel("WRD_CTDG_SubsidiaryRisk"),
+          "width": 110
+        },
+        {
+          "dataIndex": "ems",
+          "header": ViewUtil.getLabel("WRD_CTDG_Ems"),
+          "width": 110
+        },
+        {
+          "dataIndex": "flashPoint",
+          "header": ViewUtil.getLabel("WRD_CTDG_FlashPoint"),
+          "width": 110
+        },
+        {
+          "dataIndex": "fireCode",
+          "header": ViewUtil.getLabel("WRD_CTDG_FireCode"),
+          "width": 70
+        },
+        {
+          "dataIndex": "staffCd",
+          "header": ViewUtil.getLabel("WRD_CTDG_StaffCd"),
+          "width": 170
+        },
+        {
+          "dataIndex": "updateTime",
+          "header": ViewUtil.getLabel("WRD_CTDG_UpdateTime"),
+          "width": 160
+        }
+      ]
+    },
+    {
+      "key": "DgContainerInventory",
+      "items": [
+        {
+          "text": "No",
+          "xtype": "rownumberer",
+          "width": 50,
+          "style": "text-align:center",
+          "align": "center"
+        },
+        {
+          "dataIndex": "masterDgChk",
+          "header": ViewUtil.getLabel("WRD_CTDG_DGCheckI"),
+          "width": 80,
+          "locked": true,
+          "xtype": "checkcolumn",
+          "listeners": {
+            "beforecheckchange": function () {
+              return false; // HERE
+            }
+          }
+        },
+        {
+          "dataIndex": "dgChk",
+          "header": ViewUtil.getLabel("WRD_CTDG_DGCheck"),
+          "width": 70,
+          "xtype": "checkcolumn",
+          "filter": "boolean",
+          "listeners": {
+            "beforecheckchange": function () {
+              return false; // HERE
+            }
+          }
+        },
+        {
+          "dataIndex": "authNo",
+          "header": ViewUtil.getLabel("WRD_CTDG_AuthorizationNo"),
+          "width": 110
+        },
+        {
+          "dataIndex": "authDate",
+          "header": ViewUtil.getLabel("WRD_CTDG_AuthorizationDate"),
+          "width": 120
+        },
+        {
+          "dataIndex": "vslCd",
+          "header": ViewUtil.getLabel("WRD_CTDG_VesselCode"),
+          "width": 90
+        },
+        {
+          "dataIndex": "callYear",
+          "header": ViewUtil.getLabel("WRD_CTDG_CallingYear"),
+          "width": 80
+        },
+        {
+          "dataIndex": "callSeq",
+          "header": ViewUtil.getLabel("WRD_CTDG_CallingSeq"),
+          "width": 80
+        },
+        {
+          "dataIndex": "cntrNo",
+          "header": ViewUtil.getLabel("WRD_CTDG_ContainerNo"),
+          "width": 120
+        },
+        {
+          "dataIndex": "ptnrCode",
+          "header": ViewUtil.getLabel("WRD_CTDG_OPR"),
+          "width": 60
+        },
+        {
+          "dataIndex": "shiftAcc",
+          "header": ViewUtil.getLabel("WRD_CTDG_OPR2"),
+          "width": 60
+        },
+        {
+          "dataIndex": "sztp",
+          "header": ViewUtil.getLabel("WRD_CTDG_Sztp"),
+          "width": 60
+        },
+        {
+          "dataIndex": "sztp2",
+          "header": ViewUtil.getLabel("WRD_CTDG_Sztp2"),
+          "width": 60
+        },
+        {
+          "dataIndex": "fe",
+          "header": ViewUtil.getLabel("WRD_CTDG_FE"),
+          "width": 40
+        },
+        {
+          "dataIndex": "wgt",
+          "header": ViewUtil.getLabel("WRD_CTDG_Weight"),
+          "width": 60,
+          "filter": "number"
+        },
+        {
+          "dataIndex": "cntrState",
+          "header": ViewUtil.getLabel("WRD_CTDG_Status"),
+          "width": 80,
+          "renderer": "onCntrStateRender",
+          "align": "center"
+        },
+        {
+          "dataIndex": "ixCd",
+          "header": ViewUtil.getLabel("WRD_CTDG_Mode"),
+          "width": 60,
+          "renderer": "onIxCdRender",
+          "align": "center"
+        },
+        {
+          "dataIndex": "delv",
+          "header": ViewUtil.getLabel("WRD_CTDG_Delivery"),
+          "width": 130,
+          "renderer": "onDelvRender"
+        },
+        {
+          "dataIndex": "transType",
+          "header": ViewUtil.getLabel("WRD_CTDG_TransTypeIn"),
+          "width": 100,
+          "renderer": "onTransTypeRender"
+        },
+        {
+          "dataIndex": "cargoType",
+          "header": ViewUtil.getLabel("WRD_CTDG_CargoType"),
+          "width": 110,
+          "renderer": "onCargoTypeRender"
+        },
+        {
+          "dataIndex": "imdg",
+          "header": ViewUtil.getLabel("WRD_CTDG_Imdg"),
+          "width": 80
+        },
+        {
+          "dataIndex": "unno",
+          "header": ViewUtil.getLabel("WRD_CTDG_UNNo"),
+          "width": 80
+        },
+        {
+          "dataIndex": "packingGrp",
+          "header": ViewUtil.getLabel("WRD_CTDG_PackingGroup"),
+          "width": 100
+        },
+        {
+          "dataIndex": "fireCode",
+          "header": ViewUtil.getLabel("WRD_CTDG_FireCode"),
+          "width": 80
+        },
+        {
+          "dataIndex": "block",
+          "header": ViewUtil.getLabel("WRD_CTDG_Block"),
+          "width": 50
+        },
+        {
+          "dataIndex": "bay",
+          "header": ViewUtil.getLabel("WRD_CTDG_Bay"),
+          "width": 50
+        },
+        {
+          "dataIndex": "row",
+          "header": ViewUtil.getLabel("WRD_CTDG_Row"),
+          "width": 50
+        },
+        {
+          "dataIndex": "tier",
+          "header": ViewUtil.getLabel("WRD_CTDG_Tier"),
+          "width": 50
+        },
+        {
+          "dataIndex": "area",
+          "header": ViewUtil.getLabel("WRD_CTDG_Area"),
+          "width": 80
+        },
+        {
+          "dataIndex": "por",
+          "header": ViewUtil.getLabel("WRD_CTDG_POR"),
+          "width": 60
+        },
+        {
+          "dataIndex": "pol",
+          "header": ViewUtil.getLabel("WRD_CTDG_POL"),
+          "width": 60
+        },
+        {
+          "dataIndex": "pod",
+          "header": ViewUtil.getLabel("WRD_CTDG_POD"),
+          "width": 60
+        },
+        {
+          "dataIndex": "fpod",
+          "header": ViewUtil.getLabel("WRD_CTDG_FPOD"),
+          "width": 60
+        },
+        {
+          "dataIndex": "fdest",
+          "header": ViewUtil.getLabel("WRD_CTDG_FDEST"),
+          "width": 60
+        },
+        {
+          "dataIndex": "setTemp",
+          "header": ViewUtil.getLabel("WRD_CTDG_TempC"),
+          "width": 60
+        },
+        {
+          "dataIndex": "inDate",
+          "header": ViewUtil.getLabel("WRD_CTDG_InDate"),
+          "width": 130,
+          "filter": "date"
+        },
+        {
+          "dataIndex": "outDate",
+          "header": ViewUtil.getLabel("WRD_CTDG_OutDate"),
+          "width": 130
+        },
+        {
+          "dataIndex": "updateTime",
+          "header": ViewUtil.getLabel("WRD_CTDG_UpdateTime"),
+          "width": 130
+        },
+        {
+          "dataIndex": "dgRemark",
+          "header": ViewUtil.getLabel("WRD_CTDG_DgRemark"),
+          "width": 100
+        }
+      ]
+    },
+    {
+      "key": "HazardousCode",
+      "items": [
+        {
+          "dataIndex": "unid",
+          "header": ViewUtil.getLabel("WRD_CTDG_UNID"),
+          "width": 60,
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 5,
+            "enforceMaxLength": true,
+            "allowBlank": false
+          }
+        },
+        {
+          "dataIndex": "unno",
+          "header": ViewUtil.getLabel("WRD_CTDG_UNNo"),
+          "width": 60,
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 4,
+            "enforceMaxLength": true,
+            "allowBlank": false
+          }
+        },
+        {
+          "dataIndex": "cls",
+          "header": ViewUtil.getLabel("WRD_CTDG_CLASS"),
+          "width": 60,
+          "filter": "list",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 4,
+            "enforceMaxLength": true,
+            "allowBlank": false
+          }
+        },
+        {
+          "dataIndex": "packingGrp",
+          "header": ViewUtil.getLabel("WRD_CTDG_PackingGroup"),
+          "width": 100,
+          "filter": "list",
+          "editor": {
+            "xtype": "tcombobox",
+            "param": PopupServiceConstants.ItemKey.PACKING_GRP
+          }
+        },
+        {
+          "dataIndex": "properShipNm",
+          "header": ViewUtil.getLabel("WRD_CTDG_ProperShippingName"),
+          "width": 250,
+          "align": "left",
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "allowBlank": false,
+            "maxLength": 255,
+            "enforceMaxLength": true
+          }
+        },
+        {
+          "dataIndex": "subsidiaryRisk",
+          "header": ViewUtil.getLabel("WRD_CTDG_SubsidiaryRisk"),
+          "width": 100,
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 10,
+            "enforceMaxLength": true
+          }
+        },
+        {
+          "dataIndex": "limitedQty",
+          "header": ViewUtil.getLabel("WRD_CTDG_LimitedQuantity"),
+          "width": 110,
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 10,
+            "enforceMaxLength": true
+          }
+        },
+        {
+          "dataIndex": "marinePollut",
+          "header": ViewUtil.getLabel("WRD_CTDG_MarinePollutant"),
+          "width": 110,
+          "filter": { "type": "list", "store": "{marinePollut}" },
+          "editor": {
+            "xtype": "tcombobox",
+            "maxLength": 10,
+            "enforceMaxLength": true,
+            "displayField": "name",
+            "param": PopupServiceConstants.MasterCode.MARINE_POLLUT
+          }
+        },
+        {
+          "dataIndex": "ems",
+          "header": ViewUtil.getLabel("WRD_CTDG_Ems"),
+          "width": 90,
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 50,
+            "enforceMaxLength": true
+          }
+        },
+        {
+          "dataIndex": "flashPoint",
+          "header": ViewUtil.getLabel("WRD_CTDG_FlashPoint"),
+          "width": 90,
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 8,
+            "enforceMaxLength": true
+          }
+        },
+        {
+          "dataIndex": "extendGrp",
+          "header": ViewUtil.getLabel("WRD_CTDG_ExtendGroup"),
+          "width": 90,
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 2,
+            "enforceMaxLength": true
+          }
+        },
+        {
+          "dataIndex": "fireCode",
+          "header": ViewUtil.getLabel("WRD_CTDG_FireCode"),
+          "width": 70,
+          "filter": "string",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 2,
+            "enforceMaxLength": true,
+            "regex": /^[A-Z0-9]*$/
+          }
+        }
+      ]
+    },
+    {
+      "key": "HazConfirmDtl",
+      "items": [
+        {
+          "text": "No",
+          "xtype": "rownumberer",
+          "style": "text-align:center",
+          "align": "center",
+          "width": 50
+        },
+        {
+          "dataIndex": "cntrNo",
+          "header": ViewUtil.getLabel("WRD_CTDG_ContainerNo"),
+          "width": 90
+        },
+        {
+          "dataIndex": "product",
+          "header": ViewUtil.getLabel("WRD_CTDG_Product"),
+          "width": 110
+        },
+        {
+          "dataIndex": "wgt",
+          "header": ViewUtil.getLabel("WRD_CTDG_Weight"),
+          "width": 70
+        },
+        {
+          "dataIndex": "unno",
+          "header": ViewUtil.getLabel("WRD_CTDG_UNNo"),
+          "width": 70
+        },
+        {
+          "dataIndex": "imdg",
+          "header": ViewUtil.getLabel("WRD_CTDG_Imdg"),
+          "width": 70
+        },
+        {
+          "dataIndex": "packingGrp",
+          "header": ViewUtil.getLabel("WRD_CTDG_PackingGroup"),
+          "width": 100
+        },
+        {
+          "dataIndex": "limitedQty",
+          "header": ViewUtil.getLabel("WRD_CTDG_LimitedQty"),
+          "width": 80,
+          "xtype": "checkcolumn",
+          "listeners": {
+            "beforecheckchange": function () {
+              return false; // HERE
+            }
+          }
+        },
+        {
+          "dataIndex": "marinePollut",
+          "header": ViewUtil.getLabel("WRD_CTDG_Pollutant"),
+          "width": 70
+        },
+        {
+          "dataIndex": "properShipNm",
+          "header": ViewUtil.getLabel("WRD_CTDG_ShippingName"),
+          "width": 160,
+          "align": "left"
+        },
+        {
+          "dataIndex": "subsidiaryRisk",
+          "header": ViewUtil.getLabel("WRD_CTDG_SubsidiaryRisk"),
+          "width": 100
+        },
+        {
+          "dataIndex": "ems",
+          "header": ViewUtil.getLabel("WRD_CTDG_Ems"),
+          "width": 130
+        },
+        {
+          "dataIndex": "flashPoint",
+          "header": ViewUtil.getLabel("WRD_CTDG_FlashPoint"),
+          "width": 80
+        },
+        {
+          "dataIndex": "fireCode",
+          "header": ViewUtil.getLabel("WRD_CTDG_FireCode"),
+          "width": 70
+        }
+      ]
+    },
+    {
+      "key": "HazConfirmDtlList",
+      "items": [
+        { "text": "No", "xtype": "rownumberer", "style": "text-align:center", "align": "center", "width": 50 },
+        { "dataIndex": "vslCd", "header": ViewUtil.getLabel("WRD_CTDG_VesselCode"), "width": 60 },
+        { "dataIndex": "callYear", "header": ViewUtil.getLabel("WRD_CTDG_CallingYear"), "width": 60 },
+        { "dataIndex": "callSeq", "header": ViewUtil.getLabel("WRD_CTDG_CallingSequence"), "width": 60 },
+        { "dataIndex": "cntrNo", "header": ViewUtil.getLabel("WRD_CTDG_ContainerNo"), "width": 90 },
+        { "dataIndex": "ixCd", "header": ViewUtil.getLabel("WRD_CTDG_IxCd"), "width": 60 },
+        { "dataIndex": "delv", "header": ViewUtil.getLabel("WRD_CTDG_Delv"), "width": 90 },
+        { "dataIndex": "cntrState", "header": ViewUtil.getLabel("WRD_CTDG_Status"), "width": 80 }
+      ]
+    },
+    {
+      "key": "SegregationRules",
+      "items": [
+        {
+          "dataIndex": "cls",
+          "header": ViewUtil.getLabel("WRD_CTDG_IMDGClass"),
+          "width": 100,
+          "locked": true,
+          "style": "text-align:center",
+          "align": "center"
+        },
+        {
+          "header": "1.1",
+          "dataIndex": "cls_1_1",
+          "reference": "refCls_1_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.2",
+          "dataIndex": "cls_1_2",
+          "reference": "refCls_1_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.3",
+          "dataIndex": "cls_1_3",
+          "reference": "refCls_1_3",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.4",
+          "dataIndex": "cls_1_4",
+          "reference": "refCls_1_4",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.5",
+          "dataIndex": "cls_1_5",
+          "reference": "refCls_1_5",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.6",
+          "dataIndex": "cls_1_6",
+          "reference": "refCls_1_6",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "2",
+          "dataIndex": "cls_2",
+          "reference": "refCls_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "2.1",
+          "dataIndex": "cls_2_1",
+          "reference": "refCls_2_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "2.2",
+          "dataIndex": "cls_2_2",
+          "reference": "refCls_2_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "2.3",
+          "dataIndex": "cls_2_3",
+          "reference": "refCls_2_3",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "3",
+          "dataIndex": "cls_3",
+          "reference": "refCls_3",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "4.1",
+          "dataIndex": "cls_4_1",
+          "reference": "refCls_4_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "4.2",
+          "dataIndex": "cls_4_2",
+          "reference": "refCls_4_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "4.3",
+          "dataIndex": "cls_4_3",
+          "reference": "refCls_4_3",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "5.1",
+          "dataIndex": "cls_5_1",
+          "reference": "refCls_5_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "5.2",
+          "dataIndex": "cls_5_2",
+          "reference": "refCls_5_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "6.1",
+          "dataIndex": "cls_6_1",
+          "reference": "refCls_6_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "6.2",
+          "dataIndex": "cls_6_2",
+          "reference": "refCls_6_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "7",
+          "dataIndex": "cls_7",
+          "reference": "refCls_7",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "8",
+          "dataIndex": "cls_8",
+          "reference": "refCls_8",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "9",
+          "dataIndex": "cls_9",
+          "reference": "refCls_9",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        }
+      ]
+    },
+    {
+      "key": "SegregationRules2k",
+      "items": [
+        {
+          "dataIndex": "cls",
+          "header": ViewUtil.getLabel("opdg_class2"),
+          "width": 80,
+          "locked": true,
+          "style": "text-align:center",
+          "align": "center"
+        },
+        {
+          "dataIndex": "unno",
+          "header": ViewUtil.getLabel("WRD_CTDG_UNNo"),
+          "width": 80,
+          "locked": true,
+          "style": "text-align:center",
+          "align": "center"
+        },
+        {
+          "dataIndex": "unid",
+          "visible": false,
+          "header": ViewUtil.getLabel("WRD_CTDG_UNID"),
+          "width": 0,
+          "locked": true,
+          "style": "text-align:center",
+          "align": "center"
+        },
+        {
+          "dataIndex": "packingGrp",
+          "header": ViewUtil.getLabel("opdg_packingGrp"),
+          "width": 140,
+          "locked": true,
+          "style": "text-align:center",
+          "align": "center"
+        },
+        {
+          "header": "1.1",
+          "dataIndex": "cls_1_1",
+          "reference": "refCls_1_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.2",
+          "dataIndex": "cls_1_2",
+          "reference": "refCls_1_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.3",
+          "dataIndex": "cls_1_3",
+          "reference": "refCls_1_3",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.4",
+          "dataIndex": "cls_1_4",
+          "reference": "refCls_1_4",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.5",
+          "dataIndex": "cls_1_5",
+          "reference": "refCls_1_5",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "1.6",
+          "dataIndex": "cls_1_6",
+          "reference": "refCls_1_6",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "2",
+          "dataIndex": "cls_2",
+          "reference": "refCls_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "2.1",
+          "dataIndex": "cls_2_1",
+          "reference": "refCls_2_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "2.2",
+          "dataIndex": "cls_2_2",
+          "reference": "refCls_2_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "2.3",
+          "dataIndex": "cls_2_3",
+          "reference": "refCls_2_3",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "3",
+          "dataIndex": "cls_3",
+          "reference": "refCls_3",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "4.1",
+          "dataIndex": "cls_4_1",
+          "reference": "refCls_4_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "4.2",
+          "dataIndex": "cls_4_2",
+          "reference": "refCls_4_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "4.3",
+          "dataIndex": "cls_4_3",
+          "reference": "refCls_4_3",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "5.1",
+          "dataIndex": "cls_5_1",
+          "reference": "refCls_5_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "5.2",
+          "dataIndex": "cls_5_2",
+          "reference": "refCls_5_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "6.1",
+          "dataIndex": "cls_6_1",
+          "reference": "refCls_6_1",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "6.2",
+          "dataIndex": "cls_6_2",
+          "reference": "refCls_6_2",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "7",
+          "dataIndex": "cls_7",
+          "reference": "refCls_7",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "8",
+          "dataIndex": "cls_8",
+          "reference": "refCls_8",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        },
+        {
+          "header": "9",
+          "dataIndex": "cls_9",
+          "reference": "refCls_9",
+          "editor": {
+            "xtype": "textfield",
+            "maxLength": 1,
+            "enforceMaxLength": true,
+            "allowBlank": false,
+            "allowOnlyWhitespace": false
+          }
+        }
+      ]
+    }
+  ]
+}

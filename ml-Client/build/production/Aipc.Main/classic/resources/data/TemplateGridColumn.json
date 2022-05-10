@@ -1,0 +1,103 @@
+{
+	"data": [
+		{
+			"key": "TerminalView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('terminalId'),	"dataIndex": "tmlId", "caption": "terminalId",	"reference": "refTmlId",	"filter": "string",	"width": 160,
+					"editor": {
+						"xtype": "textfield",
+						"maxLength": 20,
+						"fieldStyle": "text-transform:uppercase",
+						"enforceMaxLength" : true,
+						"allowBlank": false
+			       }
+				},
+				{ "text": ViewUtil.getLabel('dtpId'),	"dataIndex": "dtpId", "caption": "dtpId",	"reference": "refDtpId",	"filter": "string",	"width": 160,
+					"editor": {
+						"xtype": "textfield",
+						"maxLength": 35,
+						"fieldStyle": "text-transform:uppercase",
+						"enforceMaxLength" : true,
+						"allowBlank": false
+			       	}
+				},
+				{ "text": ViewUtil.getLabel('terminalName'),	"dataIndex": "tmlName", "caption": "terminalName",	"reference": "refTmlName",	"filter": "string",	"width": 320,
+					"editor": {
+						"xtype": "textfield",
+						"maxLength": 35,
+						"enforceMaxLength" : true,
+						"allowBlank": false
+			       	}
+				}
+			]
+		},
+		{
+			"key": "TradePartnerView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('terminalId'),	"dataIndex": "tmlId", "caption": "terminalId",	"reference": "refTmlId",	"filter": "string",	"width": 160},
+				{ "text": ViewUtil.getLabel('partner'),	"dataIndex": "tpId", "caption": "partner",	"reference": "refTpId",	"filter": "string",	"width": 160},
+				{ "text": ViewUtil.getLabel('type'),	"dataIndex": "tpType", "caption": "type",	"reference": "refTpType",	"filter": "string",	"width": 160},
+				{ "text": ViewUtil.getLabel('operator'),	"dataIndex": "tpOperator", "caption": "operator",	"reference": "refTpOperator",	"filter": "string",	"width": 200},
+				{ "text": ViewUtil.getLabel('otpId'),	"dataIndex": "tpOtpid", "caption": "otpId",	"reference": "refTpOtpid",	"filter": "string",	"width": 300}			
+			]
+		},
+		{
+			"key": "MessageSearchView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('messageId'),	"dataIndex": "msgId", "caption": "messageId",	"reference": "refMsgId",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('version'),	"dataIndex": "msgVer", "caption": "version",	"reference": "refMsgVer",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('messageName'),	"dataIndex": "msgName", "caption": "messageName",	"reference": "refMsgName",	"filter": "string",	"width": 400, "align" :'left'},
+				{ "text": ViewUtil.getLabel('format'),	"dataIndex": "displayMsgFormat", "caption": "format",	"reference": "refDisplayMsgFormat",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('sr'),	"dataIndex": "displayMsgSnr", "caption": "sr",	"reference": "refDisplayMsgSnr",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('maxprocess'),	"dataIndex": "msgMaxProcess", "caption": "maxprocess",	"reference": "refMsgMaxProcess",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('msgPeriod'),	"dataIndex": "msgPeriod", "caption": "msgPeriod",	"reference": "refMsgPeriod",	"filter": "string",	"width": 200, "align" :'right'}			
+			]
+		},
+		{
+			"key": "SyntaxView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('messageEdi'),	"dataIndex": "msgIdVer", "caption": "messageEdi",	"reference": "refMsgIdVer",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('description'),	"dataIndex": "stxDesc", "caption": "description",	"reference": "refStxDesc",	"filter": "string",	"width": 300, "align" :'left'},
+				{ "text": ViewUtil.getLabel('groupType'),	"dataIndex": "stxGrpType", "caption": "groupType",	"reference": "refStxGrpType",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('mc'),	"dataIndex": "stxMnc", "caption": "m/c",	"reference": "refStxMnc",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('type'),	"dataIndex": "stxDataType", "caption": "type",	"reference": "refStxDataType",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('startPosition'),	"dataIndex": "stxStrPos", "caption": "startPosition",	"reference": "refStxStrPos",	"filter": "string",	"width": 110},
+				{ "text": ViewUtil.getLabel('length'),	"dataIndex": "stxLength", "caption": "length",	"reference": "refStxLength",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('delimit'),	"dataIndex": "stxDelimit", "caption": "delimit",	"reference": "refStxDelimit",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('align'),	"dataIndex": "stxAlign", "caption": "align",	"reference": "refStxAlign",	"filter": "string",	"width": 70},
+				{ "text": ViewUtil.getLabel('defaultValue'),	"dataIndex": "stxDefaultValue", "caption": "defaultValue",	"reference": "refStxDefaultValue",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('codeConvert'),	"dataIndex": "cvtType", "caption": "codeConvert",	"reference": "refCvtType",	"filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "ConvertCodeView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('tp'),	"dataIndex": "tpId", "caption": "tp",	"reference": "refTpId",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('codeType'),	"dataIndex": "displayCvtType", "caption": "codeType",	"reference": "refDisplayCvtType",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('internalcode'),	"dataIndex": "cvtIntCode", "caption": "internalcode",	"reference": "refCvtIntCode",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('tpCode'),	"dataIndex": "cvtTpCode", "caption": "tpCode",	"reference": "refCvtTpCode",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('sr'),	"dataIndex": "displayCvtSnr", "caption": "sr",	"reference": "refDisplayCvtSnr",	"filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "ErrorCodeView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('errorCode'),	"dataIndex": "errCode", "caption": "errorCode",	"reference": "refErrCode",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('errorName'),	"dataIndex": "errName", "caption": "errorName",	"reference": "refErrName",	"filter": "string",	"width": 350, "align" :'left'},
+				{ "text": ViewUtil.getLabel('messageEdi'),	"dataIndex": "msgId", "caption": "messageEdi",	"reference": "refMsgId",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('errorType'),	"dataIndex": "errType", "caption": "errorType",	"reference": "refErrType",	"filter": "string",	"width": 130, "renderer": "onGridName"}
+			]
+		},
+		{
+			"key": "DirectoryView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('ediFlat'),	"dataIndex": "displayDirEnfFlag", "caption": "edi/flat",	"reference": "refDisplayDirEnfFlag",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('sendReceive'),	"dataIndex": "displayDirSnr", "caption": "send/receive",	"reference": "refDisplayDirSnr",	"filter": "string",	"width": 110},
+				{ "text": ViewUtil.getLabel('dirAlias'),	"dataIndex": "dirAlias", "caption": "dirAlias",	"reference": "refDirAlias",	"filter": "string",	"width": 160},
+				{ "text": ViewUtil.getLabel('directory'),	"dataIndex": "dir", "caption": "directory",	"reference": "refDir",	"filter": "string",	"width": 350, "align" :'left'},
+				{ "text": ViewUtil.getLabel('lock'),	"dataIndex": "displayDirLockChk", "caption": "lock",	"reference": "refDisplayDirLockChk",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('updateTime'),	"dataIndex": "version", "caption": "updateTime",	"reference": "refVersion",	"filter": "string",	"width": 160}
+			]
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"data": [{
+		"key": "notAllowedSmallOverLarge",
+		"value": "ON",	
+		"type": "config"
+	},{
+		"key": "notAllowedAirContainer",
+		"value": "ON",	
+		"type": "config"
+	},{
+		"key": "notAllowedPODTerminalRestriction",
+		"value": "WARN",	
+		"type": "config"
+	},{
+		"key": "notAllowedPOLTerminalRestriction",
+		"value": "WARN",	
+		"type": "config"
+	},{
+		"key": "notAllowedEraseWithoutPOD",
+		"value": "ON",	
+		"type": "config"
+	},{
+		"key": "notAllowedReeferWithoutPlug",
+		"value": "ON",	
+		"type": "config"
+	},{
+		"key": "notAllowedRussianStowOnDeck",
+		"value": "ON",	
+		"type": "config"
+	},{
+		"key": "notAllowed45None45Slot",
+		"value": "ON",	
+		"type": "config"
+	},{
+		"key": "notAllowed48None48Slot",
+		"value": "ON",	
+		"type": "config"
+	},{
+		"key": "notAllowed53None53Slot",
+		"value": "ON",	
+		"type": "config"
+	},{
+		"key": "notAllowedImdgViolation",
+		"value": "ON",	
+		"type": "config"
+	}]
+}

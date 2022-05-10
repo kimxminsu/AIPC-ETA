@@ -1,0 +1,395 @@
+{
+	"data": [{
+		"key": "VSL_HQ",
+		"level": "vessel,hold",
+		"section": "1",
+		"item": "hq",
+		"type": "text",
+		"text": "^",
+		"align": "hanging",
+		"scope": "section"
+	},{
+		"key": "VSL_BOTTOM",
+		"level": "vessel,hold",
+		"section": "9",
+		"item": "bText", 
+		"type": "text",
+		"align": "hanging",
+		"scope": "section"
+	},{
+		"key": "VSL_ISIBDONE",
+		"level": "vessel,hold",
+		"section": "3",
+		"item": "isIbDone",
+		"type": "rect",
+		"style": "fill",
+		"scope": "full"
+	},{
+		"key": "VSL_ISOBDONE",
+		"level": "vessel,hold",
+		"section": "3",
+		"item": "isObDone",
+		"type": "rect",
+		"style": "fill",
+		"scope": "full"
+	},{
+		"key": "VSL_IBSEQ",
+		"level": "vessel,hold",
+		"section": "E",
+		"item": "ibSeqNo",
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "VSL_OBSEQ",
+		"level": "vessel,hold",
+		"section": "E",
+		"item": "obSeqNo",
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "VSL_RSTTIME",
+		"level": "vessel,hold",
+		"section": "E", 
+		"item": "rstTime", 
+		"type": "circle", 
+		"scope": "full"
+	},{
+		"key": "VSL_IBTWIN",
+		"level": "vessel,hold",
+		"section": "D", 
+		"item": "ibTwin", 
+		"type": "rect", 
+		"scope": "section-small"
+	},{
+		"key": "VSL_OBTWIN",
+		"level": "vessel,hold",
+		"section": "D", 
+		"item": "obTwin", 
+		"type": "rect", 
+		"scope": "section-small"
+	},{
+		"key": "VSL_SIZE2",
+		"level": "vessel,hold",
+		"section": "A", 
+		"item": "size2", 
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "VSL_WIDTHTYPE",
+		"level": "vessel,hold",
+		"section": "B", 
+		"item": "widthType2",
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "VSL_IBEQUNO",
+		"level": "vessel,hold",
+		"section": "C", 
+		"item": "ibEquNo", 
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "VSL_OBEQUNO",
+		"level": "vessel,hold",
+		"section": "C", 
+		"item": "obEquNo", 
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "VSL_UNNO",
+		"level": "vessel,hold",
+		"section": "E", 
+		"item": "unno", 
+		"type": "diamond",    
+		"scope": "full"
+	},{
+		"key": "VSL_UNNONUM",
+		"level": "vessel,hold",
+		"section": "E", 
+		"item": "unnonum", 
+		"type": "text",    
+		"scope": "section"
+	},
+
+	//bay
+	{
+		"key": "IBBAY_SEQ",
+		"level": "hatch,bay",
+		"section": "E",
+		"item": "ibSeqNo",
+		"type": "text", 
+		"scope": "section"
+	}, {
+		"key": "OBBAY_SEQ",
+		"level": "hatch,bay",
+		"section": "E",
+		"item": "obSeqNo",
+		"type": "text", 
+		"scope": "section"
+	}, {
+		"key": "BAY_BOTTOM",
+		"level": "hatch,bay",
+		"section": "9",
+		"item": "bText", 
+		"type": "text",
+		"align": "hanging",
+		"scope": "section"
+	},
+	{
+		"key": "BAY_ISIBDONE",
+		"level": "hatch,bay",
+		"section": "3",
+		"item": "isIbDone",
+		"type": "rect",
+		"style": "fill",
+		"scope": "full"
+	},{
+		"key": "BAY_ISOBDONE",
+		"level": "hatch,bay",
+		"section": "3",
+		"item": "isObDone",
+		"type": "rect",
+		"style": "fill",
+		"scope": "full"
+	},{
+		"key": "BAY_RSTTIME",
+		"level": "hatch,bay",
+		"section": "E", 
+		"item": "rstTime", 
+		"type": "circle", 
+		"scope": "full"
+	},{
+		"key": "BAY_IBTWIN",
+		"level": "hatch,bay",
+		"section": "D", 
+		"item": "ibTwin", 
+		"type": "rect", 
+		"scope": "section-small"
+	},{
+		"key": "BAY_OBTWIN",
+		"level": "hatch,bay",
+		"section": "D", 
+		"item": "obTwin", 
+		"type": "rect", 
+		"scope": "section-small"
+	},{
+		"key": "BAY_SIZE2",
+		"level": "hatch,bay",
+		"section": "A", 
+		"item": "size2", 
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "BAY_WIDTHTYPE",
+		"level": "hatch,bay",
+		"section": "B", 
+		"item": "widthType2",
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "BAY_IBEQUNO",
+		"level": "hatch,bay",
+		"section": "C", 
+		"item": "ibEquNo", 
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "BAY_OBEQUNO",
+		"level": "hatch,bay",
+		"section": "C", 
+		"item": "obEquNo", 
+		"type": "text", 
+		"scope": "section"
+	},{
+		"key": "BAY_UNNO",
+		"level": "hatch,bay",
+		"section": "E", 
+		"item": "unno", 
+		"type": "diamond",    
+		"scope": "full"
+	},{
+		"key": "BAY_UNNONUM",
+		"level": "hatch,bay",
+		"section": "E", 
+		"item": "unnonum", 
+		"type": "text",    
+		"scope": "section"
+	},{
+		"key": "VSL_ROB",
+		"level": "vessel,hold",
+		"section": "G",
+		"item": "rob",
+		"type": "rect",
+		"style": "fill",
+		"scope": "section-half"
+	}, 
+	{
+		"key": "VSL_RECT",
+		"level": "vessel,hold",
+		"section": "G",
+		"type": "rect", 
+		"scope": "section"
+	}, 
+	// {
+	// 	"level": "vessel,hold",
+	// 	"section": "E",
+	// 	"item": "size45",
+	// 	"type": "text",
+	// 	"text": "5",
+	// 	"scope": "section"
+	// }, {
+	// 	"level": "vessel,hold",
+	// 	"section": "E",
+	// 	"item": "size48",
+	// 	"type": "text",
+	// 	"text": "8",
+	// 	"scope": "section"
+	// }, {
+	// 	"level": "vessel,hold",
+	// 	"section": "E",
+	// 	"item": "size53",
+	// 	"type": "text",
+	// 	"text": "3",
+	// 	"scope": "section"
+	// }, 
+	{
+		"key": "VSL_EMPTY",
+		"level": "vessel,hold",
+		"section": "E",
+		"item": "empty",
+		"type": "text",
+		"text": "e",
+		"scope": "section"
+	}, {
+		"key": "VSL_RFTEMP",
+		"level": "vessel,hold",
+		"section": "E",
+		"item": "rfTemp",
+		"type": "text",
+		"text": "r",
+		"scope": "section"
+	}, {
+		"key": "VSL_HI", //45 - H
+		"level": "vessel,hold",
+		"section": "E",
+		"item": "hndlInst",
+		"type": "text",
+		"text": "s",
+		"scope": "section"
+	}, {
+		"key": "VSL_SHIFT",
+		"level": "vessel,hold",
+		"section": "E",
+		"item": "shift",
+		"type": "circle",
+		"style": "stroke",
+		"scope": "full"
+	}, {
+		"key": "VSL_OVERSTOW",
+		"level": "vessel,hold",
+		"section": "E",
+		"item": "overstow",
+		"type": "circle",
+		"style": "stroke",
+		"scope": "half"
+	}, {
+		"key": "BAY_HQ",
+		"level": "hatch,bay",
+		"section": "1",
+		"item": "hq",
+		"type": "text",
+		"text": "^",
+		"scope": "section"	
+	}, {
+		"key": "BAY_WGT",
+		"level": "hatch,bay",
+		"section": "E",
+		"item": "weight",
+		"type": "text",
+		"scope": "section"
+	}, {
+		"key": "BAY_RFTEMP",
+		"level": "hatch,bay",
+		"section": "D",
+		"item": "rfTemp",
+		"type": "text",
+		"text": "R",
+		"scope": "section"
+	}, 
+	// {
+	// 	"key": "BAY_ODH",
+	// 	"level": "hatch,bay",
+	// 	"section": "B",
+	// 	"item": "ovDimHeight",
+	// 	"type": "text",
+	// 	"scope": "section"
+	// }, 
+	{
+		"key": "BAY_ODP",
+		"level": "hatch,bay",
+		"section": "D",
+		"item": "ovDimPort",
+		"type": "text",
+		"scope": "section"
+	}, {
+		"key": "BAY_ODS",
+		"level": "hatch,bay",
+		"section": "F",
+		"item": "ovDimStarBoard",
+		"type": "text",
+		"scope": "section"
+	}, {
+		"key": "BAY_EMPTY",
+		"level": "hatch,bay",
+		"section": "1",
+		"item": "empty",
+		"type": "text",
+		"text": "E",
+		"scope": "full"
+	}, {
+		"key": "BAY_IMDG",
+		"level": "hatch,bay",
+		"section": "10",
+		"item": "imdg",
+		"type": "text",
+		"scope": "full"
+	}, {
+		"key": "BAY_HI",
+		"level": "hatch,bay",
+		"section": "8",
+		"item": "hndlInst",
+		"type": "text",
+		"scope": "full"
+	}, {
+		"key": "BAY_POL",
+		"level": "hatch,bay",
+		"section": "13",
+		"item": "pol",
+		"type": "rect",
+		"style": "fill",
+		"scope": "section"
+	}, {
+		"key": "BAY_SZTP",
+		"level": "hatch,bay",
+		"section": "16",
+		"item": "sztp",
+		"type": "text",
+		"scope": "section"
+	}, {
+		"key": "BAY_SHIFT",
+		"level": "hatch,bay",
+		"section": "E",
+		"item": "shift",
+		"type": "circle",
+		"style": "stroke",
+		"scope": "full"
+	}, {
+		"key": "BAY_OVERSTOW",
+		"level": "hatch,bay",
+		"section": "E",
+		"item": "overstow",
+		"type": "circle",
+		"style": "stroke",
+		"scope": "half"
+	}]
+}

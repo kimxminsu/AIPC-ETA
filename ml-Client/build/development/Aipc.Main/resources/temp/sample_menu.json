@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "menuId": "first",
+      "upperMenuId": "ROOT",
+      "menuOrder": "1",
+      "screenPathAddress": null,
+      "screenIconDefineCode": "x-fa fa-star",
+      "menuTypeCode": "FOLDER",
+      "menuScreenName": "Data",
+      "depth": "1"
+    },
+    {
+      "menuId": "ErrorCode",
+      "upperMenuId": "first",
+      "menuOrder": "2",
+      "screenPathAddress": "app-association",
+      "screenIconDefineCode": "x-fa fa-star",
+      "menuTypeCode": "SCREEN",
+      "menuScreenName": "Train",
+      "depth": "2"
+    },
+    {
+      "menuId": "Result",
+      "upperMenuId": "first",
+      "menuOrder": "2",
+      "screenPathAddress": "app-result",
+      "screenIconDefineCode": "x-fa fa-star",
+      "menuTypeCode": "SCREEN",
+      "menuScreenName": "Result",
+      "depth": "2"
+    },
+    {
+      "menuId": "second",
+      "upperMenuId": "ROOT",
+      "menuOrder": "1",
+      "screenPathAddress": null,
+      "screenIconDefineCode": "x-fa fa-star",
+      "menuTypeCode": "FOLDER",
+      "menuScreenName": "Code",
+      "depth": "1"
+    },
+    {
+      "menuId": "CommonCode",
+      "upperMenuId": "second",
+      "menuOrder": "2",
+      "screenPathAddress": "app-sample",
+      "screenIconDefineCode": "x-fa fa-star",
+      "menuTypeCode": "SCREEN",
+      "menuScreenName": "ShipCode",
+      "depth": "2"
+    },
+    {
+      "menuId": "Association",
+      "upperMenuId": "second",
+      "menuOrder": "2",
+      "screenPathAddress": "app-errorcode",
+      "screenIconDefineCode": "x-fa fa-star",
+      "menuTypeCode": "SCREEN",
+      "menuScreenName": "PortCode",
+      "depth": "2"
+    }
+  ]
+}

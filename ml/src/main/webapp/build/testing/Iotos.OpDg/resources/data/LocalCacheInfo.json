@@ -1,0 +1,1277 @@
+{
+	"data": [
+		{
+			"key": "trans type",
+			"items": [ 
+				{ "code" : "V","codeName" : "Vessel" },
+				{ "code" : "T","codeName" : "Truck" },
+				{ "code" : "B","codeName" : "Barge" },
+				{ "code" : "C","codeName" : "CFS" },
+				{ "code" : "M","codeName" : "Mode Change" },
+				{ "code" : "R","codeName" : "Rail" },
+				{ "code" : "I","codeName" : "Inter Terminal" }
+			]
+		},{
+			"key": "FE",
+			"items": [
+				{ "code" : "F","codeName" : "Full" },
+				{ "code" : "E","codeName" : "Empty" }
+			]
+		},{
+			"key": "Cargo Type",
+			"items": [ 
+				{ "code" : "GP","codeName" : "General" },
+				{ "code" : "MT","codeName" : "Empty" },
+				{ "code" : "RF","codeName" : "Reefer" },
+				{ "code" : "DR","codeName" : "Reefer & DG" },
+				{ "code" : "DG","codeName" : "Dangerous" },
+				{ "code" : "ED","codeName" : "Dangerous Empty" }
+			]
+		},{
+			"key": "Container Status",
+			"items": [
+				{ "code" : "R","codeName" : "Reserved" },
+				{ "code" : "B","codeName" : "Booking" },
+				{ "code" : "Y","codeName" : "Stacking" },
+				{ "code" : "G","codeName" : "In Progress Outgoing" },
+				{ "code" : "O","codeName" : "In Progress Incoming" },
+				{ "code" : "Z","codeName" : "Under Shifting" },
+				{ "code" : "D","codeName" : "Delivered" }
+			]
+		},{
+			"key": "delivery type",
+			"items": [
+				{ "code" : "D","codeName" : "Direct Delivery" },
+				{ "code" : "S","codeName" : "Transshipment" },
+				{ "code" : "P","codeName" : "TS to Other Terminal" },
+				{ "code" : "Z","codeName" : "TS from Other Terminal" },
+				{ "code" : "T","codeName" : "Shift" },
+				{ "code" : "X","codeName" : "Direct Loading (TS from Other Terminal)" },
+				{ "code" : "Q","codeName" : "Hot Connection" },
+				{ "code" : "O","codeName" : "Remain on board" }
+			]
+		},{
+			"key": "Hold Status",
+			"items": [ 
+				{ "code" : "","codeName" : "" },
+				{ "code" : "N","codeName" : "Released" },
+				{ "code" : "Y","codeName" : "Hold" }
+			]
+		},{
+			"key": "Hold Check",
+			"items": [
+				{ "code" : "N","codeName" : "Released" },
+				{ "code" : "Y","codeName" : "Hold" }
+			]
+		},{
+			"key": "Hold Type",
+			"items": [
+				{ "code" : "T","codeName" : "Terminal" },
+				{ "code" : "C","codeName" : "Custom" }
+			]
+		},{
+			"key": "Holding Type",
+			"items": [ 
+				{ "code" : "","codeName" : "All" },
+				{ "code" : "Y","codeName" : "Holding" },
+				{ "code" : "N","codeName" : "Released" },
+				{ "code" : "NULL","codeName" : "None" }
+			]
+		},{
+			"key": "Terminal Hold Type",
+			"items": [
+				{ "code" : "","codeName" : "All" },
+				{ "code" : "Y","codeName" : "Holding" },
+				{ "code" : "N","codeName" : "Released" }
+			]
+		},{
+			"key": "Loading confirm",
+			"items": [
+				{ "code" : "U","codeName" : "Unverified" },
+				{ "code" : "N","codeName" : "Verified" },
+				{ "code" : "C","codeName" : "Cancel" },
+				{ "code" : "R","codeName" : "Return" }
+			]
+		},{
+			"key": "Reserve Type",
+			"items": [ 
+				{ "code" : "D","codeName" : "For Vessel Discharging" },
+				{ "code" : "B","codeName" : "For Vessel Loading(Auto)" },
+				{ "code" : "X","codeName" : "For Vessel Loading" },
+				{ "code" : "R","codeName" : "For Rail Discharging" },
+				{ "code" : "S","codeName" : "For TS container Vessel Loading" },
+				{ "code" : "T","codeName" : "For Import container Return To Terminal" }
+			]
+		},{
+			"key": "Filter Defective Code",
+			"items": [
+				{ "code" : "N","codeName" : "No Need to Repair" },
+				{ "code" : "S","codeName" : "Sound" },
+				{ "code" : "T","codeName" : "Temporary Fixed" },
+				{ "code" : "R","codeName" : "To Be Repaired" }
+			]
+		},{
+			"key": "Filter Damage Condition",
+			"items": [
+				{ "code" : "H","codeName" : "Heavy" },
+				{ "code" : "M","codeName" : "Minor" },
+				{ "code" : "R","codeName" : "Need Re-Check" },
+				{ "code" : "S","codeName" : "Sound" },
+				{ "code" : "T","codeName" : "Total Loss" },
+			]
+		},{
+			"key": "Filter Clean Code",
+			"items": [ 
+				{ "code" : "L","codeName" : "Clean" },
+				{ "code" : "S","codeName" : "Sweep Only" },
+				{ "code" : "W","codeName" : "Wash" },
+				{ "code" : "H","codeName" : "Hot Wash" },
+				{ "code" : "C","codeName" : "Chemical Wash" },
+				{ "code" : "U","codeName" : "Un-clearing" }
+			]
+		},{
+			"key": "Filter Container Condition",
+			"items": [
+				{ "code" : "D","codeName" : "Dirty" },
+				{ "code" : "A","codeName" : "Sound A" },
+				{ "code" : "B","codeName" : "Sound B" },
+				{ "code" : "C","codeName" : "Sound C" }
+			]
+		},{
+			"key": "Yes/No",
+			"items": [
+				{ "code" : "Y","codeName" : "Yes" },
+				{ "code" : "N","codeName" : "No" }
+			]
+		},{
+			"key": "Inspection Check",
+			"items": [ 
+				{ "code" : "Y","codeName" : "Before Inspection" },
+				{ "code" : "N","codeName" : "After Inspection" }
+			]
+		},{
+			"key": "Search Port Code",
+			"items": [
+				{ "code" : "UNLo","codeName" : "UNLo" },
+				{ "code" : "PRIVATE","codeName" : "PRIVATE" }
+			]
+		},{
+			"key": "Partner Type",
+			"items": [
+				{ "code" : "SHP","codeName" : "Shipping Co." },
+				{ "code" : "FWD","codeName" : "Forwarder" },
+				{ "code" : "CNS","codeName" : "Shipper/Consignee" },
+				{ "code" : "TRK","codeName" : "Trucker" }
+			]
+		},{
+			"key": "Vessel Type1",
+			"items": [ 
+				{ "code" : "COAL","codeName" : "Coal" },
+				{ "code" : "GRAN","codeName" : "Grain" },
+				{ "code" : "BULK","codeName" : "Dry Bulk" },
+				{ "code" : "OLTK","codeName" : "Oil Tanker" },
+				{ "code" : "CHTK","codeName" : "Chemical Tanker" },
+				{ "code" : "GNCG","codeName" : "General Cargo" },
+				{ "code" : "SEMI","codeName" : "Multi Purpose Vessel" },
+				{ "code" : "CNTR","codeName" : "Container Vessel" },
+				{ "code" : "R","   codeName" : "Ro-ro" },
+				{ "code" : "SCNR","codeName" : "Scandinavian Ro-ro" },
+				{ "code" : "PSNG","codeName" : "Passenger Vessel" },
+				{ "code" : "CRUS","codeName" : "Cruise Vessel" },
+				{ "code" : "FSBT","codeName" : "Fishing Boat" },
+				{ "code" : "NAVY","codeName" : "Navy Vessel" },
+				{ "code" : "MTSL","codeName" : "Maritime School" },
+				{ "code" : "LGTG","codeName" : "Large Tug" },
+				{ "code" : "SMTG","codeName" : "Small Tug" },
+				{ "code" : "SMVL","codeName" : "Small Vessel" },
+				{ "code" : "MILT","codeName" : "Military Vessel" },
+				{ "code" : "MCLS","codeName" : "Miscellaneous" },
+				{ "code" : "TMPV","codeName" : "Terminal purpose vessel" }
+			]
+		},{
+			"key": "Vessel Type2",
+			"items": [
+				{ "code" : "J","codeName" : "Just in time" },
+				{ "code" : "W","codeName" : "Weekly" },
+				{ "code" : "L","codeName" : "Liner" },
+				{ "code" : "T","codeName" : "Tramper" }
+			]
+		},{
+			"key": "Vessel Type3",
+			"items": [
+				{ "code" : "M","codeName" : "Main Trade" },
+				{ "code" : "C","codeName" : "Coastal" },
+				{ "code" : "F","codeName" : "Feeder" }
+			]
+		},{
+			"key": "User Level",
+			"items": [ 
+				{ "code" : "P","codeName" : "Partner Administrator" },
+				{ "code" : "A","codeName" : "Administrator" },
+				{ "code" : "G","codeName" : "General" }
+			]
+		},{
+			"key": "User Level P",
+			"items": [
+				{ "code" : "P","codeName" : "Partner Administrator" },
+				{ "code" : "G","codeName" : "General" }
+			]
+		},{
+			"key": "User Level G",
+			"items": [
+				{ "code" : "G","codeName" : "General" }
+			]
+		},{
+			"key": "User Type",
+			"items": [ 
+				{ "code" : "I","codeName" : "Internal" },
+				{ "code" : "E","codeName" : "External" }
+			]
+		},{
+			"key": "vesselStatus",
+			"items": [
+				{ "code" : "0","codeName" : "All" },
+				{ "code" : "1","codeName" : "Before Departure" },
+				{ "code" : "2","codeName" : "After Departure" }
+			]
+		},{
+			"key": "chartType",
+			"items": [
+				{ "code" : "column","codeName" : "Column" },
+				{ "code" : "bar","codeName" : "Bar" },
+				{ "code" : "line","codeName" : "Line" },
+				{ "code" : "pie","codeName" : "Pie" }
+			]
+		},{
+			"key": "Container Table",
+			"items": [ 
+				{ "code" : "Reserve","codeName" : "Before Arrival" },
+				{ "code" : "Inventory","codeName" : "Inventory" },
+				{ "code" : "Master","codeName" : "After Departure" }
+			]
+		},{
+			"key": "Discharge Container Table",
+			"items": [
+				{ "code" : "Reserve","codeName" : "Before Arrival" },
+				{ "code" : "Inventory","codeName" : "Inventory" },
+				{ "code" : "Master","codeName" : "After Departure" },
+				{ "code" : "discharge","codeName" : "Discharged Container" }
+			]
+		},{
+			"key": "Container States",
+			"items": [
+				{ "code" : "","codeName" : "Before Arrival & Inventory" },
+				{ "code" : "R","codeName" : "Before Arrival" },
+				{ "code" : "Y","codeName" : "Inventory" }
+			]
+		},{
+			"key": "IX CD",
+			"items": [ 
+				{ "code" : "X","codeName" : "Export" },
+				{ "code" : "I","codeName" : "Import" },
+				{ "code" : "V","codeName" : "Storage" }
+			]
+		},{
+			"key": "Dispatch Mode",
+			"items": [
+				{ "code" : "CO","codeName" : "CFS Out" },
+				{ "code" : "EP","codeName" : "Empty Pickup" },
+				{ "code" : "IM","codeName" : "Import" },
+				{ "code" : "LD","codeName" : "Loading" },
+				{ "code" : "OP","codeName" : "Positioning Out" },
+				{ "code" : "OS","codeName" : "Storage Out" },
+				{ "code" : "RE","codeName" : "Loading Cancel Return" },
+				{ "code" : "TO","codeName" : "Inter Terminal Out" }
+			]
+		},{
+			"key": "Move Type",
+			"items": [
+				{ "code" : "I","codeName" : "In" },
+				{ "code" : "O","codeName" : "Out" }
+			]
+		},{
+			"key": "Coparn In/Out",
+			"items": [ 
+				{ "code" : "","codeName" : "All" },
+				{ "code" : "I","codeName" : "In" },
+				{ "code" : "O","codeName" : "Out" }
+			]
+		},{
+			"key": "Coparn Progress",
+			"items": [
+				{ "code" : "N","codeName" : "In Progress" },
+				{ "code" : "Y","codeName" : "Closed" }
+			]
+		},{
+			"key": "Coparn Type",
+			"items": [
+				{ "code" : "","codeName" : "All" },
+				{ "code" : "N","codeName" : "General" },
+				{ "code" : "Y","codeName" : "Shuttle" }
+			]
+		},{
+			"key": "Storage Code",
+			"items": [ 
+				{ "code" : "RE","codeName" : "REINFORCED UNIT" },
+				{ "code" : "UJ","codeName" : "ujjj" },
+				{ "code" : "GG","codeName" : "ggg" },
+				{ "code" : "DF","codeName" : "dangerous" },
+				{ "code" : "FD","codeName" : "fdfd" },
+				{ "code" : "FS","codeName" : "dsds" },
+				{ "code" : "KH","codeName" : "khs" },
+				{ "code" : "AD","codeName" : "ANGEL DEBON" },
+				{ "code" : "ST","codeName" : "Storage" }
+			]
+		},{
+			"key": "YardHandling Instruction",
+			"items": [
+				{ "code" : "SD","codeName" : "Special Dangerous Cargo" },
+				{ "code" : "SR","codeName" : "Special Reefer Cargo" },
+				{ "code" : "DEC","codeName" : "de cona" },
+				{ "code" : "AT","codeName" : "Avoid Top Tier" },
+				{ "code" : "AG","codeName" : "Avoid Ground Tier" },
+				{ "code" : "OG","codeName" : "Always On Ground Tier" }
+			]
+		},{
+			"key": "LCL FCL",
+			"items": [
+				{ "code" : "F","codeName" : "FCL" },
+				{ "code" : "L","codeName" : "LCL" }
+			]
+		},{
+			"key": "Return To Terminal Reason",
+			"items": [ 
+				{ "code" : "RR1","codeName" : "return reason A" },
+				{ "code" : "RTR2","codeName" : "return Reason B" },
+				{ "code" : "PIF","codeName" : "return reason C" }
+			]
+		},{
+			"key": "StayDays/DailyMovemment",
+			"items": [
+				{ "code" : "S","codeName" : "Stay Days" },
+				{ "code" : "D","codeName" : "Daily Movement" }
+			]
+		},{
+			"key": "Power Code",
+			"items": [
+				{ "code" : "R","codeName" : "Repair" },
+				{ "code" : "S","codeName" : "Sound" }
+			]
+		},{
+			"key": "CntrSize",
+			"items": [ 
+				{ "code" : "20","codeName" : "20FT" },
+				{ "code" : "40","codeName" : "40FT" }
+			]
+		},{
+			"key": "VesselTrade",
+			"items": [
+				{ "code" : "D","codeName" : "Domestic" },
+				{ "code" : "F","codeName" : "Foreign" }
+			]
+		},{
+			"key": "Class",
+			"items": [
+				{ "code" : "GD","codeName" : "Import Local" },
+				{ "code" : "GL","codeName" : "Export Local" },
+				{ "code" : "SD","codeName" : "Restow B/Q" },
+				{ "code" : "SL","codeName" : "Restow Q/B" },
+				{ "code" : "SS","codeName" : "Restow B/B" },
+				{ "code" : "TD","codeName" : "Import T/S" },
+				{ "code" : "TL","codeName" : "Export T/S" }
+			]
+		},{
+			"key": "Movement Type",
+			"items": [ 
+				{ "code" : "IM","codeName" : "Import Local" },
+				{ "code" : "OF","codeName" : "Import Transport" },
+				{ "code" : "TL","codeName" : "Import TS Local" },
+				{ "code" : "IT","codeName" : "TS To Other Terminal" },
+				{ "code" : "SF","codeName" : "Shifting" },
+				{ "code" : "EX","codeName" : "Export Local" },
+				{ "code" : "DF","codeName" : "Export Transport" },
+				{ "code" : "ET","codeName" : "TS From Other Terminal" },
+				{ "code" : "XT","codeName" : "Export TS Local" },
+				{ "code" : "VM","codeName" : "Storage Empty" }
+			]
+		},{
+			"key": "VesselType",
+			"items": [
+				{ "code" : "B","codeName" : "Barge" },
+				{ "code" : "V","codeName" : "Vessel" }
+			]
+		},{
+			"key": "statYardCntrSize",
+			"items": [
+				{ "code" : "2","codeName" : "20FT" },
+				{ "code" : "4","codeName" : "40FT" }
+			]
+		},{
+			"key": "yardWorkingType",
+			"items": [ 
+				{ "code" : "AG","codeName" : "Auto-shifting Due to Gate" },
+				{ "code" : "AD","codeName" : "Ad-hoc shifting" },
+				{ "code" : "AO","codeName" : "auto-shifting Due to Other" },
+				{ "code" : "AS","codeName" : "Auto-shifting" },
+				{ "code" : "AV","codeName" : "Auto-shifting Due to Vessel" },
+				{ "code" : "GY","codeName" : "Gate In" },
+				{ "code" : "LC","codeName" : "Location change" },
+				{ "code" : "RB","codeName" : "Remarshalling with Billable reason" },
+				{ "code" : "RN","codeName" : "Remarshalling with non-Billable reason" },
+				{ "code" : "SY","codeName" : "Shuttle In" },
+				{ "code" : "VY","codeName" : "Vessel In" },
+				{ "code" : "YG","codeName" : "Gate Out" },
+				{ "code" : "YS","codeName" : "Shuttle Out" },
+				{ "code" : "YV","codeName" : "Vessel Out" },
+				{ "code" : "YX","codeName" : "Shifting In One Block/Area" },
+				{ "code" : "YY","codeName" : "Shifting To Other Block/Area" },
+				{ "code" : "YZ","codeName" : "Remarshalling" },
+				{ "code" : "YR","codeName" : "Rail Out" },
+				{ "code" : "RY","codeName" : "Rail In" }
+			]
+		},{
+			"key": "gateMoveQty",
+			"items": [
+				{ "code" : "1","codeName" : "1 Move" },
+				{ "code" : "2","codeName" : "2 Move" },
+				{ "code" : "3","codeName" : "3 Move" },
+				{ "code" : "4","codeName" : "4 Move" }
+			]
+		},{
+			"key": "gateMoveType",
+			"items": [
+				{ "code" : "e:","codeName" : "In empty 20ft" },
+				{ "code" : "f:","codeName" : "In laden 20ft" },
+				{ "code" : ":e","codeName" : "Out empty 20ft" },
+				{ "code" : ":f","codeName" : "Out laden 20ft" },
+				{ "code" : "E:","codeName" : "In empty 40ft" },
+				{ "code" : "F:","codeName" : "In laden 40ft" },
+				{ "code" : ":E","codeName" : "Out empty 40ft" },
+				{ "code" : ":F","codeName" : "Out laden 40ft" }
+			]
+		},{
+			"key": "equipmentType",
+			"items": [ 
+				{ "code" : "FL","codeName" : "Fork Lift" },
+				{ "code" : "GC","codeName" : "Gantry Crane" },
+				{ "code" : "RS","codeName" : "Reach Stacker" },
+				{ "code" : "TC","codeName" : "Transfer Crane" },
+				{ "code" : "YC","codeName" : "Yard Chassis" },
+				{ "code" : "YT","codeName" : "Yard Tractor" }
+			]
+		},{
+			"key": "dayOfWeek",
+			"items": [
+				{ "code" : "MON","codeName" : "MONDAY" },
+				{ "code" : "TUE","codeName" : "TUESDAY" },
+				{ "code" : "WED","codeName" : "WEDNESDAY" },
+				{ "code" : "THU","codeName" : "THURSDAY" },
+				{ "code" : "FRI","codeName" : "FRIDAY" },
+				{ "code" : "SAT","codeName" : "SATURDAY" },
+				{ "code" : "SUN","codeName" : "SUNDAY" }
+			]
+		},{
+			"key": "occupancyClass",
+			"items": [
+				{ "code" : "IMP","codeName" : "IMPORT" },
+				{ "code" : "EXP","codeName" : "EXPORT" },
+				{ "code" : "TRA","codeName" : "TRANSSHIPMENT" },
+				{ "code" : "TRI","codeName" : "TS TO OTHER TERMINAL" },
+				{ "code" : "TRE","codeName" : "TS FROM OTHER TERMINAL" },
+				{ "code" : "TST","codeName" : "TRANSIT" }
+			]
+		},{
+			"key": "Payer Type",
+			"items": [ 
+				{ "code" : "SHP","codeName" : "Shipping Co." },
+				{ "code" : "FWD","codeName" : "Forwarder" },
+				{ "code" : "CNS","codeName" : "Shipper/Consignee" },
+				{ "code" : "TRK","codeName" : "Trucker" },
+				{ "code" : "SHA","codeName" : "Shipping Agency" }
+			]
+		},{
+			"key": "payType",
+			"items": [
+				{ "code" : "A","codeName" : "Accept" },
+				{ "code" : "P","codeName" : "Pay at Driver Assist" },
+				{ "code" : "C","codeName" : "Submit Acceptance" }
+			]
+		},{
+			"key": "Theme Type",
+			"items": [
+				{ "code" : "D","codeName" : "Blue Theme(default)" },
+				{ "code" : "B","codeName" : "Black Theme" },
+				{ "code" : "G","codeName" : "Green Theme" },
+				{ "code" : "P","codeName" : "Purple Theme" }
+			]
+		},{
+			"key": "intervalType",
+			"items": [ 
+				{ "code" : "1","codeName" : "DAILY" },
+				{ "code" : "2","codeName" : "2DAYS" },
+				{ "code" : "3","codeName" : "3DAYS" }
+			]
+		},{
+			"key": "runType",
+			"items": [
+				{ "code" : "auto","codeName" : "AUTO" },
+				{ "code" : "manual","codeName" : "MANUAL" },
+				{ "code" : "immediate","codeName" : "IMMEDIATE" }
+			]
+		},{
+			"key": "Default ISO codes",
+			"items": [
+				{ "code" : "42G1","codeName" : "42G1" },
+				{ "code" : "45G1","codeName" : "45G1" },
+				{ "code" : "22G1","codeName" : "22G1" },
+				{ "code" : "L5G1","codeName" : "L5G1" },
+				{ "code" : "42P1","codeName" : "42P1" },
+				{ "code" : "45P1","codeName" : "45P1" },
+				{ "code" : "22P1","codeName" : "22P1" },
+				{ "code" : "45R1","codeName" : "45R1" },
+				{ "code" : "22R1","codeName" : "22R1" },
+				{ "code" : "42U1","codeName" : "42U1" },
+				{ "code" : "22U1","codeName" : "22U1" }
+			]
+		},{
+			"key": "HW Size Selection",
+			"items": [ 
+				{ "code" : "800A","codeName" : "0" },
+				{ "code" : "860A","codeName" : "2" },
+				{ "code" : "900A","codeName" : "4" },
+				{ "code" : "960A","codeName" : "5" },
+				{ "code" : "961A","codeName" : "6" },
+				{ "code" : "430A","codeName" : "8" },
+				{ "code" : "400A","codeName" : "9" },
+				{ "code" : "860B","codeName" : "C" },
+				{ "code" : "900B","codeName" : "D" },
+				{ "code" : "960B","codeName" : "E" },	
+				{ "code" : "961B","codeName" : "F" },	
+				{ "code" : "860C","codeName" : "L" },
+				{ "code" : "900C","codeName" : "M" },	
+				{ "code" : "960C","codeName" : "N" },	
+				{ "code" : "961C","codeName" : "P" }
+			]
+		},{
+			"key": "Size Selection",
+			"items": [
+				{ "code" : "","codeName" : "" },
+				{ "code" : "1","codeName" : "10 feet" },
+				{ "code" : "2","codeName" : "20 feet" },
+				{ "code" : "3","codeName" : "30 feet" },
+				{ "code" : "4","codeName" : "40 feet" },
+				{ "code" : "L","codeName" : "45 feet" },
+				{ "code" : "M","codeName" : "48 feet" }
+			]
+		},{
+			"key": "Height Selection",
+			"items": [
+				{ "code" : "","codeName" : "" },
+				{ "code" : "400","codeName" : "4 feet" },
+				{ "code" : "430","codeName" : "4 feet 3" },
+				{ "code" : "800","codeName" : "8 feet" },
+				{ "code" : "860","codeName" : "8 feet 6" },
+				{ "code" : "900","codeName" : "9 feet" },
+				{ "code" : "960","codeName" : "9 feet 6" },
+				{ "code" : "961","codeName" : "> 9 feet 6" }
+			]
+		},{
+			"key": "Type Selection",
+			"items": [ 
+				{ "code" : "","codeName" : "" },
+				{ "code" : "G0","codeName" : "General" },
+				{ "code" : "R0","codeName" : "Reefer" },
+				{ "code" : "T0","codeName" : "Tank" },
+				{ "code" : "B0","codeName" : "Bulk" },
+				{ "code" : "P1","codeName" : "Flat Rack" },
+				{ "code" : "G2","codeName" : "Open Side" },
+				{ "code" : "U0","codeName" : "Open Top" },
+				{ "code" : "P0","codeName" : "Platform" },
+				{ "code" : "V0","codeName" : "Ventilated" }
+			]
+		},{
+			"key": "Width Selection",
+			"items": [
+				{ "code" : "","codeName" : "" },
+				{ "code" : "A","codeName" : "2.438m" },
+				{ "code" : "B","codeName" : "2.438m => 2.5m" },
+				{ "code" : "C","codeName" : "> 2.5m" }
+			]
+		},{
+			"key": "Hold Code",
+			"items": [
+				{ "code" : "","codeName" : "" },
+				{ "code" : "DMG","codeName" : "DAMAGED CONTAINER" },
+				{ "code" : "CYZ","codeName" : "YARD PLAN" },
+				{ "code" : "CFS","codeName" : "CFS" },
+				{ "code" : "OPR","codeName" : "OPERATOR" },
+				{ "code" : "SHI","codeName" : "SHIPPING" },
+				{ "code" : "OTH","codeName" : "OTHER" },
+				{ "code" : "SPH","codeName" : "SHIPPING DEMAND" }
+			]
+		},{
+			"key": "SIZE Code",
+			"items": [ 
+				{ "code" : "0","codeName" : "0" },
+				{ "code" : "2","codeName" : "2" },
+				{ "code" : "2","codeName" : "C" },
+				{ "code" : "2","codeName" : "L" },
+				{ "code" : "4","codeName" : "4" },
+				{ "code" : "4","codeName" : "D" },
+				{ "code" : "4","codeName" : "M" },
+				{ "code" : "5","codeName" : "5" },
+				{ "code" : "5","codeName" : "E" },
+				{ "code" : "5","codeName" : "N" },
+				{ "code" : "6","codeName" : "6" },
+				{ "code" : "6","codeName" : "F" },
+				{ "code" : "6","codeName" : "P" },
+				{ "code" : "8","codeName" : "8" },
+				{ "code" : "8","codeName" : "9" }
+			]
+		},{
+			"key": "trainStatus",
+			"items": [
+				{ "code" : "1","codeName" : "Before Departure" },
+				{ "code" : "2","codeName" : "After Departure" }
+			]
+		},{
+			"key": "preadviceFilteringOption",
+			"items": [
+				{ "code" : "All","codeName" : "ALL" },
+				{ "code" : "Reserve","codeName" : "In Progress" },
+				{ "code" : "preadviceClosed","codeName" : "Closed" }
+			]
+		},{
+			"key": "Preadvice Creator",
+			"items": [ 
+				{ "code" : "ALL","codeName" : "ALL" },
+				{ "code" : "WEBIP","codeName" : "WEBIP" },
+				{ "code" : "EDI","codeName" : "EDI" },
+				{ "code" : "API","codeName" : "API" }
+			]
+		},{
+			"key": "deliveryTypeInPA",
+			"items": [
+				{ "code" : "D","codeName" : "Direct Delivery" },
+				{ "code" : "Z","codeName" : "TS from Other Terminal" }
+			]
+		},{
+			"key": "Import/Export",
+			"items": [
+				{ "code" : "X","codeName" : "Export" },
+				{ "code" : "I","codeName" : "Import" }
+			]
+		},{
+			"key": "Bundle Mode",
+			"items": [ 
+				{ "code" : "D","codeName" : "Discharging" },
+				{ "code" : "L","codeName" : "Loading" },
+				{ "code" : "V","codeName" : "Storage" }
+			]
+		},{
+			"key": "equipmentTypeForDriver",
+			"items": [
+				{ "code" : "YT","codeName" : "Yard Tractor" },
+				{ "code" : "GC","codeName" : "Gantry Crane" }
+			]
+		},{
+			"key": "equipmentTypeForDriver",
+			"items": [
+				{ "code" : "YT","codeName" : "Yard Tractor" },
+				{ "code" : "GC","codeName" : "Gantry Crane" }
+			]
+		},{
+			"key": "WebDockReceipt Status",
+			"items": [ 
+				{ "code" : "E","codeName" : "Data error in sending EDI" },
+				{ "code" : "P","codeName" : "Pending for dock receipt" },
+				{ "code" : "D","codeName" : "Dock Receipt done" }
+			]
+		},{
+			"key": "SendReportMode",
+			"items": [
+				{ "code" : "Y","codeName" : "On" },
+				{ "code" : "N","codeName" : "Off" }
+			]
+		},{
+			"key": "Matched Option",
+			"items": [
+				{ "code" : "MAT","codeName" : "MATCHED" },
+				{ "code" : "UNM","codeName" : "UNMATCHED" }
+			]
+		},{
+			"key": "Delivery Option", 
+			"items": [ 
+				{ "code" : "ALL","codeName" : "All" },
+				{ "code" : "LOCAL","codeName" : "Local" },
+				{ "code" : "T/S","codeName" : "T/S" }
+			]
+		},{
+			"key": "Reefer Type", 
+			"items": [
+				{ "code" : "RF","codeName" : "Reefer Container" },
+				{ "code" : "DR","codeName" : "Reefer Dry Container" },
+			]
+		},{
+			"key": "Reefer Mode",
+			"items": [
+				{ "code" : "Inbound","codeName" : "Inbound" },
+				{ "code" : "Import","codeName" : "  Import" },
+				{ "code" : "T/S Import","codeName" : "  T/S Import" },
+				{ "code" : "Outbound","codeName" : "Outbound" },
+				{ "code" : "Export","codeName" : "  Export" },
+				{ "code" : "T/S Export","codeName" : "  T/S Export" },
+				{ "code" : "T/S Local","codeName" : "  T/S Local" },
+				{ "code" : "Storage","codeName" : "Storage" },
+				{ "code" : "Others","codeName" : "Others" }
+			]
+		},{
+			"key": "Weight Limit SIZE Code",
+			"items": [ 
+				{ "code" : "10","codeName" : "10 8'" },
+				{ "code" : "12","codeName" : "10 8'6" },
+				{ "code" : "14","codeName" : "10 9'" },
+				{ "code" : "15","codeName" : "10 9'6" },
+				{ "code" : "16","codeName" : "10 > 9'6" },
+				{ "code" : "18","codeName" : "10 4'-4'3" },
+				{ "code" : "20","codeName" : "20 8'" },
+				{ "code" : "22","codeName" : "20 8'6" },
+				{ "code" : "24","codeName" : "20 9'" },
+				{ "code" : "25","codeName" : "20 9'6" },
+				{ "code" : "26","codeName" : "20 > 9'6" },
+				{ "code" : "28","codeName" : "20 4'-4'3" },
+				{ "code" : "30","codeName" : "30 8'" },
+				{ "code" : "32","codeName" : "30 8'6" },
+				{ "code" : "34","codeName" : "30 9'" },
+				{ "code" : "35","codeName" : "30 9'6" },
+				{ "code" : "36","codeName" : "30 > 9'6" },
+				{ "code" : "38","codeName" : "30 4'-4'3" },
+				{ "code" : "40","codeName" : "40 8'" },
+				{ "code" : "42","codeName" : "40 8'6" },
+				{ "code" : "44","codeName" : "40 9'" },
+				{ "code" : "45","codeName" : "40 9'6" },
+				{ "code" : "46","codeName" : "40 > 9'6" },
+				{ "code" : "48","codeName" : "40 4'-4'3" },
+				{ "code" : "L4","codeName" : "45 9'" },
+				{ "code" : "L5","codeName" : "45 9'6" },
+				{ "code" : "L6","codeName" : "45 >9'6" },
+				{ "code" : "M4","codeName" : "48 9'" },
+				{ "code" : "M5","codeName" : "48 9'6" },
+				{ "code" : "M6","codeName" : "48 >9'6" }
+			]
+		},{
+			"key": "Weight Limit Type Code",
+			"items": [
+				{ "code" : "A0","codeName" : "Air/Surface" },
+				{ "code" : "B0","codeName" : "Dry Bulk" },
+				{ "code" : "G0","codeName" : "General Dry" },
+				{ "code" : "G2","codeName" : "Open Side" },
+				{ "code" : "H0","codeName" : "Refrigerated and/or heated" },
+				{ "code" : "P0","codeName" : "Platform" },
+				{ "code" : "P1","codeName" : "Platform-Fixed" },
+				{ "code" : "R0","codeName" : "Refrigerated" },
+				{ "code" : "S0","codeName" : "Named Cargo" },
+				{ "code" : "T0","codeName" : "Tank" },
+				{ "code" : "U0","codeName" : "Open-top" },
+				{ "code" : "V0","codeName" : "Ventilation" }
+			]
+		},{
+			"key": "Weight Limit Cargo Type",
+			"items": [
+				{ "code" : "AK","codeName" : "Over Dimension" },
+				{ "code" : "BB","codeName" : "Break Bulk" }
+			]
+		},{
+			"key": "Stoppage Type",
+			"items": [ 
+				{ "code" : "V","codeName" : "Vessel" },
+				{ "code" : "E","codeName" : "Equipment" },
+				{ "code" : "O","codeName" : "Operational" }
+			]
+		},{
+			"key": "Due To",
+			"items": [
+				{ "code" : "T","codeName" : "Terminal" },
+				{ "code" : "V","codeName" : "Vessel" },
+				{ "code" : "S","codeName" : "Stevedores" },
+				{ "code" : "O","codeName" : "Others" }
+			]
+		},{
+			"key": "Next Service Lane Port Type",
+			"items": [
+				{ "code" : "FDEST","codeName" : "FDEST" },
+				{ "code" : "FPOD","codeName" : "FPOD" }
+			]
+		},{
+			"key": "ARUS",
+			"items": [ 
+				{ "code" : "A","codeName" : "AK/BB" },
+				{ "code" : "H","codeName" : "Banana Warehouse" },
+				{ "code" : "C","codeName" : "CFS" },
+				{ "code" : "U","codeName" : "Custom Inspection" },
+				{ "code" : "G","codeName" : "DG" },
+				{ "code" : "N","codeName" : "EU Border Control" },
+				{ "code" : "E","codeName" : "Empty In CY" },
+				{ "code" : "S","codeName" : "Empty Outside CY" },
+				{ "code" : "Q","codeName" : "Equipment" },
+				{ "code" : "B","codeName" : "Error Area" },
+				{ "code" : "F","codeName" : "Fumigation" },
+				{ "code" : "I","codeName" : "Inspection" },
+				{ "code" : "T","codeName" : "Inter-Terminal" },
+				{ "code" : "M","codeName" : "M&R Shop" },
+				{ "code" : "R","codeName" : "Rail" },
+				{ "code" : "O","codeName" : "Re-Stow" },
+				{ "code" : "D","codeName" : "Warehouse" },
+				{ "code" : "W","codeName" : "Washing Place" }
+			]
+		},{
+			"key": "ARU2",
+			"items": [
+				{ "code" : "E","codeName" : "Export" },
+				{ "code" : "I","codeName" : "Import" },
+				{ "code" : "T","codeName" : "T/S" }
+			]
+		},{
+			"key": "WDCD",
+			"items": [
+				{ "code" : "*","codeName" : "*" },
+				{ "code" : "D","codeName" : "Decked" },
+				{ "code" : "W","codeName" : "Wheeled" }
+			]
+		},{
+			"key": "ICCD",
+			"items": [ 
+				{ "code" : "G","codeName" : "Gate" },
+				{ "code" : "I","codeName" : "Interface" },
+				{ "code" : "Q","codeName" : "Quay" },
+				{ "code" : "R","codeName" : "Rail" },
+				{ "code" : "Y","codeName" : "Yard" }
+			]
+		},{
+			"key": "BKDR",
+			"items": [
+				{ "code" : "L","codeName" : "Left" },
+				{ "code" : "R","codeName" : "Right" }
+			]
+		},{
+			"key": "BKTP",
+			"items": [ 
+				{ "code" : "F","codeName" : "F/L" },
+				{ "code" : "R","codeName" : "R/S" },
+				{ "code" : "S","codeName" : "S/C" },
+				{ "code" : "T","codeName" : "T/C" }
+			]
+		},{
+			"key": "Next Service Lane Port Type",
+			"items": [
+				{ "code" : "FDEST","codeName" : "FDEST" },
+				{ "code" : "FPOD","codeName" : "FPOD" }
+			]
+		},{
+			"key": "NUR",
+			"items": [
+				{ "code" : "ANG","codeName" : "TRANSFORMADOR ,NO APILAR ENCIMA" },
+				{ "code" : "ANGE","codeName" : "NO TIRAR EN ESTAS PILAS YA QUE NO QUEREMOS" },
+				{ "code" : "TNIU","codeName" : "Temporaly Not Used Slot" },
+				{ "code" : "VOID","codeName" : "Not In Use Slot (YD)" }
+			]
+		},{
+			"key": "CNLH",
+			"items": [ 
+				{ "code" : "2","codeName" : "20" },
+				{ "code" : "3","codeName" : "30" },
+				{ "code" : "4","codeName" : "40" },
+				{ "code" : "L","codeName" : "45" }
+			]
+		},{
+			"key": "SLCG",
+			"items": [
+				{ "code" : "A","codeName" : "AK" },
+				{ "code" : "D","codeName" : "DG" },
+				{ "code" : "R","codeName" : "RF" }
+			]
+		},{
+			"key": "BYCT",
+			"items": [ 
+				{ "code" : "1","codeName" : "1" },
+				{ "code" : "2","codeName" : "2" },
+				{ "code" : "3","codeName" : "3" }
+			]
+		},{
+			"key": "BKUS",
+			"items": [
+				{ "code" : "A","codeName" : "Awkward" },
+				{ "code" : "B","codeName" : "Rail" },
+				{ "code" : "C","codeName" : "Custom Inspection" },
+				{ "code" : "D","codeName" : "Dangerous" },
+				{ "code" : "E","codeName" : "Empty" },
+				{ "code" : "F","codeName" : "Fumigation" },
+				{ "code" : "G","codeName" : "Damage" },
+				{ "code" : "H","codeName" : "Banana Warehouse" },
+				{ "code" : "I","codeName" : "Import" },
+				{ "code" : "L","codeName" : "T/S Laden" },
+				{ "code" : "M","codeName" : "Temporary" },
+				{ "code" : "N","codeName" : "EU Border Control" },
+				{ "code" : "O","codeName" : "Long Stay" },
+				{ "code" : "P","codeName" : "Inspection" },
+				{ "code" : "Q","codeName" : "M&R Shop" },
+				{ "code" : "R","codeName" : "Reefer" },
+				{ "code" : "S","codeName" : "Special" },
+				{ "code" : "T","codeName" : "T/S" },
+				{ "code" : "U","codeName" : "Auction" },
+				{ "code" : "X","codeName" : "Export" },
+				{ "code" : "Y","codeName" : "T/S Empty" },
+				{ "code" : "Z","codeName" : "45'" }
+			]
+		},{
+			"key": "EQPOS",
+			"items": [
+				{ "code" : "B","codeName" : "Both" },
+				{ "code" : "E","codeName" : "Bottom" },
+				{ "code" : "S","codeName" : "Top" }
+			]
+		},{
+			"key": "ORDER DOCUMENT TYPE",
+			"items": [ 
+				{ "code" : "BK","codeName" : "Booking No" },
+				{ "code" : "BL","codeName" : "BL No" }
+			]
+		},{
+			"key": "ORDER PARTNER TYPE",
+			"items": [
+				{ "code" : "CNS","codeName" : "Shipper/Consignee" },
+				{ "code" : "FWD","codeName" : "Forwarder" }
+			]
+		},{
+			"key": "Gate Move Type",
+			"items": [ 
+				{ "code" : "GF","codeName" : "Gate In" },
+				{ "code" : "GO","codeName" : "Gate Out" }
+			]
+		},{
+			"key": "Gate Tran Type",
+			"items": [
+				{ "code" : "I","codeName" : "Truck In Time" },
+				{ "code" : "O","codeName" : "Truck Out Time" }
+			]
+		},{
+			"key": "Along Side",
+			"items": [
+				{ "code" : "S","codeName" : "Starboard" },
+				{ "code" : "P","codeName" : "Portside" }
+			]
+		},{
+			"key": "IX CD",
+			"items": [ 
+				{ "code" : "I","codeName" : "Import" },
+				{ "code" : "V","codeName" : "Storage" },
+				{ "code" : "X","codeName" : "Export" }
+			]
+		},{
+			"key": "GroupingPatternType",
+			"items": [
+				{ "code" : "V","codeName" : "Value" },
+				{ "code" : "R","codeName" : "Range" }
+			]
+		},{
+			"key": "PlugJobType",
+			"items": [ 
+				{ "code" : "I","codeName" : "Plug In" },
+				{ "code" : "O","codeName" : "Plug Out" }
+			]
+		},{
+			"key": "Yard Planing Sort",
+			"items": [
+				{ "code" : "N","codeName" : "Asc" },
+				{ "code" : "Y","codeName" : "Desc" }
+			]
+		},{
+			"key": "Category",
+			"items": [
+				{ "code" : "Y","codeName" : "Consolidation" },
+				{ "code" : "N","codeName" : "Irregular Stowage" }
+			]
+		},{
+			"key": "Category matched",
+			"items": [ 
+				{ "code" : "I","codeName" : "Inner (Mismatched)" },
+				{ "code" : "O","codeName" : "Outer (Matched)" }
+			]
+		},{
+			"key": "Category Plan Pattern",
+			"items": [
+				{ "code" : "G","codeName" : "General" },
+				{ "code" : "S","codeName" : "Specific" }
+			]
+		},{
+			"key": "Irregular Stowage",
+			"items": [ 
+				{ "code" : "L","codeName" : "Loading Plan" },
+				{ "code" : "M","codeName" : "Mixture" },
+				{ "code" : "S","codeName" : "Slot for Special Cargo" },
+				{ "code" : "H","codeName" : "Special Handling" },
+				{ "code" : "I","codeName" : "IMDG Segregation" }
+			]
+		},{
+			"key": "Irregular Mixture",
+			"items": [
+				{ "code" : "WGT_GROUP","codeName" : "Weight Group" },
+				{ "code" : "VSL_CD, CALL_YEAR,CALL_SEQ","codeName" : "VVD" },
+				{ "code" : "STORAGE_CODE","codeName" : "Storage Code" },
+				{ "code" : "SO_NO","codeName" : "SO No." },
+				{ "code" : "PREV_VSL,PREV_YEAR,PREV_SEQ","codeName" : "Prev VVD" },
+				{ "code" : "POD","codeName" : "POD" },
+				{ "code" : "PTNR_CODE","codeName" : "Operator" },
+				{ "code" : "IX_CD","codeName" : "Mode" },
+				{ "code" : "DECODE(IX_CD, 'I', IN_LANE, OUT_LANE)","codeName" : "Lane" },
+				{ "code" : "FE","codeName" : "FE" },
+				{ "code" : "CNTR_TYPE","codeName" : "Cntr Type" },
+				{ "code" : "CNTR_LEN","codeName" : "Cntr Len" },
+				{ "code" : "CNTR_HW","codeName" : "Cntr HW" },
+				{ "code" : "CARGO_TYPE","codeName" : "Cargo Type" },
+				{ "code" : "BL_NO","codeName" : "BL No." }
+			]
+		},{
+			"key": "Medium Type",
+			"items": [
+				{ "code" : "M","codeName" : "Manual" },
+				{ "code" : "W","codeName" : "WEBIP" },
+				{ "code" : "T","codeName" : "TPS" },
+				{ "code" : "R","codeName" : "RPS" },
+				{ "code" : "E","codeName" : "EDI" },
+				{ "code" : "G","codeName" : "Gate" },
+				{ "code" : "P","codeName" : "Plan" },
+				{ "code" : "S","codeName" : "Server" }
+			]
+		},{
+			"key": "Terminal InOut",
+			"items": [ 
+				{ "code" : "IT","codeName" : "Gate In" },
+				{ "code" : "IV","codeName" : "Vessel In" },
+				{ "code" : "OT","codeName" : "Gate Out" },
+				{ "code" : "OV","codeName" : "Vessel Out" }
+			]
+		},
+		{ 
+			"key": "Calendar Months",
+			"items": [ 
+				{ "code" : "01","codeName" : "01" },
+				{ "code" : "02","codeName" : "02" },
+				{ "code" : "03","codeName" : "03" },
+				{ "code" : "04","codeName" : "04" },
+				{ "code" : "05","codeName" : "05" },
+				{ "code" : "06","codeName" : "06" },
+				{ "code" : "07","codeName" : "07" },
+				{ "code" : "08","codeName" : "08" },
+				{ "code" : "09","codeName" : "09" },
+				{ "code" : "10","codeName" : "10" },
+				{ "code" : "11","codeName" : "11" },
+				{ "code" : "12","codeName" : "12" }
+			]
+		},
+		{
+			"key": "partnerTypes",
+			"items": [ 
+				{ "partnerType" : "SHP","alliance" : "Y" },
+				{ "partnerType" : "FWD","alliance" : "" },
+				{ "partnerType" : "CNS","alliance" : "" },
+				{ "partnerType" : "TRK","alliance" : "" }
+			]
+		},
+		{
+			"key": "FileNamingTypes",
+			"items": [ 
+				{ "code" : "1","codeName" : "MessageID_TerminalID_TPID_Date" },
+				{ "code" : "2","codeName" : "MessageID_TerminalID_Date" },
+				{ "code" : "3","codeName" : "Date_MessageID_TerminalID" }
+			]
+		},
+		{
+			"key": "IsoTypes",
+			"items": [ 
+				{ "code" : "6346","codeName" : "6346" },
+				{ "code" : "2716","codeName" : "2716" },
+				{ "code" : "OTHR","codeName" : "OTHR" }
+			]
+		},
+		{
+			"key": "TPTypes",
+			"items": [ 
+				{ "code" : "SHP","codeName" : "Shipping Company" },
+				{ "code" : "SHA","codeName" : "Shipping Agent" },
+				{ "code" : "RAO","codeName" : "Rail Operator" },
+				{ "code" : "GVM","codeName" : "Goverment" },
+				{ "code" : "TRK","codeName" : "Trucker" },
+				{ "code" : "FWD","codeName" : "Forwarder" }
+			]
+		},
+		{
+			"key": "codeFormat",
+			"items": [ 
+				{ "code" : "E","codeName" : "UN/EDIFACT" },
+				{ "code" : "P","codeName" : "PRIVATE" },
+				{ "code" : "X","codeName" : "XML" }
+			]
+		},
+		{
+			"key": "codeSnr",
+			"items": [ 
+				{ "code" : "S","codeName" : "SEND" },
+				{ "code" : "R","codeName" : "RECEIVE" },
+				{ "code" : "B","codeName" : "BOTH" }
+			]
+		},
+		{
+			"key": "codeMaxProcess",
+			"items": [ 
+				{ "code" : "1","codeName" : "1" },
+				{ "code" : "2","codeName" : "2" },
+				{ "code" : "3","codeName" : "3" },
+				{ "code" : "4","codeName" : "4" },
+				{ "code" : "5","codeName" : "5" },
+				{ "code" : "6","codeName" : "6" },
+				{ "code" : "7","codeName" : "7" },
+				{ "code" : "8","codeName" : "8" },
+				{ "code" : "9","codeName" : "9" },
+				{ "code" : "10","codeName" : "10" }
+			]
+		},
+				{
+			"key": "CODE_TYPE_SMGI",
+			"items": [ 
+				{ "code" : "SZTP","codeName" : "Size Type" },
+				{ "code" : "PORT","codeName" : "Port Code" },
+				{ "code" : "PTNR","codeName" : "Operator Code" },
+				{ "code" : "CNSG","codeName" : "Consignee Code" }
+			]
+		},
+		{
+			"key": "ErrorTypes",
+			"items": [ 
+				{ "code" : "E","codeName" : "Error" },
+				{ "code" : "W","codeName" : "Warning" }
+			]
+		},
+		{
+			"key": "Send/Receive",
+			"items": [ 
+				{ "code" : "S","codeName" : "Send" },
+				{ "code" : "R","codeName" : "Receive" }
+			]
+		},
+		{
+			"key": "EDI/Flat",
+			"items": [ 
+				{ "code" : "E","codeName" : "EDI" },
+				{ "code" : "F","codeName" : "Flat" }
+			]
+		},
+		{
+			"key": "COARRICreateTypes",
+			"items": [ 
+				{ "code" : "I","codeName" : "Interval" },
+				{ "code" : "D","codeName" : "After Departure" }
+			]
+		},
+		{
+			"key": "COARRIReceiverTypes",
+			"items": [ 
+				{ "code" : "B","codeName" : "Both" },
+				{ "code" : "C","codeName" : "Container Operator" },
+				{ "code" : "V","codeName" : "Vessel Operator" }
+			]
+		},
+		{
+			"key": "rcvTypes",
+			"items": [ 
+				{ "code" : "C","codeName" : "Container OPR" },
+				{ "code" : "V","codeName" : "Vessel OPR" }
+			]
+		},
+		{
+			"key": "msgRStatusTypes",
+			"items": [ 
+				{ "code" : "ITR","codeName" : "Translating" },
+				{ "code" : "ITC","codeName" : "Translated" },
+				{ "code" : "ITE","codeName" : "Suspend" },
+				{ "code" : "IMR","codeName" : "Received" },
+				{ "code" : "IMC","codeName" : "Mapped" },
+				{ "code" : "ITW","codeName" : "ManualMapWait" },
+				{ "code" : "IWT","codeName" : "Waited" },		
+				{ "code" : "IER","codeName" : "Error" }
+			]
+		},
+		{
+			"key": "msgSStatusTypes",
+			"items": [ 
+				{ "code" : "OTR","codeName" : "Translating" },
+				{ "code" : "OTC","codeName" : "Translated" },
+				{ "code" : "OMR","codeName" : "Creating" },
+				{ "code" : "OMC","codeName" : "Created" },
+				{ "code" : "OWT","codeName" : "Waited" },	
+				{ "code" : "OCR","codeName" : "Sent" },	
+				{ "code" : "OTE","codeName" : "Suspend" }
+			]
+		},
+		{
+			"key": "MSG_STATUS",
+			"items": [
+				{ "code" : "ITR","codeName" : "Translating" },
+				{ "code" : "ITC","codeName" : "Translated" },
+				{ "code" : "ITE","codeName" : "Suspend" },
+				{ "code" : "IMR","codeName" : "Received" },
+				{ "code" : "IMC","codeName" : "Mapped" },
+				{ "code" : "ITW","codeName" : "ManualMapWait" },
+				{ "code" : "IWT","codeName" : "Waited" },		
+				{ "code" : "IER","codeName" : "Error" },
+				{ "code" : "OTR","codeName" : "Translating" },
+				{ "code" : "OTC","codeName" : "Translated" },
+				{ "code" : "OMR","codeName" : "Creating" },
+				{ "code" : "OMC","codeName" : "Created" },
+				{ "code" : "OWT","codeName" : "Waited" },	
+				{ "code" : "OCR","codeName" : "Sent" },	
+				{ "code" : "OTE","codeName" : "Suspend" }
+			]
+		},
+		{
+			"key": "ProtocolS",
+			"items": [ 
+				{ "code" : "PUT_FTP","codeName" : "FTP" },
+				{ "code" : "PUT_SMTPC","codeName" : "SMTPC(Content)" },
+				{ "code" : "PUT_SMTPA","codeName" : "SMTPA(Attach)" }
+			]
+		},
+		{
+			"key": "ProtocolR",
+			"items": [ 
+				{ "code" : "GET_FTP","codeName" : "FTP" },
+				{ "code" : "GET_POP3C","codeName" : "POP3C(Content)" },
+				{ "code" : "GET_POP3A","codeName" : "POP3A(Attach)" }
+			]
+		},
+		{
+			"key": "CommunicatorInterval",
+			"items": [ 
+				{ "code" : "1","codeName" : "1" },
+				{ "code" : "10","codeName" : "10" },
+				{ "code" : "20","codeName" : "20" },
+				{ "code" : "30","codeName" : "30" },
+				{ "code" : "40","codeName" : "40" },
+				{ "code" : "50","codeName" : "50" },
+				{ "code" : "60","codeName" : "60" },
+				{ "code" : "70","codeName" : "70" },
+				{ "code" : "80","codeName" : "80" },
+				{ "code" : "90","codeName" : "90" },
+				{ "code" : "100","codeName" : "100" }
+			]
+		},
+		{
+			"key": "SCHEDULER_TYPES",
+			"items": [ 
+				{ "code" : "CR","codeName" : "CR(Communicator)" },
+				{ "code" : "MR","codeName" : "MR(Mapper)" },
+				{ "code" : "TR","codeName" : "TR(Translator)" }
+			]
+		}
+	]
+}

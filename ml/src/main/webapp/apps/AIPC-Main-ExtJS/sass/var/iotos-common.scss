@@ -1,0 +1,8 @@
+$package_path:get-resource-path("./iotos-common");
+
+// 내 프로젝트에 있는 리소스를 사용하고 싶은 경우
+//.bg {background-image: url(get-resource-path('/images/background/background.jpg'))};
+
+// iotos-common에 있는 리소스를 사용하고 싶은 경우
+//.bg {background-image: url(get-resource-path('#{$package_path}/images/background/background.jpg'))};
+

@@ -1,0 +1,219 @@
+{
+	"data": [
+		{
+			"key": "ErrorCodeView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('errorCode'),	"dataIndex": "errCode", "caption": "errorCode",	"reference": "refErrCode",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('errorName'),	"dataIndex": "errName", "caption": "errorName",	"reference": "refErrName",	"filter": "string",	"width": 350, "align" :'left'},
+				{ "text": ViewUtil.getLabel('messageEdi'),	"dataIndex": "msgId", "caption": "messageEdi",	"reference": "refMsgId",	"filter": "string",	"width": 130},
+				{ "text": ViewUtil.getLabel('errorType'),	"dataIndex": "displayErrType", "caption": "errorType",	"reference": "refDisplayErrType",	"filter": "string",	"width": 130}
+			]
+		},
+		{
+			"key": "PodForVvdView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselCode'),	"dataIndex": "vslCd", "reference": "refVslCd",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingYear'),	"dataIndex": "callYear", "reference": "refCallYear",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingSeq'),	"dataIndex": "callSeq", "reference": "refCallSeq",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_UserVoyage'),	"dataIndex": "userVoyage", "reference": "refUserVoyage",	"filter": "string",	"width": 110},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_POD'),	"dataIndex": "pod", "reference": "refPOD",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_PortName'),	"dataIndex": "portName", "reference": "refPortName",	"filter": "string",	"width": 130, "align" :'left'},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ForeColor'),	"dataIndex": "foreColor", "reference": "refForeColorStr",	"filter": "string",	"width": 100, "renderer": "onGridColor"},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BackColor'),	"dataIndex": "backColor", "reference": "refBackColorStr",	"filter": "string",	"width": 100, "renderer": "onGridColor"},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_PortPrefix'),	"dataIndex": "portPrefix", "reference": "refPortPrefix",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_RegionCode'),	"dataIndex": "regionCode", "reference": "refRegionCode",	"filter": "string",	"width": 90}
+			]
+		},
+		{
+			"key": "OprForVvdView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselCode'),	"dataIndex": "vslCd", "reference": "refVslCd",	"filter": "string",	"width": 90},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingYear'),"dataIndex": "callYear", "reference": "refCallYear",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingSeq'),	"dataIndex": "callSeq", "reference": "refCallSeq",	"filter": "string",	"width": 100},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_UserVoyage'),	"dataIndex": "userVoyage", "reference": "refUserVoyage",	"filter": "string",	"width": 110},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OPR'),		"dataIndex": "opr", "reference": "refOpr",	"filter": "string",	"width": 80},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OPRDescription'),	"dataIndex": "oprDescription", "reference": "refOprDescription",	"filter": "string",	"width": 280, "align" :'left'},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ForeColor'),	"dataIndex": "foreColor", "reference": "refForeColorStr",	"filter": "string",	"width": 100, "renderer": "onGridColor"},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BackColor'),	"dataIndex": "backColor", "reference": "refBackColorStr",	"filter": "string",	"width": 100, "renderer": "onGridColor"},
+			]
+		},
+		{
+			"key": "LongTermScheduleView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselCode'),	"dataIndex": "vslCd", "reference": "refVslCd",	"filter": "string",	"text-align": "center", "align" :"center", "width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselName'),	"dataIndex": "vslNm", "reference": "refVslNm",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingYear'),	"dataIndex": "callYear", "reference": "refCallYear",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingSeq'),	"dataIndex": "callSeq", "reference": "refCallSeq",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Operator'),	"dataIndex": "operator", "reference": "refOperator",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_InLane'),	"dataIndex": "inLane", "reference": "refInLane",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OutLane'),	"dataIndex": "outLane", "reference": "refOutLane",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_UserVoyage'),	"dataIndex": "userVoyage", "reference": "refUserVoyage",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingType'),	"dataIndex": "vslType3", "reference": "refVslType3",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_IVoyNo'),	"dataIndex": "inVoyNo", "reference": "refIVoyNo",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OVoyNo'),	"dataIndex": "outVoyNo", "reference": "refOVoyNo",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETB'),	"dataIndex": "longtermEtb", "reference": "refLongtermEtb",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETD'),	"dataIndex": "etd", "reference": "refEtd",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Berth'),	"dataIndex": "berth", "reference": "refBerth",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Alongside'),	"dataIndex": "alongside", "reference": "refAlongside",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BerthWindow'),	"dataIndex": "berthWindow", "reference": "refBerthWindow",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BowPos'),	"dataIndex": "bowPos", "reference": "refBowPos",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DeckPos'),	"dataIndex": "deckPos", "reference": "refDeckPos",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_SternPos'),	"dataIndex": "sternPos", "reference": "refSternPos",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyDis'),	"dataIndex": "qtyDis", "reference": "refQtyDis",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyLoad'),	"dataIndex": "qtyLoad", "reference": "refQtyLoad",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyShift'),	"dataIndex": "qtyShift", "reference": "refQtyShift",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DraftFore'),	"dataIndex": "draftFore", "reference": "refDraftFore",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DraftMid'),	"dataIndex": "draftMid", "reference": "refDraftMid",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DraftAft'),	"dataIndex": "draftAft", "reference": "refDraftAft",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BargeChk'),	"dataIndex": "bargeChkChecked", "reference": "refBargeChk",	"xtype": "checkcolumn", "disabled": true,	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DomesticChk'),	"dataIndex": "domesticChkChecked", "reference": "refDomesticChk",	"xtype": "checkcolumn", "disabled": true,	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Cancel'),	"dataIndex": "cancelChkChecked", "reference": "refCancelChk",	"xtype": "checkcolumn", "disabled": true,	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Storage'),	"dataIndex": "storageChkChecked", "reference": "refStorageChk",	"xtype": "checkcolumn", "disabled": true,	"text-align": "center", "align" :"center",	"width": 130}
+			]
+		},
+		{
+			"key": "CallingScheduleView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselCode'),	"dataIndex": "vslCd", "reference": "refVslCd",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselName'),	"dataIndex": "vslNm", "reference": "refVslNm",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingYear'),	"dataIndex": "callYear", "reference": "refCallYear",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingSeq'),	"dataIndex": "callSeq", "reference": "refCallSeq",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Operator'),	"dataIndex": "operator", "reference": "refOperator",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_InLane'),	"dataIndex": "inLane", "reference": "refInLane",	"filter": "string",	"text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OutLane'),	"dataIndex": "outLane", "reference": "refOutLane",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_UserVoyage'),	"dataIndex": "userVoyage", "reference": "refUserVoyage",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingType'),	"dataIndex": "vslType3", "reference": "refVslType3",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_IVoyNo'),	"dataIndex": "inVoyNo", "reference": "refIVoyNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OVoyNo'),	"dataIndex": "outVoyNo", "reference": "refOVoyNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BondAreaNo'),	"dataIndex": "bondAreaNo", "reference": "refBondAreaNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_PortInVoy'),	"dataIndex": "portInVoy", "reference": "refPortInVoy",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_PortOutVoy'),	"dataIndex": "portOutVoy", "reference": "refPortOutVoy",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETA'),	"dataIndex": "eta", "reference": "refEta",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETB'),	"dataIndex": "etb", "reference": "refEtb",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETD'),	"dataIndex": "etd", "reference": "refEtd",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Berth'),	"dataIndex": "berth", "reference": "refBerth",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Alongside'),	"dataIndex": "alongside", "reference": "refAlongside",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BowPos'),	"dataIndex": "bowPos", "reference": "refBowPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DeckPos'),	"dataIndex": "deckPos", "reference": "refDeckPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_SternPos'),	"dataIndex": "sternPos", "reference": "refSternPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ToBitt'),	"dataIndex": "toBitt", "reference": "refToBitt",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_FromBitt'),	"dataIndex": "fromBitt", "reference": "refFromBitt",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_MoorToBitt'),	"dataIndex": "moorToBitt", "reference": "refMoorToBitt",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_MoorFromBitt'),	"dataIndex": "moorFromBitt", "reference": "refMoorFromBitt",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyDis'),	"dataIndex": "qtyDis", "reference": "refQtyDis",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyLoad'),	"dataIndex": "qtyLoad", "reference": "refQtyLoad",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyShift'),	"dataIndex": "qtyShift", "reference": "refQtyShift",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BargeChk'),	"dataIndex": "bargeChkChecked", "reference": "refBargeChk",	"xtype": "checkcolumn", "disabled": true, "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DomesticChk'),	"dataIndex": "domesticChkChecked", "reference": "refDomesticChk",	"xtype": "checkcolumn", "disabled": true, "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Cancel'),	"dataIndex": "cancelChkChecked", "reference": "refCancelChk",	"xtype": "checkcolumn", "text-align": "center", "align" :"center",	"width": 130}
+			]
+		},
+		{
+			"key": "CancelledScheduleView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselCode'),	"dataIndex": "vslCd", "reference": "refVslCd",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselName'),	"dataIndex": "vslNm", "reference": "refVslNm",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingYear'),	"dataIndex": "callYear", "reference": "refCallYear",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingSeq'),	"dataIndex": "callSeq", "reference": "refCallSeq",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Operator'),	"dataIndex": "operator", "reference": "refOperator",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_InLane'),	"dataIndex": "inLane", "reference": "refInLane",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OutLane'),	"dataIndex": "outLane", "reference": "refOutLane",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_UserVoyage'),	"dataIndex": "userVoyage", "reference": "refUserVoyage",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingType'),	"dataIndex": "vslType3", "reference": "refVslType3",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_IVoyNo'),	"dataIndex": "inVoyNo", "reference": "refIVoyNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OVoyNo'),	"dataIndex": "outVoyNo", "reference": "refOVoyNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BondAreaNo'),	"dataIndex": "bondAreaNo", "reference": "refBondAreaNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_PortInVoy'),	"dataIndex": "portInVoy", "reference": "refPortInVoy",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_PortOutVoy'),	"dataIndex": "portOutVoy", "reference": "refPortOutVoy",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETB'),	"dataIndex": "longtermEtb", "reference": "refLongtermEtb",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETD'),	"dataIndex": "etd", "reference": "refEtd",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Berth'),	"dataIndex": "berth", "reference": "refBerth",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Alongside'),	"dataIndex": "alongside", "reference": "refAlongside",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BowPos'),	"dataIndex": "bowPos", "reference": "refBowPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DeckPos'),	"dataIndex": "deckPos", "reference": "refDeckPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_SternPos'),	"dataIndex": "sternPos", "reference": "refSternPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyDis'),	"dataIndex": "qtyDis", "reference": "refQtyDis",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyLoad'),	"dataIndex": "qtyLoad", "reference": "refQtyLoad",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyShift'),	"dataIndex": "qtyShift", "reference": "refQtyShift",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BargeChk'),	"dataIndex": "bargeChkChecked", "reference": "refBargeChk",	"xtype": "checkcolumn", "disabled": true, "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DomesticChk'),	"dataIndex": "domesticChkChecked", "reference": "refDomesticChk",	"xtype": "checkcolumn", "disabled": true, "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Cancel'),	"dataIndex": "cancelChkChecked", "reference": "refCancelChk",	"xtype": "checkcolumn", "disabled": true, "text-align": "center", "align" :"center",	"width": 130}
+			]
+		},
+		{
+			"key": "StorageScheduleView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselCode'),	"dataIndex": "vslCd", "reference": "refVslCd",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselName'),	"dataIndex": "vslNm", "reference": "refVslNm",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingYear'),	"dataIndex": "callYear", "reference": "refCallYear",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingSeq'),	"dataIndex": "callSeq", "reference": "refCallSeq",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Operator'),	"dataIndex": "operator", "reference": "refOperator",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_InLane'),	"dataIndex": "inLane", "reference": "refInLane",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OutLane'),	"dataIndex": "outLane", "reference": "refOutLane",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_UserVoyage'),	"dataIndex": "userVoyage", "reference": "refUserVoyage",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_IVoyNo'),	"dataIndex": "inVoyNo", "reference": "refIVoyNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OVoyNo'),	"dataIndex": "outVoyNo", "reference": "refOVoyNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BondAreaNo'),	"dataIndex": "bondAreaNo", "reference": "refBondAreaNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_PortInVoy'),	"dataIndex": "portInVoy", "reference": "refPortInVoy",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_PortOutVoy'),	"dataIndex": "portOutVoy", "reference": "refPortOutVoy",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETB'),	"dataIndex": "longtermEtb", "reference": "refLongtermEtb",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETD'),	"dataIndex": "etd", "reference": "refEtd",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Storage'),	"dataIndex": "storageChkChecked", "reference": "refStorageChk",	"xtype": "checkcolumn", "width": 130,
+					"renderer": function (value, meta, record, row, col) {
+        	            var me = this;
+        	            
+        	            if(record.get('systemStorage') === 'Y'){
+        	                meta['tdCls'] = 'x-item-disabled';
+        	                value = false;
+        	            } else {
+        	                meta['tdCls'] = '';
+        	            }
+        	            
+        	            return new Ext.ux.CheckColumn().renderer(value);
+        	        }
+				}
+			]
+		},
+		{
+			"key": "BerthWindowScheduleView",
+			"items": [ 	
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselCode'),	"dataIndex": "vslCd", "reference": "refVslCd",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VesselName'),	"dataIndex": "vslNm", "reference": "refVslNm",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingYear'),	"dataIndex": "callYear", "reference": "refCallYear",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_CallingSeq'),	"dataIndex": "callSeq", "reference": "refCallSeq",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Operator'),	"dataIndex": "operator", "reference": "refOperator",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_InLane'),	"dataIndex": "inLane", "reference": "refInLane",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OutLane'),	"dataIndex": "outLane", "reference": "refOutLane",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_IVoyNo'),	"dataIndex": "inVoyNo", "reference": "refIVoyNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_OVoyNo'),	"dataIndex": "outVoyNo", "reference": "refOVoyNo",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETB'),	"dataIndex": "longtermEtb", "reference": "refLongtermEtb",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_ETD'),	"dataIndex": "etd", "reference": "refEtd",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Berth'),	"dataIndex": "berth", "reference": "refBerth",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Alongside'),	"dataIndex": "alongside", "reference": "refAlongside",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BerthWindow'),	"dataIndex": "berthWindow", "reference": "refBerthWindow",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_VslSeq'),	"dataIndex": "vslSeq", "reference": "refVslSeq",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_BowPos'),	"dataIndex": "bowPos", "reference": "refBowPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_DeckPos'),	"dataIndex": "deckPos", "reference": "refDeckPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_SternPos'),	"dataIndex": "sternPos", "reference": "refSternPos",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyDis'),	"dataIndex": "qtyDis", "reference": "refQtyDis",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyLoad'),	"dataIndex": "qtyLoad", "reference": "refQtyLoad",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QtyShift'),	"dataIndex": "qtyShift", "reference": "refQtyShift",	"filter": "string", "text-align": "center", "align" :"center",	"width": 130}
+			]
+		},
+		{
+			"key": "QcAssignmentView",
+			"items": [ 	
+				{ "text": "",	"dataIndex": "statusColor", "reference": "refStatusColor",	"filter": "string",	"width": 30, "renderer": "onGridColor"},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QCNO'),	"dataIndex": "equNo", "reference": "refEquNo",	"filter": "string",	"width": 100, "renderer": "onEquNoColor"},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_QCAssignSeq'),	"dataIndex": "gangSeq", "reference": "refGangSeq",	"width": 60, "align" :'right'},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Productivity'),	"dataIndex": "qcProductivity", "reference": "refQcProductivity",	"width": 130, "align" :'right'},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Assign'),	"dataIndex": "isAssignedStringChecked", "xtype": "checkcolumn", "disabled": true, "reference": "refIsAssigned",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_StartTime'),	"dataIndex": "startTime", "reference": "refStartTime",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_EndTime'),	"dataIndex": "endTime", "reference": "refEndTime",	"width": 130},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Discharge'),	"dataIndex": "qtyDis", "reference": "refQtyDis",	"width": 100, "align" :'right'},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Load'),	"dataIndex": "qtyLoad", "reference": "refQtyLoad",	"width": 100, "align" :'right'},
+				{ "text": ViewUtil.getLabel('WRD_CTBP_Restow'),	"dataIndex": "qtyShift", "reference": "refQtyShift", "width": 100, "align" :'right'}
+			]
+		}
+	]
+}

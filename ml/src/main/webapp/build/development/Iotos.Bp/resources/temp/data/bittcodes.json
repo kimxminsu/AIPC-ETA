@@ -1,0 +1,15 @@
+{
+  "response" : {
+    "newVersion" : null,
+    "offset" : 0,
+    "limit" : 0,
+    "size" : 0,
+    "errorNumber" : 0,
+    "errorDescription" : "",
+    "totalCount" : 0,
+    "sharable" : false,
+    "messageId" : "",
+    "mode" : "",
+    "data" : [ ]
+  }
+}
